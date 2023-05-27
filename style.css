@@ -1,5 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+h1 {
 
-.h1{
- font-family: 'Source Serif Pro', serif;;
+    font-family: 'Source Serif Pro', cursive;
+    color: #47525E;
+    font-size: 20px;
+}
+
+.textoCenter {
+    text-align: center;
+}
+
+.card {
+    background-color: #969FAA;
+    border: 2px solid #969FAA;
+    border-radius: 15px;
+    width: 1010px;
+    height: 1010px;
+    top: 100px;
+    position: relative;
+}
+
+.selectortwo {
+    background-color: #FFFFFF;
+    border: 2px solid #EB8600;
+    border-radius: 15px;
+    width: 1000px;
+    height: 1000px;
 }
