@@ -1,28 +1,204 @@
-h1 {
+/*ESTILOS DE ADMIN USUARIO*/
+.custom-heading {
 
-    font-family: 'Source Serif Pro', cursive;
-    color: #47525E;
-    font-size: 20px;
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #47525E !important;
+    font-size: 25px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    top: 20px !important;
+    position: relative !important;
 }
 
-.textoCenter {
+.position table {
+
+    position: relative !important;
+    top: 80px !important;
+    width: 955px;
+    height: 950px;
+    left: 25px;
+
+}
+
+.table-responsive table {
+
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+    /* Otros estilos adicionales */
+}
+
+.dataTables_length {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.dataTables_filter {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.dataTables_info {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.pagination {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.justificarIcon {
     text-align: center;
 }
 
 .card {
-    background-color: #969FAA;
-    border: 2px solid #969FAA;
-    border-radius: 15px;
-    width: 1010px;
-    height: 1010px;
-    top: 100px;
-    position: relative;
+    background-color: #969FAA !important;
+    border: 2px solid #969FAA !important;
+    border-radius: 15px !important;
+    width: 1010px !important;
+    height: 1010px !important;
+    top: 100px !important;
+    position: relative !important;
+    left: 130px !important;
 }
 
 .selectortwo {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
+    border: 2px solid #EB8600 !important;
+    border-radius: 15px !important;
+    width: 1000px !important;
+    height: 1000px !important;
+    position: relative !important;
+    left: 4px !important;
+}
+
+/*LINEAS HORIZONTALES IZQUIERDA*/
+
+.horizontal-line {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 50px;
+    width: 270px;
+    height: 20px;
+    left: 29px;
+}
+
+.horizontal-linetwo {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 20px;
+    left: 29px;
+}
+
+.lineaIzquierda {
+    position: relative;
+    top: 25px;
+}
+
+/* LINEAS HORIZONTALES DERECHA*/
+
+.lineaderecha {
+    position: relative;
+    top: -49px;
+
+}
+
+.horizontal-derecha {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 50px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+.horizontal-derechatwo {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+.button {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 16px;
+    background-color: #FFD185;
     border: 2px solid #EB8600;
     border-radius: 15px;
-    width: 1000px;
-    height: 1000px;
+    width: 39px;
+    height: 39px;
+    color: #FFFFFF;
+    line-height: 36px;
+    width: 145px;
+    text-align: center;
+    position: relative;
+    top: 47px;
 }
+
+.table-Gray {
+    background-color: #D7DADD;
+}
+
+.table-orange {
+    background-color: #FFF4E3;
+}
+
+/*TOOLTIP ESTILOS*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /*COLOR BUTTON*/
+
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #5A6978 !important;
+    border-color: #5A6978 !important;
+  }
