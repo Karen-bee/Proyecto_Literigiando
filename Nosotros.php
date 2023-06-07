@@ -21,7 +21,7 @@
     <title>Literagiando</title>
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <!-- BANNER PRINCIPAL -->
     <div class="dj-banner">
         <div class="dj-bg">
@@ -41,8 +41,7 @@
             <div class="col">
                 <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="El proyecto de desarrollo social Literagiando, se inicio con el trabajo de mas de 6 años, se ha venido consolidando como un medio de formación y promoción, Literagiando ha visitado mas de 10 instituciones educativas de la ciudad de Bogotá, ofreciendo experiencias para el aprendizaje de niños, niñas y sus cuidadores
-" data-original-title="Historia">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="Historia" data-content="El proyecto de desarrollo social Literagiando, se inicio con el trabajo de mas de 6 años, se ha venido consolidando como un medio de formación y promoción, Literagiando ha visitado mas de 10 instituciones educativas de la ciudad de Bogotá, ofreciendo experiencias para el aprendizaje de niños, niñas y sus cuidadores" data-original-title="Historia">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Historia</p>
                         </div>
@@ -75,10 +74,17 @@
             </div>
         </div>
 
-        <div id="selected-info" class="my-4">
+        <!-- Linea -->
+
+        <div class="hr"></div>
+
+        <div id="selected-info" class="my-4" >
             <div id="circle">
             </div>
         </div>
+        <!-- Imagenes -->
+
+        
         <script src="script.js"></script>
 
 </body>
