@@ -338,15 +338,9 @@
         background-color: #EB8600
     }
 
-    .timeline-steps .timeline-content .inner-circle:before {
-        content: "";
-        background-color: #EB8600;
-        display: inline-block;
-        height: 3rem;
-        width: 3rem;
-        min-width: 3rem;
-        border-radius: 6.25rem;
-
+   
+    .timeline-steps .timeline-content .inner-circle.active {
+        background-color: black;
     }
 
     .parrafo {
@@ -408,8 +402,13 @@
 
     .image-container img {
         width: 270px;
-        height: 198px;
+        height: 213px;
+        position: relative;
+        top: -19px;
+        left: 1px;
+        opacity: 106%;
     }
+
 
     .image-container h2 {
         position: absolute;
@@ -421,7 +420,73 @@
         padding: 10px;
     }
 
+    /*CUADRO DE FONDO IMAGENES HISTORIA*/
 
+    .cuadro-negro {
+        width: 289px;
+        height: 213px;
+        position: relative;
+        top: -188px;
+        left: 143px;
+        background-color: #70777E;
+        opacity: 73%;
+    }
+
+    .cuadro-negro2 {
+        width: 289px;
+        height: 213px;
+        position: relative;
+        top: -399px;
+        left: 522px;
+        background-color: #70777E;
+        opacity: 73%;
+    }
+
+    .image-container2 {
+        width: 270px;
+        height: 198px;
+        position: relative;
+        top: -19px;
+        left: 0px;
+        opacity: 106%;
+    }
+
+    .cuadro-negro3 {
+        width: 289px;
+        height: 213px;
+        position: relative;
+        top: -614px;
+        left: 897px;
+        background-color: #70777E;
+        opacity: 73%;
+    }
+
+    .image-container3 {
+        width: 270px;
+        height: 198px;
+        position: relative;
+        top: -19px;
+        left: 0px;
+        opacity: 106%;
+    }
+
+    .posionImg {
+        position: relative;
+        top: 45px;
+        left: 32px;
+    }
+
+    /*EJEMPLO
+
+    .inner-circle {
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        border-radius: 50%;
+        display: none;
+      Para ocultar la bolita negra inicialmente 
+    }
+*/
 
 
 }

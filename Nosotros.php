@@ -74,17 +74,18 @@
             </div>
         </div>
 
+
         <!-- Linea -->
 
         <div class="hr"></div>
 
-        <div id="selected-info" class="my-4" >
+        <div id="selected-info" class="my-4">
             <div id="circle">
             </div>
         </div>
         <!-- Imagenes -->
 
-        
+
         <script src="script.js"></script>
 
 </body>
