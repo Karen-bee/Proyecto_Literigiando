@@ -203,292 +203,444 @@
     border-color: #5A6978 !important;
 }
 
-/*ESTILOS NOSOTROs*/
+.media2 {
+    position: relative !important;
+    top: 80px !important;
+    width: 955px !important;
+    height: 950px !important;
+    left: 25px !important;
 
-@media screen and (min-width:768px) {
-    .dj-banner {
-        margin: 30px 0;
-        position: relative;
-    }
+}
 
-    .dj-banner .dj-bg {
+/*PANTALLAS 767 */
 
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+@media (max-width: 767px) {
+    .table-responsive {
+        top: 0;
         width: 100%;
-
+        height: auto;
+        left: 0;
     }
 
-    .dj-banner .dj-bg img {
-        display: block;
-        margin: 20px auto;
-        padding: 20px 0;
+    .table {
+        font-size: 12px;
     }
 
-    .dj-banner .dj-text {
-        text-align: center;
-        padding-bottom: 20px;
-    }
+    .card {
 
-    .dj-banner .dj-bg img {
-        margin-right: 100px;
-    }
-
-    .dj-banner .dj-text {
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translate(-10%, -50%);
-        width: 50%;
-        text-align: left;
-    }
-
-    .dj-banner .dj-text h1 {
-        font-size: calc(2*1.5vw);
-    }
-
-    .dj-banner .dj-text p {
-        font-size: calc(1.2*1.5vw);
-    }
-
-
-    .cuadradoNosotros {
-        border-radius: 5px !important;
-        background: #EB8600 !important;
-        border-color: #EB8600 !important;
-        height: 67px !important;
-        color: white !important;
-        width: 222px !important;
-        text-align: center !important;
-        font-size: 25px !important;
-        padding: 10px 0 !important;
-        font-family: 'Source Serif Pro', serif !important;
-        font-weight: 700;
-        position: relative;
-        left: 4px;
-        top: -15px;
-    }
-
-    .cuadrobajo {
-        border-radius: 5px !important;
-        background: black !important;
-        border-color: black !important;
-        height: 67px !important;
-        width: 222px !important;
-        padding: 10px 0 !important;
-        position: relative;
-        left: 476px;
-    }
-
-    /*TIMELINE / NOSOTROS */
-
-    body {
-        margin-top: 20px;
-    }
-
-    .timeline-steps {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap
-    }
-
-    .timeline-steps .timeline-step {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin: 1rem
-    }
-
-    @media (min-width:768px) {
-        .timeline-steps .timeline-step:not(:last-child):after {
-            content: "";
-            display: block;
-            border-top: .25rem dotted #EB8600;
-            width: 3.46rem;
-            position: absolute;
-            left: 7.5rem;
-            top: .3125rem
-        }
-
-        .timeline-steps .timeline-step:not(:first-child):before {
-            content: "";
-            display: block;
-            border-top: .25rem dotted #EB8600;
-            width: 3.8125rem;
-            position: absolute;
-            right: 7.5rem;
-            top: .3125rem
-        }
-    }
-
-    .timeline-steps .timeline-content {
-        width: 10rem;
-        text-align: center
-    }
-
-    .timeline-steps .timeline-content .inner-circle {
-        border-radius: 1.5rem;
-        height: 2rem;
-        width: 2rem;
-        position: relative;
-        top: -8px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #EB8600
-    }
-
-
-    .timeline-steps .timeline-content .inner-circle.active {
-        background-color: black;
-    }
-
-    .parrafo {
-        font-family: 'Source Serif Pro', cursive !important;
-        color: #000000 !important;
-        font-size: 18px !important;
-        text-align: center !important;
-        font-weight: 700 !important;
-    }
-
-    /*LETRA SOBRE NOSOTROS*/
-    .tittle {
-        font-family: 'Source Serif Pro', cursive !important;
-        color: #000000 !important;
-        font-size: 25px !important;
-        font-weight: 700 !important;
-        top: -166px !important;
+        background-color: #969FAA !important;
+        border: 2px solid #969FAA !important;
+        border-radius: 15px !important;
+        width: 617px !important;
+        height: 673px !important;
+        top: 100px !important;
         position: relative !important;
-        left: 89px !important;
+        left: 83px !important;
+
+    }
+
+    .selectortwo {
+        background-color: #FFFFFF !important;
+        border: 2px solid #EB8600 !important;
+        border-radius: 15px !important;
+        width: 604px !important;
+        height: 665px !important;
+        position: relative !important;
+        left: 4px !important;
+    }
+
+    /*LINEAS HORIZONTALES IZQUIERDA*/
+
+    .horizontal-line {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 156px;
+        height: 20px;
+        left: 24px;
+    }
+
+    .horizontal-linetwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 155px;
+        height: 20px;
+        left: 24px;
+
+    }
+
+    .lineaIzquierda {
+        position: relative;
+        top: 30px;
+    }
+
+    /* LINEAS HORIZONTALES DERECHA*/
+
+    .lineaderecha {
+        position: relative;
+        top: -52px;
+
+    }
+
+    .horizontal-derecha {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 153px;
+        height: 20px;
+        left: 423px;
+    }
+
+    .horizontal-derechatwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 153px;
+        height: 20px;
+        left: 423px;
+    }
+
+    .media2 {
+        position: relative !important;
+        top: 80px !important;
+        width: 565px !important;
+        height: 255px !important;
+        left: 25px !important;
+    
+
+    }
+
+}
+
+/*POP UP */
+.botenesPopup {
+    background-color: #EB8600 !important;
+    border-color: #EB8600 !important;
+    color: white !important;
+    border-radius: 9px;
+    height: 37px;
+
+}
+
+.letraform {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #080808 !important;
+    font-size: 17px !important;
+
+}
+
+/*ESTILOS NOSOTROS*/
+
+.dj-banner {
+    margin: 30px 0;
+    position: relative;
+}
+
+.dj-banner .dj-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.dj-banner .dj-bg img {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.dj-banner .dj-text {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.dj-banner .dj-bg img {
+    margin-right: 100px;
+}
+
+.dj-banner .dj-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    width: 50%;
+    text-align: left;
+}
+
+.dj-banner .dj-text h1 {
+    font-size: calc(2 * 1.5vw);
+}
+
+.dj-banner .dj-text p {
+    font-size: calc(1.2 * 1.5vw);
+}
+
+.cuadradoNosotros {
+    border-radius: 5px !important;
+    background: #EB8600 !important;
+    border-color: #EB8600 !important;
+    height: 67px !important;
+    color: white !important;
+    width: 222px !important;
+    text-align: center !important;
+    font-size: 25px !important;
+    padding: 10px 0 !important;
+    font-family: 'Source Serif Pro', serif !important;
+    font-weight: 700;
+    position: relative;
+    left: 4px;
+    top: -15px;
+}
+
+.cuadrobajo {
+    border-radius: 5px !important;
+    background: black !important;
+    border-color: black !important;
+    height: 67px !important;
+    width: 222px !important;
+    padding: 10px 0 !important;
+    position: relative;
+    left: 476px;
+}
+
+/* TIMELINE / NOSOTROS */
+
+body {
+    margin-top: 20px;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem;
+}
+
+.timeline-steps .timeline-step:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: .25rem dotted #EB8600;
+    width: 3.46rem;
+    position: absolute;
+    left: 7.5rem;
+    top: .3125rem;
+}
+
+.timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: .25rem dotted #EB8600;
+    width: 3.8125rem;
+    position: absolute;
+    right: 7.5rem;
+    top: .3125rem;
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    top: -8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EB8600;
+}
+
+.timeline-steps .timeline-content .inner-circle.active {
+    background-color: black;
+}
+
+.parrafo {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #000000 !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+}
+
+/* LETRA SOBRE NOSOTROS */
+.tittle {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #000000 !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    top: -166px !important;
+    position: relative !important;
+    left: 89px !important;
+}
+
+.content {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #000000 !important;
+    font-size: 17px !important;
+    font-weight: 700;
+    left: 10%;
+    position: relative;
+    top: -291px;
+    justify-content: center;
+    letter-spacing: 2px;
+    line-height: 39px;
+    max-width: 900px;
+    display: flex;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LINEA NOSOTROS */
+.hr {
+    border: none;
+    border-top: 1px solid #343F4B;
+    margin: 10px 0;
+    overflow-x: hidden;
+}
+
+/* IMAGENES NOSOTROS HISTORIA */
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    position: relative;
+    top: -19px;
+    left: 1px;
+    opacity: 1;
+}
+
+.image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+}
+
+/* CUADRO DE FONDO IMAGENES HISTORIA */
+
+.cuadro-negro {
+    width: 100%;
+    max-width: 289px;
+    height: 213px;
+    position: relative;
+    top: -188px;
+    left: 143px;
+    background-color: #70777E;
+    opacity: 0.73;
+}
+
+.cuadro-negro2 {
+    width: 100%;
+    max-width: 289px;
+    height: 213px;
+    position: relative;
+    top: -399px;
+    left: 522px;
+    background-color: #70777E;
+    opacity: 0.73;
+}
+
+.image-container2 {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    position: relative;
+    top: -19px;
+    left: 0px;
+    opacity: 1;
+}
+
+.cuadro-negro3 {
+    width: 100%;
+    max-width: 289px;
+    height: 213px;
+    position: relative;
+    top: -614px;
+    left: 897px;
+    background-color: #70777E;
+    opacity: 0.73;
+}
+
+.image-container3 {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    position: relative;
+    top: -19px;
+    left: 0px;
+    opacity: 1;
+}
+
+.posionImg {
+    position: relative;
+    top: 45px;
+    left: 32px;
+    width: 200px;
+    height: 150px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .dj-banner .dj-text {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .dj-banner .dj-bg img {
+        margin-right: 0;
     }
 
     .content {
-
-        font-family: 'Source Serif Pro', cursive !important;
-        color: #000000 !important;
-        font-size: 17px !important;
-        font-weight: 700;
-        left: 371px;
-        position: relative;
-        top: -291px;
-        justify-content: center;
-        letter-spacing: 2px;
-        line-height: 39px;
-        width: 900px;
-        display: flex;
-        height: 100px;
-
+        top: 0;
+        left: 0;
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 20px;
     }
 
-    /*LINEA NOSOTROS */
-    .hr {
-        border: none;
-        /* Remueve el borde predeterminado */
-        border-top: 1px solid #343F4B;
-        /* Establece el estilo de la línea */
-        margin: 10px 0;
-        /* Agrega margen superior e inferior para separar elementos */
-        overflow-x: hidden;
-    }
-
-    /*BOILITA TIMELINE*/
-
-
-    /*IMAGENES NOSOTROS HISTORIA*/
-
-    .image-container {
-        position: relative;
-    }
-
-    .image-container img {
-        width: 270px;
-        height: 213px;
-        position: relative;
-        top: -19px;
-        left: 1px;
-        opacity: 106%;
-    }
-
-
-    .image-container h2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        padding: 10px;
-    }
-
-    /*CUADRO DE FONDO IMAGENES HISTORIA*/
-
-    .cuadro-negro {
-        width: 289px;
-        height: 213px;
-        position: relative;
-        top: -188px;
-        left: 143px;
-        background-color: #70777E;
-        opacity: 73%;
-    }
-
-    .cuadro-negro2 {
-        width: 289px;
-        height: 213px;
-        position: relative;
-        top: -399px;
-        left: 522px;
-        background-color: #70777E;
-        opacity: 73%;
-    }
-
-    .image-container2 {
-        width: 270px;
-        height: 198px;
-        position: relative;
-        top: -19px;
-        left: 0px;
-        opacity: 106%;
-    }
-
+    .cuadro-negro,
+    .cuadro-negro2,
     .cuadro-negro3 {
-        width: 289px;
-        height: 213px;
-        position: relative;
-        top: -614px;
-        left: 897px;
-        background-color: #70777E;
-        opacity: 73%;
+        top: 0;
+        left: 0;
+        position: static;
+        margin: 20px auto;
     }
 
+    .image-container img,
+    .image-container2,
     .image-container3 {
-        width: 270px;
-        height: 198px;
-        position: relative;
-        top: -19px;
-        left: 0px;
-        opacity: 106%;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        position: static;
+        opacity: 1;
     }
-
-    .posionImg {
-        position: relative;
-        top: 45px;
-        left: 32px;
-    }
-
-    /*EJEMPLO
-
-    .inner-circle {
-        width: 20px;
-        height: 20px;
-        background-color: black;
-        border-radius: 50%;
-        display: none;
-      Para ocultar la bolita negra inicialmente 
-    }
-*/
-
 
 }

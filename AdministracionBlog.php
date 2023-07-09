@@ -86,6 +86,11 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
+
+        // Pop up 
+        $('#myModal').on('shown.bs.modal', function() {
+            $('#myInput').trigger('focus')
+        })
     </script>
 
 
@@ -104,45 +109,159 @@
                 <div class="horizontal-derecha"></div>
                 <div class="horizontal-derechatwo"></div>
             </div>
-            <div class="table-responsive " style="position: relative;
-                top: 80px;  width: 955px;
-                height: 950px;
-                left: 25px;">
-                <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th scope="col-sm-2" class="table-Gray">Código</th>
-                            <th scope="col-sm-2" class="table-Gray">Titulo</th>
-                            <th scope="col-sm-2" class="table-Gray">Autor</th>
-                            <th scope="col-sm-2" class="table-Gray">Fecha</th>
-                            <th scope="col-sm-2" class="table-Gray">Descripcion</th>
-                            <th scope="col-sm-2" class="table-Gray">Imagen</th>
-                            <th scope="col-sm-2" class="table-Gray">Estado</th>
-                            <th scope="col-sm-2" class="table-Gray">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col-sm-2 table-orange">02457</td>
-                            <td class="col-sm-2 table-orange">Teorias Pedagogicas</td>
-                            <td class="col-sm-2 table-orange">Regina de Miguel</td>
-                            <td class="col-sm-2 table-orange">30/04/2023</td>
-                            <td class="col-sm-2 table-orange">Tecnicas inclusivas para la pedagogia actualmente...</td>
-                            <td class="col-sm-2 table-orange"><img src="./Imagenes/pedagogica.png" alt="MDN" width="50px" height="50px"></td>
-                            <td class="col-sm-2 justificarIcon table-orange">Activo</td>
-                            <td class="col-sm-2 justificarIcon table-orange">
-                                <button class="form-control" data-toggle="tooltip" title="Editar"><i class="bi bi-pencil-square"></i></button>
-                                <button class="form-control" data-toggle="tooltip" title="Desactivar"><i class="bi bi-x-circle-fill"></i></button>
+            <div class="table-responsive media2" >
+                <div style="overflow-x:auto;">
+                    <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th scope="col-sm-2" class="table-Gray">Código</th>
+                                <th scope="col-sm-2" class="table-Gray">Titulo</th>
+                                <th scope="col-sm-2" class="table-Gray">Autor</th>
+                                <th scope="col-sm-2" class="table-Gray">Fecha</th>
+                                <th scope="col-sm-2" class="table-Gray">Descripcion</th>
+                                <th scope="col-sm-2" class="table-Gray">Imagen</th>
+                                <th scope="col-sm-2" class="table-Gray">Estado</th>
+                                <th scope="col-sm-2" class="table-Gray">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-sm-2 table-orange">02457</td>
+                                <td class="col-sm-2 table-orange">Teorias Pedagogicas</td>
+                                <td class="col-sm-2 table-orange">Regina de Miguel</td>
+                                <td class="col-sm-2 table-orange">30/04/2023</td>
+                                <td class="col-sm-2 table-orange">Tecnicas inclusivas para la pedagogia actualmente...</td>
+                                <td class="col-sm-2 table-orange"><img src="./Imagenes/pedagogica.png" alt="MDN" width="50px" height="50px"></td>
+                                <td class="col-sm-2 justificarIcon table-orange">Activo</td>
+                                <td class="col-sm-2 justificarIcon table-orange">
+                                    <button class="form-control" data-toggle="tooltip" title="Editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="form-control" data-toggle="tooltip" title="Desactivar"><i class="bi bi-x-circle-fill"></i></button>
 
-                            </td>
+                                </td>
 
-                        </tr>
+                            </tr>
 
-                    </tbody>
-                </table>
-                <button class="button tooltiptext" data-toggle="tooltip" title="Agregar">Agregar</button>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
             </div>
 
+        </div>
+    </div>
+
+    <!-- POP UP EDITAR -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Editar Blog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Código</label>
+                                    <input type="number" class="form-control" id="txt_codigo" placeholder="02457" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_autor" class="letraform">Autor</label>
+                                    <input type="text" class="form-control" id="txt_autor" placeholder="Regina de Miguel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Estado</label>
+                                    <input type="text" class="form-control" id="txt_estado" placeholder="Activado">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_titulo" class="letraform">Título</label>
+                                    <input type="text" class="form-control" id="txt_titulo" placeholder="Teorías Pedagógicas">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_fecha" class="letraform">Fecha</label>
+                                    <input type="date" class="form-control" id="txt_fecha" placeholder="MM/DD/YYYY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="file_imagen" class="letraform">Imagen</label>
+                                    <input type="file" class="form-control-file" id="file_imagen">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1" class="letraform">Descripción</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Técnicas inclusivas para la pedagogía actualmente..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                    <button type="button" class="botenesPopup">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POP UP AGREGAR -->
+    <div class="modal fade" id="pop_agregar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Agregar Blog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Código</label>
+                                    <input type="number" class="form-control" id="txt_codigos">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_autor" class="letraform">Autor</label>
+                                    <input type="text" class="form-control" id="txt_autores">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Estado</label>
+                                    <input type="text" class="form-control" id="txt_estados">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_titulo" class="letraform">Título</label>
+                                    <input type="text" class="form-control" id="txt_titulos">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_fecha" class="letraform">Fecha</label>
+                                    <input type="date" class="form-control" id="txt_fechas">
+                                </div>
+                                <div class="form-group">
+                                    <label for="file_imagen" class="letraform">Imagen</label>
+                                    <input type="file" class="form-control-file" id="file_imagens">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1" class="letraform">Descripción</label>
+                                    <textarea class="form-control" id="text_area_descripcion" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                    <button type="button" class="botenesPopup">Guardar</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
