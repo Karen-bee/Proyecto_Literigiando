@@ -10,6 +10,17 @@
     position: relative !important;
 }
 
+.custom-headingUsu {
+
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #47525E !important;
+    font-size: 25px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    top: 20px !important;
+    position: relative !important;
+}
+
 .position table {
 
     position: relative !important;
@@ -65,7 +76,7 @@
     height: 1010px !important;
     top: 100px !important;
     position: relative !important;
-    left: 130px !important;
+    left: 184px !important;
 }
 
 .selectortwo {
@@ -128,6 +139,29 @@
     height: 20px;
     left: 690px;
 }
+
+/* LINES HORIZONRALES DERECHA TABLA USUARIO */
+
+.horizontal-derecha2 {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 50px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+.horizontal-derechatwo2 {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+
+
 
 .button {
     font-family: 'Source Serif Pro', cursive !important;
@@ -212,7 +246,150 @@
 
 }
 
-/*PANTALLAS 767 */
+
+
+
+/*PANTALLAS 992 portatiles*/
+
+@media (max-width: 992px) {
+    .table-responsive {
+        top: 0;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    /*TIPO DE LETRA TITULO*/
+
+    .custom-headingUsu {
+
+        font-family: 'Source Serif Pro', cursive !important;
+        color: #47525E !important;
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        top: 20px !important;
+        position: relative !important;
+        column-count: 2 !important;
+        column-gap: 20px !important;
+        margin-left: 219px !important;
+    }
+
+    .card {
+
+        background-color: #969FAA !important;
+        border: 2px solid #969FAA !important;
+        border-radius: 15px !important;
+        width: 813px !important;
+        height: 813px !important;
+        top: 100px !important;
+        position: relative !important;
+        left: 83px !important;
+
+    }
+
+    .selectortwo {
+        background-color: #FFFFFF !important;
+        border: 2px solid #EB8600 !important;
+        border-radius: 15px !important;
+        width: 801px !important;
+        height: 801px !important;
+        position: relative !important;
+        left: 4px !important;
+    }
+
+    /*LINEAS HORIZONTALES IZQUIERDA*/
+
+    .horizontal-line {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 207px;
+        height: 20px;
+        left: 48px;
+    }
+
+    .horizontal-linetwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 207px;
+        height: 20px;
+        left: 48px;
+
+    }
+
+    .lineaIzquierda {
+        position: relative;
+        top: 30px;
+    }
+
+    /* LINEAS HORIZONTALES DERECHA*/
+
+    .lineaderecha {
+        position: relative;
+        top: -52px;
+
+    }
+
+    .horizontal-derecha {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 207px;
+        height: 20px;
+        left: 539px;
+    }
+
+    .horizontal-derechatwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 207px;
+        height: 20px;
+        left: 539px;
+    }
+
+    .horizontal-derecha2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 27px;
+        width: 213px;
+        height: 20px;
+        left: 490px;
+
+
+    }
+
+    .horizontal-derechatwo2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: -4px;
+        width: 213px;
+        height: 20px;
+        left: 490px;
+    }
+
+    .media2 {
+        position: relative !important;
+        top: 80px !important;
+        width: 753px !important;
+        height: 341px !important;
+        left: 25px !important;
+    }
+
+    .pop {
+        width: 461px;
+        margin-left: 265px;
+    }
+
+}
+
+/*PANTALLAS 767 TABLETAS*/
 
 @media (max-width: 767px) {
     .table-responsive {
@@ -237,6 +414,22 @@
         position: relative !important;
         left: 83px !important;
 
+    }
+
+    /*TITULO*/
+
+    .custom-headingUsu {
+
+        font-family: 'Source Serif Pro', cursive !important;
+        color: #47525E !important;
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        top: 20px !important;
+        position: relative !important;
+        column-count: 2 !important;
+        column-gap: 20px !important;
+        margin-left: 219px !important;
     }
 
     .selectortwo {
@@ -301,17 +494,184 @@
         left: 423px;
     }
 
+    /*LINEAS USUARIO*/
+
+    .horizontal-derecha2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 25px;
+        width: 154px;
+        height: 20px;
+        left: 418px;
+    }
+
+    .horizontal-derechatwo2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: -5px;
+        width: 154px;
+        height: 20px;
+        left: 418px;
+    }
+
     .media2 {
         position: relative !important;
         top: 80px !important;
         width: 565px !important;
-        height: 255px !important;
+        height: 565px !important;
         left: 25px !important;
-    
+
 
     }
 
+    .pop {
+        width: 321px;
+        margin-left: 229px;
+    }
+
 }
+
+/*PANTALLAS 576 MOVILES*/
+
+@media (max-width: 576px) {
+    .custom-headingUsu {
+
+        font-family: 'Source Serif Pro', cursive !important;
+        color: #47525E !important;
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        top: 20px !important;
+        position: relative !important;
+        margin-left: 145px !important;
+    }
+
+    
+    .table-responsive {
+        top: 0;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+
+    /*LINEAS USUARIO*/
+
+    .horizontal-derecha2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 25px;
+        width: 154px;
+        height: 20px;
+        left: 335px;
+    }
+
+    .horizontal-derechatwo2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: -5px;
+        width: 154px;
+        height: 20px;
+        left: 335px;
+    }
+
+    .card {
+
+        background-color: #969FAA !important;
+        border: 2px solid #969FAA !important;
+        border-radius: 15px !important;
+        width: 515px !important;
+        height: 673px !important;
+        top: 100px !important;
+        position: relative !important;
+        margin-left: -54px !important;
+
+    }
+
+    .selectortwo {
+        background-color: #FFFFFF !important;
+        border: 2px solid #EB8600 !important;
+        border-radius: 15px !important;
+        width: 510px !important;
+        height: 665px !important;
+        position: relative !important;
+        left: -1px !important;
+    }
+
+    /*LINEAS HORIZONTALES IZQUIERDA*/
+
+    .horizontal-line {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 118px;
+        height: 20px;
+        left: 19px;
+    }
+
+    .horizontal-linetwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 118px;
+        height: 20px;
+        left: 19px;
+
+    }
+
+    .lineaIzquierda {
+        position: relative;
+        top: 30px;
+    }
+
+    /* LINEAS HORIZONTALES DERECHA*/
+
+    .lineaderecha {
+        position: relative;
+        top: -52px;
+
+    }
+
+    .horizontal-derecha {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 102px;
+        height: 20px;
+        left: 376px;
+    }
+
+    .horizontal-derechatwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 102px;
+        height: 20px;
+        left: 376px;
+    }
+
+    .media2 {
+        position: relative !important;
+        top: 45px !important;
+        width: 457px !important;
+        height: 417px !important;
+        left: 25px !important;
+
+
+    }
+
+    .pop {
+        width: 321px;
+        margin-left: 137px;
+    }
+
+}
+
+
 
 /*POP UP */
 .botenesPopup {
