@@ -38,7 +38,7 @@
         const myTimeout1 = setTimeout(myGreeting1, 5000);
         const myTimeout2 = setTimeout(myGreeting2, 5000);
         const myTimeout3 = setTimeout(myGreeting3, 5000);
-    
+
 
         //FUNCIONES 
 
@@ -51,7 +51,7 @@
 
             }
         }
-       
+
         // Buscar
         function myGreeting1() {
             if (document.getElementById("example_info") != null) {
@@ -86,6 +86,12 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
+
+
+        // Pop up 
+        $('#myModal').on('shown.bs.modal', function() {
+            $('#myInput').trigger('focus')
+        })
     </script>
 
 
@@ -99,50 +105,168 @@
                 <div class="horizontal-line"></div>
                 <div class="horizontal-linetwo"></div>
             </div>
-            <h1 class="custom-heading">Administrador de Usuarios</h1>
+            <h1 class="custom-headingUsu">Administrador de Usuarios</h1>
             <div class="lineaderecha">
-                <div class="horizontal-derecha"></div>
-                <div class="horizontal-derechatwo"></div>
+                <div class="horizontal-derecha2"></div>
+                <div class="horizontal-derechatwo2"></div>
             </div>
-            <div class="table-responsive " style="position: relative;
-                top: 80px;  width: 955px;
-                height: 950px;
-                left: 25px;">
-                <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th scope="col-sm-2" class="table-Gray">Código</th>
-                            <th scope="col-sm-2" class="table-Gray">Nombre</th>
-                            <th scope="col-sm-2" class="table-Gray">Apellido</th>
-                            <th scope="col-sm-2" class="table-Gray">Dirección</th>
-                            <th scope="col-sm-2" class="table-Gray">Teléfono</th>
-                            <th scope="col-sm-2" class="table-Gray">Nombre de Usuario</th>
-                            <th scope="col-sm-2" class="table-Gray">Email</th>
-                            <th scope="col-sm-2" class="table-Gray">Rol</th>
-                            <th scope="col-sm-2" class="table-Gray">Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col-sm-2 table-orange">01875</td>
-                            <td class="col-sm-2 table-orange">Ana Maria</td>
-                            <td class="col-sm-2 table-orange">Cortez Carreño</td>
-                            <td class="col-sm-2 table-orange">Cra 105c # 25f-75</td>
-                            <td class="col-sm-2 table-orange">7690190</td>
-                            <td class="col-sm-2 table-orange">AnaM78</td>
-                            <td class="col-sm-2 table-orange">AnaM85Cortez@gmail.com </td>
-                            <td class="col-sm-2 table-orange">Usuario</td>
-                            <td class="col-sm-2 justificarIcon table-orange"><i class="bi bi-circle-fill"></i></td>
+            <div class="table-responsive media2">
+                <div style="overflow-x:auto;">
+                    <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th scope="col-sm-2" class="table-Gray">Código</th>
+                                <th scope="col-sm-2" class="table-Gray">Nombre</th>
+                                <th scope="col-sm-2" class="table-Gray">Apellido</th>
+                                <th scope="col-sm-2" class="table-Gray">Dirección</th>
+                                <th scope="col-sm-2" class="table-Gray">Teléfono</th>
+                                <th scope="col-sm-2" class="table-Gray">Nombre de Usuario</th>
+                                <th scope="col-sm-2" class="table-Gray">Email</th>
+                                <th scope="col-sm-2" class="table-Gray">Rol</th>
+                                <th scope="col-sm-2" class="table-Gray">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-sm-2 table-orange">01875</td>
+                                <td class="col-sm-2 table-orange">Ana Maria</td>
+                                <td class="col-sm-2 table-orange">Cortez Carreño</td>
+                                <td class="col-sm-2 table-orange">Cra 105c # 25f-75</td>
+                                <td class="col-sm-2 table-orange">7690190</td>
+                                <td class="col-sm-2 table-orange">AnaM78</td>
+                                <td class="col-sm-2 table-orange">AnaM85Cortez@gmail.com </td>
+                                <td class="col-sm-2 table-orange">Usuario</td>
+                                <td class="col-sm-2 justificarIcon table-orange"><i class="bi bi-circle-fill"></i></td>
 
-                        </tr>
+                            </tr>
 
-                    </tbody>
-                </table>
-                <button class="button tooltiptext" data-toggle="tooltip" title="Agregar">Agregar</button>
-                <button class="button tooltiptext" data-toggle="tooltip" title="Actualizar">Actualizar</button>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
+                <button class="button tooltiptext" data-toggle="tooltip" title="Actualizar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Actualizar</button>
 
             </div>
 
+        </div>
+    </div>
+
+    <!-- POP UP EDITAR -->
+
+    <div class="modal fade pop" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Editar Usuarios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Código</label>
+                                    <input type="number" class="form-control" id="txt_codigo" placeholder="01875" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_autor" class="letraform">Apellido</label>
+                                    <input type="text" class="form-control" id="txt_apellido" placeholder="Cortez Carreño">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Telefono</label>
+                                    <input type="text" class="form-control" id="txt_telefono" placeholder="7690190">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Email</label>
+                                    <input type="email" class="form-control" id="txt_email" placeholder="AnaM85Cortez@gmail.com	">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_titulo" class="letraform">Nombre</label>
+                                    <input type="text" class="form-control" id="txt_nombre" placeholder="Ana Maria">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_fecha" class="letraform">Dirección</label>
+                                    <input type="text" class="form-control" id="txt_direccion" placeholder="Cra 105c # 25f-75">
+                                </div>
+                                <div class="form-group">
+                                    <label for="file_imagen" class="letraform">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="txt_usuario" placeholder="AnaM78">
+                                </div>
+                                <div class="form-group">
+                                    <label for="file_imagen" class="letraform">Rol</label>
+                                    <input type="text" class="form-control" id="txt_rol" placeholder="Usuario">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                    <button type="button" class="botenesPopup">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POP UP AGREGAR -->
+    <div class="modal fade pop" id="pop_agregar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Agregar Usuarios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Código</label>
+                                    <input type="number" class="form-control" id="txt_codigo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_autor" class="letraform">Apellido</label>
+                                    <input type="text" class="form-control" id="txt_apellido" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Telefono</label>
+                                    <input type="text" class="form-control" id="txt_telefono" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Email</label>
+                                    <input type="email" class="form-control" id="txt_email" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_titulo" class="letraform">Nombre</label>
+                                    <input type="text" class="form-control" id="txt_nombre" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_fecha" class="letraform">Dirección</label>
+                                    <input type="text" class="form-control" id="txt_direccion" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="file_imagen" class="letraform">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="txt_usuario" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="file_imagen" class="letraform">Rol</label>
+                                    <input type="text" class="form-control" id="txt_rol">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                    <button type="button" class="botenesPopup">Guardar</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
