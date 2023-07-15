@@ -1,48 +1,63 @@
+function mostrarInformacion(seleccion, elemento) {
 
-// FUNCION TIMELINE NOSOTROS
+    var historiaInfo = document.getElementById('historia-info');
+    var objetivosInfo = document.getElementById('objetivos-info');
 
-const timelineItems = document.getElementsByClassName('timeline-content');
+    // Restablece el contenido de ambos elementos
+    historiaInfo.innerHTML = '';
+    objetivosInfo.innerHTML = '';
 
-// Asignar un evento de clic a cada elemento
-for (let i = 0; i < timelineItems.length; i++) {
-    timelineItems[i].addEventListener('click', function () {
+    // Obtener info historia
+    const title = elemento.getAttribute('data-original-title');
+    const content = elemento.getAttribute('data-content');
+    const img = elemento.getAttribute('data-img');
+    const imgnino = elemento.getAttribute('data-nino');
+    const imgnino1 = elemento.getAttribute('data-nino1');
+    const imgnino2 = elemento.getAttribute('data-nino2');
 
-        // Obtener el título y el contenido del elemento seleccionado
-        const title = this.getAttribute('data-original-title');
-        const content = this.getAttribute('data-content');
-        const img = this.getAttribute('data-img');
-        const imgnino = this.getAttribute('data-nino');
-        const imgnino1 = this.getAttribute('data-nino1');
-        const imgnino2 = this.getAttribute('data-nino2');
+    // Obtener info Objetivos
+    const imgObje = elemento.getAttribute('data-imgRec');
 
-        // Actualizar el contenido del div 'selected-info'
-        const selectedInfoDiv = document.getElementById('circle');
-        selectedInfoDiv.innerHTML = `
+
+    // Comprueba la selección y muestra la información correspondiente
+    if (seleccion === 'historia') {
+        historiaInfo.innerHTML = `
         ${img}
-      <h4 class='tittle'>${title}</h4>
-      <p class='content'>${content}</p>
-      <div class="posionImg">
-      <div class="cuadro-negro">
-      <div class="image-container">
-      ${imgnino}
-      </div>
-      </div>
-      <div class="cuadro-negro2">
-      <div class="image-container2">
-      ${imgnino1}
-      </div>
-      </div>
-      <div class="cuadro-negro3">
-      <div class="image-container3">
-      ${imgnino2}
-      </div>
-      </div>
-      </div>
-
+        <h4 class='tittle'>${title}</h4>
+        <p class='content'>${content}</p>
+        <div class="posionImg">
+          <div class="cuadro-negro">
+            <div class="image-container">
+              ${imgnino}
+            </div>
+          </div>
+          <div class="cuadro-negro2">
+            <div class="image-container2">
+              ${imgnino1}
+            </div>
+          </div>
+          <div class="cuadro-negro3">
+            <div class="image-container3">
+              ${imgnino2}
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (seleccion === 'objetivos') {
+        objetivosInfo.innerHTML = `
+      <div class='imgObj'> ${imgObje}</div>
+      <div class='imgObj'> ${img}</div>
+      <h4 class='tittleObj'>${title}</h4>
+      <p class='contentObj'>${content}</p>
+     
     `;
-
-    });
+    }
 }
+
+
+
+
+
 
 
 // FUNCION ACTIVAR TIMELINE NOSOTROS 

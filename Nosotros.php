@@ -40,14 +40,13 @@
             <div class="col">
                 <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="Historia" data-content="El proyecto de desarrollo social Literagiando, se inicio con el trabajo de mas de 6 años, se ha venido consolidando como un medio de formación y promoción, Literagiando ha visitado mas de 10 instituciones educativas de la ciudad de Bogotá, ofreciendo experiencias para el aprendizaje de niños, niñas y sus cuidadores" data-original-title="Historia" data-img="<img  src='./Imagenes/circulo.jpeg' alt='Niños' width='267px' height='240px'>" data-nino="<img src='./Imagenes/niños.jpeg' alt='Descripción de la imagen' width='270px' height='213px'>" data-nino1="<img src='./Imagenes/niños.jpeg' alt='Descripción de la imagen' class='imagetam'  width='270px' height='213px'>" data-nino2="<img src='./Imagenes/niños.jpeg' alt='Descripción de la imagen' class='imagetam'  width='270px' height='213px'>">
+                        <div class="timeline-content" onclick="mostrarInformacion('historia', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="Historia" data-content="El proyecto de desarrollo social Literagiando, se inicio con el trabajo de mas de 6 años, se ha venido consolidando como un medio de formación y promoción, Literagiando ha visitado mas de 10 instituciones educativas de la ciudad de Bogotá, ofreciendo experiencias para el aprendizaje de niños, niñas y sus cuidadores" data-original-title="Historia" data-img="<img  src='./Imagenes/circulo.jpeg' alt='Niños' width='267px' height='240px'>" data-nino="<img src='./Imagenes/niños.jpeg' alt='Descripción de la imagen' width='270px' height='213px'>" data-nino1="<img src='./Imagenes/niños.jpeg' alt='Descripción de la imagen' class='imagetam'  width='270px' height='213px'>" data-nino2="<img src='./Imagenes/niños.jpeg' alt='Descripción de la imagen' class='imagetam'  width='270px' height='213px'>">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Historia</p>
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Generar espacios para el desarrollo de las habilidades comunicativas, a través de la creación de ambientes lúdico – pedagógicos, promoción de hábitos en torno a la lectura y la escritura y animación a la lectura desde la biblioteca fija e itinerante y los espacios de difusión que posee el proyecto." 
-                        data-original-title="Objetivo Principal">
+                        <div class="timeline-content" onclick="mostrarInformacion('objetivos', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Generar espacios para el desarrollo de las habilidades comunicativas, a través de la creación de ambientes lúdico – pedagógicos, promoción de hábitos en torno a la lectura y la escritura y animación a la lectura desde la biblioteca fija e itinerante y los espacios de difusión que posee el proyecto." data-original-title="Objetivo Principal" data-img="<img  src='./Imagenes/circulo.jpeg' alt='Niños' width='267px' height='240px'>" data-imgRec="<img  src='./Imagenes/fondo.jpeg' alt='Niños' width='267px' height='240px'>">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Objetivos</p>
                         </div>
@@ -79,14 +78,20 @@
 
         <div class="hr"></div>
 
-        <div id="selected-info" class="my-4">
-            <div id="circle">
-            </div>
+
+        <div id="historia-info" class="my-4">
+            <!-- Contenido de la historia -->
         </div>
-        <!-- Imagenes -->
+
+        <div id="objetivos-info" class="my-4">
+            <!-- Contenido de los objetivos -->
+        </div>
+
 
 
         <script src="script.js"></script>
+
+
 
 </body>
 
