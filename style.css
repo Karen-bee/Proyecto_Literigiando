@@ -963,16 +963,23 @@ body {
 
 .imgObj {
     margin-left: 1061px;
+    top: -168px;
+    position: relative;
+
 }
 
 .tittleObj {
     column-count: 2 !important;
     column-gap: 20px !important;
     margin-left: 1150px;
-    top: -181px;
+    top: -355px;
     position: relative;
     font-family: 'Source Serif Pro', cursive !important;
     font-size: 25px !important;
+    position: relative;
+    /* top: 20px; */
+    z-index: 2;
+
 }
 
 
@@ -982,7 +989,7 @@ body {
     font-weight: 700;
     left: -6%;
     position: relative;
-    top: -291px;
+    top: -481px;
     justify-content: center;
     letter-spacing: 2px;
     line-height: 39px;
@@ -991,4 +998,42 @@ body {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.fondoobj {
+    position: relative;
+    width: 922px;
+    height: 178px;
+    border: 2px solid #000000;
+    left: 126px;
+    top: 54px;
+
+}
+
+.mancha {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 223px;
+    background-color: #FEDF5A;
+    opacity: 0.56;
+    border-radius: 50%;
+    transform: rotate(-1deg);
+    z-index: -1;
+}
+
+.img2 {
+    position: relative;
+    top: -354px;
+}
+
+.SecundObj{
+    column-count: 2 !important;
+    column-gap: 8px !important;
+    margin-left: 95px !important;
+    top: -519px !important;
+    position: relative !important;
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 25px !important;
 }

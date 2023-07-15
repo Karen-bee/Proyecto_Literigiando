@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" onclick="mostrarInformacion('objetivos', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Generar espacios para el desarrollo de las habilidades comunicativas, a través de la creación de ambientes lúdico – pedagógicos, promoción de hábitos en torno a la lectura y la escritura y animación a la lectura desde la biblioteca fija e itinerante y los espacios de difusión que posee el proyecto." data-original-title="Objetivo Principal" data-img="<img  src='./Imagenes/circulo.jpeg' alt='Niños' width='267px' height='240px'>" data-imgRec="<img  src='./Imagenes/fondo.jpeg' alt='Niños' width='267px' height='240px'>">
+                        <div class="timeline-content" onclick="mostrarInformacion('objetivos', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Generar espacios para el desarrollo de las habilidades comunicativas, a través de la creación de ambientes lúdico – pedagógicos, promoción de hábitos en torno a la lectura y la escritura y animación a la lectura desde la biblioteca fija e itinerante y los espacios de difusión que posee el proyecto." data-original-title="Objetivo Principal" data-img="<img  src='./Imagenes/circulo.jpeg' alt='Niños' width='267px' height='240px'>" data-secun-title="Objetivos Especificos">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Objetivos</p>
                         </div>

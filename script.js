@@ -16,7 +16,7 @@ function mostrarInformacion(seleccion, elemento) {
     const imgnino2 = elemento.getAttribute('data-nino2');
 
     // Obtener info Objetivos
-    const imgObje = elemento.getAttribute('data-imgRec');
+    const SecuTittle = elemento.getAttribute('data-secun-title');
 
 
     // Comprueba la selección y muestra la información correspondiente
@@ -45,11 +45,14 @@ function mostrarInformacion(seleccion, elemento) {
       `;
     } else if (seleccion === 'objetivos') {
         objetivosInfo.innerHTML = `
-      <div class='imgObj'> ${imgObje}</div>
+      <div class='fondoobj'>
+      <div class="mancha"></div>
+      </div>
       <div class='imgObj'> ${img}</div>
       <h4 class='tittleObj'>${title}</h4>
       <p class='contentObj'>${content}</p>
-     
+     <div class='img2' >${img}</div>
+     <h4 class='SecundObj'>${SecuTittle}</h4>
     `;
     }
 }
