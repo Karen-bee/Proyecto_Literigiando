@@ -1,0 +1,1039 @@
+/*ESTILOS DE ADMIN USUARIO*/
+.custom-heading {
+
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #47525E !important;
+    font-size: 25px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    top: 20px !important;
+    position: relative !important;
+}
+
+.custom-headingUsu {
+
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #47525E !important;
+    font-size: 25px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    top: 20px !important;
+    position: relative !important;
+}
+
+.position table {
+
+    position: relative !important;
+    top: 80px !important;
+    width: 955px;
+    height: 950px;
+    left: 25px;
+
+}
+
+.table-responsive table {
+
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+    /* Otros estilos adicionales */
+}
+
+.dataTables_length {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.dataTables_filter {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.dataTables_info {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.pagination {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.justificarIcon {
+    text-align: center;
+}
+
+.card {
+    background-color: #969FAA !important;
+    border: 2px solid #969FAA !important;
+    border-radius: 15px !important;
+    width: 1010px !important;
+    height: 1010px !important;
+    top: 100px !important;
+    position: relative !important;
+    left: 184px !important;
+}
+
+.selectortwo {
+    background-color: #FFFFFF !important;
+    border: 2px solid #EB8600 !important;
+    border-radius: 15px !important;
+    width: 1000px !important;
+    height: 1000px !important;
+    position: relative !important;
+    left: 4px !important;
+}
+
+/*LINEAS HORIZONTALES IZQUIERDA*/
+
+.horizontal-line {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 50px;
+    width: 270px;
+    height: 20px;
+    left: 29px;
+}
+
+.horizontal-linetwo {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 20px;
+    left: 29px;
+}
+
+.lineaIzquierda {
+    position: relative;
+    top: 25px;
+}
+
+/* LINEAS HORIZONTALES DERECHA*/
+
+.lineaderecha {
+    position: relative;
+    top: -49px;
+
+}
+
+.horizontal-derecha {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 50px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+.horizontal-derechatwo {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+/* LINES HORIZONRALES DERECHA TABLA USUARIO */
+
+.horizontal-derecha2 {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 50px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+.horizontal-derechatwo2 {
+    border-top: 3px solid #FFD185;
+    position: relative;
+    top: 20px;
+    width: 270px;
+    height: 20px;
+    left: 690px;
+}
+
+
+
+
+.button {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 16px;
+    background-color: #FFD185;
+    border: 2px solid #EB8600;
+    border-radius: 15px;
+    width: 39px;
+    height: 39px;
+    color: #FFFFFF;
+    line-height: 36px;
+    width: 145px;
+    text-align: center;
+    position: relative;
+    top: 47px;
+}
+
+.table-Gray {
+    background-color: #D7DADD;
+}
+
+.table-orange {
+    background-color: #FFF4E3;
+}
+
+/*TOOLTIP ESTILOS*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*COLOR BUTTON*/
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #5A6978 !important;
+    border-color: #5A6978 !important;
+}
+
+.media2 {
+    position: relative !important;
+    top: 80px !important;
+    width: 955px !important;
+    height: 950px !important;
+    left: 25px !important;
+
+}
+
+
+
+
+/*PANTALLAS 992 portatiles*/
+
+@media (max-width: 992px) {
+    .table-responsive {
+        top: 0;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    /*TIPO DE LETRA TITULO*/
+
+    .custom-headingUsu {
+
+        font-family: 'Source Serif Pro', cursive !important;
+        color: #47525E !important;
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        top: 20px !important;
+        position: relative !important;
+        column-count: 2 !important;
+        column-gap: 20px !important;
+        margin-left: 219px !important;
+    }
+
+    .card {
+
+        background-color: #969FAA !important;
+        border: 2px solid #969FAA !important;
+        border-radius: 15px !important;
+        width: 813px !important;
+        height: 813px !important;
+        top: 100px !important;
+        position: relative !important;
+        left: 83px !important;
+
+    }
+
+    .selectortwo {
+        background-color: #FFFFFF !important;
+        border: 2px solid #EB8600 !important;
+        border-radius: 15px !important;
+        width: 801px !important;
+        height: 801px !important;
+        position: relative !important;
+        left: 4px !important;
+    }
+
+    /*LINEAS HORIZONTALES IZQUIERDA*/
+
+    .horizontal-line {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 207px;
+        height: 20px;
+        left: 48px;
+    }
+
+    .horizontal-linetwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 207px;
+        height: 20px;
+        left: 48px;
+
+    }
+
+    .lineaIzquierda {
+        position: relative;
+        top: 30px;
+    }
+
+    /* LINEAS HORIZONTALES DERECHA*/
+
+    .lineaderecha {
+        position: relative;
+        top: -52px;
+
+    }
+
+    .horizontal-derecha {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 207px;
+        height: 20px;
+        left: 539px;
+    }
+
+    .horizontal-derechatwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 207px;
+        height: 20px;
+        left: 539px;
+    }
+
+    .horizontal-derecha2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 27px;
+        width: 213px;
+        height: 20px;
+        left: 490px;
+
+
+    }
+
+    .horizontal-derechatwo2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: -4px;
+        width: 213px;
+        height: 20px;
+        left: 490px;
+    }
+
+    .media2 {
+        position: relative !important;
+        top: 80px !important;
+        width: 753px !important;
+        height: 341px !important;
+        left: 25px !important;
+    }
+
+    .pop {
+        width: 461px;
+        margin-left: 265px;
+    }
+
+}
+
+/*PANTALLAS 767 TABLETAS*/
+
+@media (max-width: 767px) {
+    .table-responsive {
+        top: 0;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .card {
+
+        background-color: #969FAA !important;
+        border: 2px solid #969FAA !important;
+        border-radius: 15px !important;
+        width: 617px !important;
+        height: 673px !important;
+        top: 100px !important;
+        position: relative !important;
+        left: 83px !important;
+
+    }
+
+    /*TITULO*/
+
+    .custom-headingUsu {
+
+        font-family: 'Source Serif Pro', cursive !important;
+        color: #47525E !important;
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        top: 20px !important;
+        position: relative !important;
+        column-count: 2 !important;
+        column-gap: 20px !important;
+        margin-left: 219px !important;
+    }
+
+    .selectortwo {
+        background-color: #FFFFFF !important;
+        border: 2px solid #EB8600 !important;
+        border-radius: 15px !important;
+        width: 604px !important;
+        height: 665px !important;
+        position: relative !important;
+        left: 4px !important;
+    }
+
+    /*LINEAS HORIZONTALES IZQUIERDA*/
+
+    .horizontal-line {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 156px;
+        height: 20px;
+        left: 24px;
+    }
+
+    .horizontal-linetwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 155px;
+        height: 20px;
+        left: 24px;
+
+    }
+
+    .lineaIzquierda {
+        position: relative;
+        top: 30px;
+    }
+
+    /* LINEAS HORIZONTALES DERECHA*/
+
+    .lineaderecha {
+        position: relative;
+        top: -52px;
+
+    }
+
+    .horizontal-derecha {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 153px;
+        height: 20px;
+        left: 423px;
+    }
+
+    .horizontal-derechatwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 153px;
+        height: 20px;
+        left: 423px;
+    }
+
+    /*LINEAS USUARIO*/
+
+    .horizontal-derecha2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 25px;
+        width: 154px;
+        height: 20px;
+        left: 418px;
+    }
+
+    .horizontal-derechatwo2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: -5px;
+        width: 154px;
+        height: 20px;
+        left: 418px;
+    }
+
+    .media2 {
+        position: relative !important;
+        top: 80px !important;
+        width: 565px !important;
+        height: 565px !important;
+        left: 25px !important;
+
+
+    }
+
+    .pop {
+        width: 321px;
+        margin-left: 229px;
+    }
+
+}
+
+/*PANTALLAS 576 MOVILES*/
+
+@media (max-width: 576px) {
+    .custom-headingUsu {
+
+        font-family: 'Source Serif Pro', cursive !important;
+        color: #47525E !important;
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        top: 20px !important;
+        position: relative !important;
+        margin-left: 145px !important;
+    }
+
+
+    .table-responsive {
+        top: 0;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+
+    /*LINEAS USUARIO*/
+
+    .horizontal-derecha2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 25px;
+        width: 154px;
+        height: 20px;
+        left: 335px;
+    }
+
+    .horizontal-derechatwo2 {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: -5px;
+        width: 154px;
+        height: 20px;
+        left: 335px;
+    }
+
+    .card {
+
+        background-color: #969FAA !important;
+        border: 2px solid #969FAA !important;
+        border-radius: 15px !important;
+        width: 515px !important;
+        height: 673px !important;
+        top: 100px !important;
+        position: relative !important;
+        margin-left: -54px !important;
+
+    }
+
+    .selectortwo {
+        background-color: #FFFFFF !important;
+        border: 2px solid #EB8600 !important;
+        border-radius: 15px !important;
+        width: 510px !important;
+        height: 665px !important;
+        position: relative !important;
+        left: -1px !important;
+    }
+
+    /*LINEAS HORIZONTALES IZQUIERDA*/
+
+    .horizontal-line {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 118px;
+        height: 20px;
+        left: 19px;
+    }
+
+    .horizontal-linetwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 118px;
+        height: 20px;
+        left: 19px;
+
+    }
+
+    .lineaIzquierda {
+        position: relative;
+        top: 30px;
+    }
+
+    /* LINEAS HORIZONTALES DERECHA*/
+
+    .lineaderecha {
+        position: relative;
+        top: -52px;
+
+    }
+
+    .horizontal-derecha {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 50px;
+        width: 102px;
+        height: 20px;
+        left: 376px;
+    }
+
+    .horizontal-derechatwo {
+        border-top: 3px solid #FFD185;
+        position: relative;
+        top: 20px;
+        width: 102px;
+        height: 20px;
+        left: 376px;
+    }
+
+    .media2 {
+        position: relative !important;
+        top: 45px !important;
+        width: 457px !important;
+        height: 417px !important;
+        left: 25px !important;
+
+
+    }
+
+    .pop {
+        width: 321px;
+        margin-left: 137px;
+    }
+
+}
+
+
+
+/*POP UP */
+.botenesPopup {
+    background-color: #EB8600 !important;
+    border-color: #EB8600 !important;
+    color: white !important;
+    border-radius: 9px;
+    height: 37px;
+
+}
+
+.letraform {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #080808 !important;
+    font-size: 17px !important;
+
+}
+
+/*ESTILOS NOSOTROS*/
+
+.dj-banner {
+    margin: 30px 0;
+    position: relative;
+}
+
+.dj-banner .dj-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.dj-banner .dj-bg img {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.dj-banner .dj-text {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.dj-banner .dj-bg img {
+    margin-right: 100px;
+}
+
+.dj-banner .dj-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    width: 50%;
+    text-align: left;
+}
+
+.dj-banner .dj-text h1 {
+    font-size: calc(2 * 1.5vw);
+}
+
+.dj-banner .dj-text p {
+    font-size: calc(1.2 * 1.5vw);
+}
+
+.cuadradoNosotros {
+    border-radius: 5px !important;
+    background: #EB8600 !important;
+    border-color: #EB8600 !important;
+    height: 67px !important;
+    color: white !important;
+    width: 222px !important;
+    text-align: center !important;
+    font-size: 25px !important;
+    padding: 10px 0 !important;
+    font-family: 'Source Serif Pro', serif !important;
+    font-weight: 700;
+    position: relative;
+    left: 4px;
+    top: -15px;
+}
+
+.cuadrobajo {
+    border-radius: 5px !important;
+    background: black !important;
+    border-color: black !important;
+    height: 67px !important;
+    width: 222px !important;
+    padding: 10px 0 !important;
+    position: relative;
+    left: 476px;
+}
+
+/* TIMELINE / NOSOTROS */
+
+body {
+    margin-top: 20px;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem;
+}
+
+.timeline-steps .timeline-step:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: .25rem dotted #EB8600;
+    width: 3.46rem;
+    position: absolute;
+    left: 7.5rem;
+    top: .3125rem;
+}
+
+.timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: .25rem dotted #EB8600;
+    width: 3.8125rem;
+    position: absolute;
+    right: 7.5rem;
+    top: .3125rem;
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    top: -8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EB8600;
+}
+
+.timeline-steps .timeline-content .inner-circle.active {
+    background-color: black;
+}
+
+.parrafo {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #000000 !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+}
+
+/* LETRA SOBRE NOSOTROS */
+.tittle {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #000000 !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    top: -166px !important;
+    position: relative !important;
+    left: 89px !important;
+}
+
+.content {
+    font-family: 'Source Serif Pro', cursive !important;
+    color: #000000 !important;
+    font-size: 17px !important;
+    font-weight: 700;
+    left: 10%;
+    position: relative;
+    top: -291px;
+    justify-content: center;
+    letter-spacing: 2px;
+    line-height: 39px;
+    max-width: 900px;
+    display: flex;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LINEA NOSOTROS */
+.hr {
+    border: none;
+    border-top: 1px solid #343F4B;
+    margin: 10px 0;
+    overflow-x: hidden;
+}
+
+/* IMAGENES NOSOTROS HISTORIA */
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    position: relative;
+    top: -19px;
+    left: 1px;
+    opacity: 1;
+}
+
+.image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+}
+
+/* CUADRO DE FONDO IMAGENES HISTORIA */
+
+.cuadro-negro {
+    width: 100%;
+    max-width: 289px;
+    height: 213px;
+    position: relative;
+    top: -188px;
+    left: 143px;
+    background-color: #70777E;
+    opacity: 0.73;
+}
+
+.cuadro-negro2 {
+    width: 100%;
+    max-width: 289px;
+    height: 213px;
+    position: relative;
+    top: -399px;
+    left: 522px;
+    background-color: #70777E;
+    opacity: 0.73;
+}
+
+.image-container2 {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    position: relative;
+    top: -19px;
+    left: 0px;
+    opacity: 1;
+}
+
+.cuadro-negro3 {
+    width: 100%;
+    max-width: 289px;
+    height: 213px;
+    position: relative;
+    top: -614px;
+    left: 897px;
+    background-color: #70777E;
+    opacity: 0.73;
+}
+
+.image-container3 {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    position: relative;
+    top: -19px;
+    left: 0px;
+    opacity: 1;
+}
+
+.posionImg {
+    position: relative;
+    top: 45px;
+    left: 32px;
+    width: 270px;
+    height: 213px;
+}
+
+/*ESTILOS OBJETIVOS NOSOTROS*/
+
+.imgObj {
+    margin-left: 1061px;
+    top: -168px;
+    position: relative;
+
+}
+
+.tittleObj {
+    column-count: 2 !important;
+    column-gap: 20px !important;
+    margin-left: 1150px;
+    top: -355px;
+    position: relative;
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 25px !important;
+    position: relative;
+    /* top: 20px; */
+    z-index: 2;
+
+}
+
+
+.contentObj {
+    color: #000000 !important;
+    font-size: 17px !important;
+    font-weight: 700;
+    left: -6%;
+    position: relative;
+    top: -481px;
+    justify-content: center;
+    letter-spacing: 2px;
+    line-height: 39px;
+    max-width: 900px;
+    display: flex;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondoobj {
+    position: relative;
+    width: 922px;
+    height: 178px;
+    border: 2px solid #000000;
+    left: 126px;
+    top: 54px;
+
+}
+
+.mancha {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 223px;
+    background-color: #FEDF5A;
+    opacity: 0.56;
+    border-radius: 50%;
+    transform: rotate(-1deg);
+    z-index: -1;
+}
+
+.img2 {
+    position: relative;
+    top: -354px;
+}
+
+.SecundObj{
+    column-count: 2 !important;
+    column-gap: 8px !important;
+    margin-left: 95px !important;
+    top: -519px !important;
+    position: relative !important;
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 25px !important;
+}
