@@ -19,6 +19,13 @@ function mostrarInformacion(seleccion, elemento) {
   const SecuTittle = elemento.getAttribute('data-secun-title');
   const SecunDescrip = elemento.getAttribute('data-secun-descr');
 
+  // Obtener info Servicios 
+
+  const Item1 = elemento.getAttribute('data-contentItem1');
+  const dataInfoItem2 = elemento.getAttribute('data-infoItem1');
+  const imgItem1 = elemento.getAttribute('data-imgItem1');
+
+
 
   // Comprueba la selección y muestra la información correspondiente
   if (seleccion === 'historia') {
@@ -60,6 +67,19 @@ function mostrarInformacion(seleccion, elemento) {
      </div>
      <p class='contentObj2'>${SecunDescrip}</p>
      </div>
+    `;
+  } else if (seleccion === 'servicios') {
+    objetivosInfo.innerHTML = `
+    <blockquote class="styled-quote">
+    <h4 class='titleservicios'>${title}</h4>
+    <div class="straight-line"></div>
+    </blockquote>
+    <div class='imgCuadrado' >${img}</div>
+    <div class="square"></div>
+    <div class='textitem1'>${Item1}</div>
+    <div class='straight-lineItem1'></div>
+    <div class='dataItem1'>${dataInfoItem2}</div>
+    <div class='imgItem1'>${imgItem1}</div>
     `;
   }
 }

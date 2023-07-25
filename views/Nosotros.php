@@ -55,7 +55,8 @@
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                        <div class="timeline-content" onclick="mostrarInformacion('servicios', this)" data-toggle="popover" data-trigger="hover"  data-img="<img  src='../Imagenes/circulo.jpeg' alt='Niños' width='150px' height='150px'>" data-placement="top" title="" data-contentItem1="Material" data-infoItem1="Se realizan préstamos de material bibliográfico"
+                        data-imgItem1="<img  src='../Imagenes/Imagen4.jpeg' alt='Niños' width='100px' height='100px'>" data-original-title="Servicios">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Servicios</p>
                         </div>

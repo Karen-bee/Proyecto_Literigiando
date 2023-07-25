@@ -1086,3 +1086,106 @@ body {
     width: 1500px;
     height: 600px;
 }
+
+/*ESTILOS SERVICIOS*/
+
+.titleservicios {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 37px !important;
+    margin-left: 578px;
+}
+
+.straight-line {
+    width: 14%;
+    height: 2px;
+    background-color: #EB8600;
+    margin-left: 565px;
+    top: -48px;
+    position: relative;
+}
+
+/*COMILLAS CON ESTILO*/
+
+.styled-quote {
+    position: relative;
+    font-size: 18px;
+}
+
+.styled-quote::before,
+.styled-quote::after {
+    content: '"';
+    color: #EB8600;
+    position: absolute;
+    font-size: 47px;
+}
+
+.styled-quote::before {
+    left: 527px;
+}
+
+.styled-quote::after {
+    right: 477px;
+    top: 0px;
+}
+
+/*cuadrados*/
+
+.square {
+
+    width: 155px;
+    height: 320px;
+    background-color: white;
+    border: 3px solid #EB8600;
+    margin: 10px;
+    display: inline-block;
+    margin-left: 182px;
+    border-radius: 18px;
+
+}
+
+/*tamaño imagen circulo*/
+
+.imgCuadrado {
+    margin-left: 185px;
+}
+
+/*items */
+
+.textitem1 {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 24px !important;
+    margin-left: 214px;
+    position: relative;
+    top: -319px;
+
+}
+
+.straight-lineItem1 {
+    width: 9%;
+    height: 2px;
+    background-color: #969FAA;
+    margin-left: 201px;
+    top: -313px;
+    position: relative;
+}
+
+.dataItem1 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 16px !important;
+    column-count: 2px;
+    margin-left: 212px;
+    position: relative;
+    top: -288px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+.imgItem1 {
+    position: relative;
+    top: -375px;
+    margin-left: 209px;
+}
