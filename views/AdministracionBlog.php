@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Estilos/style.css">
 
     <!-- BOOSTRAP -->
     <!-- JavaScript Bundle with Popper -->
@@ -131,7 +131,7 @@
                                 <td class="col-sm-2 table-orange">Regina de Miguel</td>
                                 <td class="col-sm-2 table-orange">30/04/2023</td>
                                 <td class="col-sm-2 table-orange">Tecnicas inclusivas para la pedagogia actualmente...</td>
-                                <td class="col-sm-2 table-orange"><img src="./Imagenes/pedagogica.png" alt="MDN" width="50px" height="50px"></td>
+                                <td class="col-sm-2 table-orange"><img src="../Imagenes/pedagogica.png" alt="MDN" width="50px" height="50px"></td>
                                 <td class="col-sm-2 justificarIcon table-orange">Activo</td>
                                 <td class="col-sm-2 justificarIcon table-orange">
                                     <button class="form-control" data-toggle="tooltip" title="Editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
