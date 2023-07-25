@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     <!--- style --->
-    <link rel="stylesheet" href="Estilos/style_cambiocontra.css">
+    <link rel="stylesheet" href="../Estilos/style_cambiocontra.css">
 
     <!--data table CSS -->
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css' />
