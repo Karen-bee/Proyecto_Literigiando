@@ -55,14 +55,16 @@
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" onclick="mostrarInformacion('servicios', this)" data-toggle="popover" data-trigger="hover"  data-img="<img  src='../Imagenes/circulo.jpeg' alt='Niños' width='150px' height='150px'>" data-placement="top" title="" data-contentItem1="Material" data-infoItem1="Se realizan préstamos de material bibliográfico"
-                        data-imgItem1="<img  src='../Imagenes/Imagen4.jpeg' alt='Niños' width='100px' height='100px'>" data-original-title="Servicios">
+                        <div class="timeline-content" onclick="mostrarInformacion('servicios', this)" data-toggle="popover" data-trigger="hover"  data-img="<img  src='../Imagenes/circulo.jpeg' alt='Niños' width='150px' height='150px'>" data-placement="top" title="" data-contentItem1="Material" data-contentItem2= "Referencias" data-contentItem3="Apoyo" 
+                        data-contentItem4="Estudiantes" data-infoItem1="Se realizan préstamos de material bibliográfico" data-infoItem2="Se mostrara la ficha tecnica o bibliografica del material"
+                        data-infoItem3="Servir como medio de apoyo a la universidad " data-infoItem4="Apoyo en el proceso estudiantil de niños, niñas y cuidadores"  data-imgItem1="<img  src='../Imagenes/Imagen4.jpeg' alt='Niños' width='100px' height='100px'>" data-imgItem2="<img  src='../Imagenes/Imagen3.jpeg' alt='Niños' width='100px' height='100px'>" 
+                        data-imgItem3="<img  src='../Imagenes/Imagen1.jpeg' alt='Niños' width='100px' height='100px'>"  data-imgItem4="<img  src='../Imagenes/Imagen2.jpeg' alt='Niños' width='100px' height='100px'>" data-original-title="Servicios">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Servicios</p>
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                        <div class="timeline-content"  onclick="mostrarInformacion('Generos', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Generos Literarios">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Géneros Literarios</p>
                         </div>

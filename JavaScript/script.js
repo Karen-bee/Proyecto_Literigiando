@@ -22,8 +22,25 @@ function mostrarInformacion(seleccion, elemento) {
   // Obtener info Servicios 
 
   const Item1 = elemento.getAttribute('data-contentItem1');
+  const Item2 = elemento.getAttribute('data-contentItem2');
+  const Item3 = elemento.getAttribute('data-contentItem3');
+  const Item4 = elemento.getAttribute('data-contentItem4');
+
   const dataInfoItem2 = elemento.getAttribute('data-infoItem1');
+  const dataInfoItem3 = elemento.getAttribute('data-infoItem2');
+  const dataInfoItem4 = elemento.getAttribute('data-infoItem3');
+  const dataInfoItem5 = elemento.getAttribute('data-infoItem4');
+
+
   const imgItem1 = elemento.getAttribute('data-imgItem1');
+  const imgItem2 = elemento.getAttribute('data-imgItem2');
+  const imgItem3 = elemento.getAttribute('data-imgItem3');
+  const imgItem4 = elemento.getAttribute('data-imgItem4');
+
+
+
+
+
 
 
 
@@ -74,18 +91,48 @@ function mostrarInformacion(seleccion, elemento) {
     <h4 class='titleservicios'>${title}</h4>
     <div class="straight-line"></div>
     </blockquote>
+   
+    <div class='fondo1'>
     <div class='imgCuadrado' >${img}</div>
     <div class="square"></div>
     <div class='textitem1'>${Item1}</div>
     <div class='straight-lineItem1'></div>
     <div class='dataItem1'>${dataInfoItem2}</div>
     <div class='imgItem1'>${imgItem1}</div>
+
+    <div class='imgCuadrado2' >${img}</div>
+    <div class="square2"></div>
+    <div class='textitem2'>${Item2}</div>
+    <div class='straight-lineItem2'></div>
+    <div class='dataItem2'>${dataInfoItem3}</div>
+    <div class='imgItem2'>${imgItem2}</div>
+
+    <div class='imgCuadrado3'>${img}</div>
+    <div class="square3"></div>
+    <div class='textitem3'>${Item3}</div>
+    <div class='straight-lineItem3'></div>
+    <div class='dataItem3'>${dataInfoItem4}</div>
+    <div class='imgItem3'>${imgItem3}</div>
+
+    <div class='imgCuadrado4'>${img}</div>
+    <div class="square4"></div>
+    <div class='textitem4'>${Item4}</div>
+    <div class='straight-lineItem4'></div>
+    <div class='dataItem4'>${dataInfoItem5}</div>
+    <div class='imgItem4'>${imgItem4}</div>
+</div>
+    `;
+  } else if (seleccion === 'Generos') {
+    objetivosInfo.innerHTML = `
+    <div class="cloud">
+    <h4 class='titleGeneros'>${title}</h4>
+  </div>
+  <div class='lineaGeneros'></div>
+  
     `;
   }
+
 }
-
-
-
 
 
 

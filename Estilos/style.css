@@ -1143,10 +1143,74 @@ body {
 
 }
 
+.square2 {
+
+    width: 155px;
+    height: 320px;
+    background-color: white;
+    border: 3px solid #EB8600;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 18px;
+    top: -844px;
+    position: relative;
+    margin-left: 430px;
+
+}
+
+.square3 {
+
+    width: 155px;
+    height: 320px;
+    background-color: white;
+    border: 3px solid #EB8600;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 18px;
+    top: -1683px;
+    position: relative;
+    margin-left: 668px;
+}
+
+.square4 {
+
+    width: 155px;
+    height: 320px;
+    background-color: white;
+    border: 3px solid #EB8600;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 18px;
+    top: -2524px;
+    position: relative;
+    margin-left: 904px;
+}
+
 /*tamaño imagen circulo*/
 
 .imgCuadrado {
     margin-left: 185px;
+}
+
+.imgCuadrado2 {
+    margin-left: 435px;
+    position: relative;
+    top: -844px;
+}
+
+
+.imgCuadrado3 {
+    margin-left: 671px;
+    position: relative;
+    top: -1689px;
+
+}
+
+.imgCuadrado4 {
+    margin-left: 904px;
+    position: relative;
+    top: -2531px;
+
 }
 
 /*items */
@@ -1160,12 +1224,65 @@ body {
 
 }
 
+.textitem2 {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 24px !important;
+    margin-left: 447px;
+    position: relative;
+    top: -1159px;
+
+}
+
+.textitem3 {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 24px !important;
+    margin-left: 713px;
+    position: relative;
+    top: -2004px;
+}
+
+.textitem4 {
+    font-family: 'Source Serif Pro', cursive !important;
+    font-size: 24px !important;
+    margin-left: 922px;
+    position: relative;
+    top: -2843px;
+}
+
 .straight-lineItem1 {
     width: 9%;
     height: 2px;
     background-color: #969FAA;
     margin-left: 201px;
     top: -313px;
+    position: relative;
+}
+
+.straight-lineItem2 {
+    width: 9%;
+    height: 2px;
+    background-color: #969FAA;
+    margin-left: 452px;
+    top: -1153px;
+    position: relative;
+
+}
+
+.straight-lineItem3 {
+    width: 9%;
+    height: 2px;
+    background-color: #969FAA;
+    margin-left: 692px;
+    top: -2002px;
+    position: relative;
+}
+
+.straight-lineItem4 {
+    width: 9%;
+    height: 2px;
+    background-color: #969FAA;
+    margin-left: 928px;
+    top: -2842px;
     position: relative;
 }
 
@@ -1184,8 +1301,129 @@ body {
     text-align: center;
 }
 
+.dataItem2 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 16px !important;
+    column-count: 2px;
+    margin-left: 461px;
+    position: relative;
+    top: -1128px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+.dataItem3 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 16px !important;
+    column-count: 2px;
+    margin-left: 705px;
+    position: relative;
+    top: -1976px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+.dataItem4 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 16px !important;
+    column-count: 2px;
+    margin-left: 946px;
+    position: relative;
+    top: -2822px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
 .imgItem1 {
     position: relative;
     top: -375px;
     margin-left: 209px;
+}
+
+.imgItem2 {
+    position: relative;
+    top: -1215px;
+    margin-left: 458px;
+}
+
+.imgItem3 {
+    position: relative;
+    top: -2050px;
+    margin-left: 698px;
+}
+
+.imgItem4 {
+    position: relative;
+    top: -2889px;
+    margin-left: 938px;
+}
+
+
+.fondo1 {
+    margin-left: 80px;
+}
+
+/*ESTILOS GENEROS LITERARIOS*/
+
+.titleGeneros {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 37px !important;
+    column-count: 2px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+    margin-left: 19px;
+    top: -39px;
+    position: relative;
+
+}
+
+/* NUBE */
+
+.cloud {
+    position: relative;
+    background-color: #E4C48F;
+    border-radius: 50%;
+    width: 200px;
+    height: 100px;
+    padding: 22px;
+    margin-left: 582px;
+    top: 41px;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background-color: #E4C48F;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    left: 60px;
+}
+
+.cloud::after {
+    width: 60px;
+    height: 60px;
+    top: -15px;
+    right: 60px;
 }
