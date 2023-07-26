@@ -1,0 +1,140 @@
+/*Elegimos letra*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+h1 { /*Diseño h1*/
+    font-size: 40px; /*Tamaño de la letra*/
+    color: black; /*Color de la letra*/
+    margin: 0; /*Margen*/
+    margin-bottom: 20px; /*Margen inferior (Separacion de la parte de abajo)*/
+    text-align: center; /*Alineacion de texto*/
+}
+
+.ImagBlog { /*Diseño Imagen de blog*/
+    width: 100%;  /*Disposicion imagen*/  
+}
+
+body {
+    font-family: 'Source Serif Pro'; /*Seleccionamos la letra para nuestro body*/
+}
+
+*{ /*Resetear el css*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /*Quitar lineas de abajo de los enlaces*/
+    list-style: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.adventur-content {
+    display: "flex";
+    justify-content: space-between; /*Separar los elementos*/
+    margin-top: 50px;
+}
+
+.adventur-1 {
+    padding: 75px 65px; /*Imagen pequeña ubicación*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adventur-1 img{
+    width: 160px; /*Tamaño de la imagen pequeña*/
+    margin: -120px 0 75 px 0;
+
+}
+
+.adventur-1 h3{
+    color: black;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 25px;
+    text-align: center; /*Alineacion de texto*/
+    
+}
+
+.adventur-2 h3{
+    color: black;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 25px;
+    text-align: center; /*Alineacion de texto*/
+    
+}
+
+.bg-1{
+    background-image: url(imagenes/manualidades.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 300px;
+}
+
+.bg-2{
+    background-image: url(imagenes/abeja.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 300px;
+}
+
+.bg-3{
+    background-image: url(imagenes/literatura.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 300px;
+}
+
+.bg-4{
+    background-image: url(imagenes/mariposa.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 300px;
+}
+
+.bg-5{
+    background-image: url(imagenes/marquez.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 300px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #D89E67;
+    color:white;
+    font-size: 15px;
+
+}
+
+.btn-1:hover {
+    background-color: #f0af71;
+}
+
+.boton1{ /*Diseño boton*/
+    padding: 50px; /*Relleno*/
+    background: linear-gradient( /*Fondo*/
+        90deg,
+        rgba(255, 166, 0, 0.89) 100%,
+        rgba(243, 188, 86, 0.897) 25%);
+    padding: 15px 40px 15px 40px; /*Relleno*/
+    width: 60%; /*Ancho*/
+    border-radius: 10px; /*Grosor del borde*/
+    text-align: center; /*Alineacion de texto*/
+    margin-bottom: 15px;
+}
