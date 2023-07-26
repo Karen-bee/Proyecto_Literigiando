@@ -1,0 +1,108 @@
+body { /*Diseño del cuerpo*/
+    box-sizing: border-box; /*Tamaño de la caja*/
+    font-family:serif; /*Fuente de la letra*/
+    display: flex; /*Pantalla flexible*/
+    justify-content: center; /*Centrar el contenido*/
+    align-items: center; /*Alinear elementos al centro*/
+    min-height: 100vh; /*Altura*/
+}
+
+.FondoImg {
+    width: 100%;  
+}
+
+form { /*Diseño formulario*/
+    box-shadow: 0px 0px 25px rgba(255, 166, 0, 0.89); /*Colocar el color en forma de sombra al cuadrado*/
+    padding: 40px 75px; /*Relleno*/
+    border-radius: 25px; /*Grosor del borde*/
+    display: flex; /*Pantalla flexible*/
+    flex-direction: column; /*Colocarlo en forma de columna*/
+    text-align: left; /*Alineacion de texto*/
+    width: auto; /*Ancho automatico*/
+}
+
+form h2 { /*Diseño h2*/
+    font-size: 30px; /*Tamaño de la letra*/
+    color: black; /*Color de la letra*/
+    margin: 0; /*Margen*/
+    margin-bottom: 20px; /*Margen inferior (Separacion de la parte de abajo)*/
+    text-align: center; /*Alineacion de texto*/
+}
+
+form p { /*Diseño p*/
+    font-size: 18px;  /*Tamaño de la letra*/
+    color: black; /*Color de la letra*/
+    margin-bottom: 20px; /*Margen inferior (Separacion de la parte de abajo)*/
+}
+
+.cajaF { /*Contenedor*/
+    position: relative; /*Posicion relativa*/
+    width: 305px; /*Ancho*/
+    margin-bottom: 35px; /*Margen inferior (Separacion de la parte de abajo)*/
+}
+
+input{ /*Cajas de texto*/
+    color: black; /*Color de la letra*/
+    padding: 15px 40px 15px 55px; /*Relleno Alto Final Inferior Inicio*/
+    width: 125%; /*Ancho*/
+    border-radius: 10px; /*Grosor del borde*/
+    border: 0;
+    box-shadow: 0 0 10px rgba(243, 188, 86, 0.897); /*Colocar el color en forma de sombra al cuadrado*/
+    outline: none; /*Contorno ninguno*/
+    font-size: 14px; /*Tamaño de la letra*/
+}
+
+.iconos { /*iconos*/
+    position:absolute; /*Posicion absoluta*/
+    height: 35px; /*Altura*/
+    width: 30px; /*Ancho*/
+    left: 15px; /*Izquierda*/
+    top: 50%; /*Arriba*/
+    transform: translateY(-55%); /*Transformar*/
+}
+
+.boton1{ /*Diseño boton*/
+    padding: 50px; /*Relleno*/
+    background: linear-gradient( /*Fondo*/
+        90deg,
+        rgba(255, 166, 0, 0.89) 100%,
+        rgba(243, 188, 86, 0.897) 25%);
+    padding: 15px 40px 15px 40px; /*Relleno*/
+    width: 98%; /*Ancho*/
+    border-radius: 10px; /*Grosor del borde*/
+    text-align: center; /*Alineacion de texto*/
+    margin-bottom: 15px;
+}
+
+.boton1:hover{ /*Diseño boton al espichar o pasar por encima*/
+    background: rgb(243, 188, 86, 0.897); /*Fondo*/
+
+}
+
+@media(max-width:991px){ /*Responsive*/
+    body{
+        padding: 10px;
+    }
+
+    form{
+        padding: 25px;
+        width: 95%;
+    }
+
+    .cajaF{
+        position: relative;
+        width: 65%;
+        margin-bottom: 25px;
+    }
+
+    input {
+        padding: 15px 40px 15px 50px;
+    }
+
+    .iconos {
+        height: 25px;
+        width: 25px;
+    }
+
+}
+
