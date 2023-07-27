@@ -38,6 +38,21 @@ function mostrarInformacion(seleccion, elemento) {
   const imgItem4 = elemento.getAttribute('data-imgItem4');
 
 
+  // INFO GENEROS LITERARIOS 
+
+  const titlegeneros = elemento.getAttribute('data-titlegenero');
+  const titlegeneros2 = elemento.getAttribute('data-titlegenero2');
+  const titlegeneros3 = elemento.getAttribute('data-titlegenero3');
+  const titlegeneros4 = elemento.getAttribute('data-titlegenero4');
+
+
+
+  const infogeneros = elemento.getAttribute('data-infogenero');
+  const infogeneros2 = elemento.getAttribute('data-infogenero2');
+  const infogeneros3 = elemento.getAttribute('data-infogenero3');
+  const infogeneros4 = elemento.getAttribute('data-infogenero4');
+
+
 
 
 
@@ -128,6 +143,35 @@ function mostrarInformacion(seleccion, elemento) {
     <h4 class='titleGeneros'>${title}</h4>
   </div>
   <div class='lineaGeneros'></div>
+  <div class="linea-recta"></div>
+  <div class="linea-recta2"></div>
+  <div class="cuadradogen"></div>
+  <h4 class="titlegenero">${titlegeneros}</h4>
+  <div class="straight-cuadrado"></div>
+  <div class="infogenero">${infogeneros}</div>
+
+  <div class="cuadradogen2"></div>
+  <h4 class="titlegenero2">${titlegeneros2}</h4>
+  <div class="straight-cuadrado2"></div>
+  <div class="infogenero2">${infogeneros2}</div>
+
+
+  <div class="cuadradogen3"></div>
+  <h4 class="titlegenero3">${titlegeneros3}</h4>
+  <div class="straight-cuadrado3"></div>
+  <div class="infogenero3">${infogeneros3}</div>
+
+  <div class="cuadradogen4"></div>
+  <h4 class="titlegenero4">${titlegeneros4}</h4>
+  <div class="straight-cuadrado4"></div>
+  <div class="infogenero4">${infogeneros4}</div>
+
+
+
+
+
+
+
   
     `;
   }
