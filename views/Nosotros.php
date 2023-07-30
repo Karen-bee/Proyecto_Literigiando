@@ -61,13 +61,13 @@
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" onclick="mostrarInformacion('Generos', this)" data-toggle="popover" data-titlegenero="Cuentos" data-titlegenero2="Audio Libros" data-titlegenero3="Novelas" data-titlegenero4="Relatos" data-infogenero="Narracion breve, oral o escrita, historias de ficcion" data-infogenero2="Grabacion de los contenidos de un libro" data-infogenero3="Narracion en prosa, extensa, historias de ficción" data-infogenero4="Cuento o narración corta, relatando un acontecimiento" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Generos Literarios">
+                        <div class="timeline-content" onclick="mostrarInformacion('Generos', this)" data-toggle="popover" data-titlegenero="Cuentos" data-titlegenero2="Audio Libros" data-titlegenero3="Novelas" data-titlegenero4="Relatos" data-titlegenero5="Historico" data-titlegenero6="Filosofico" data-titlegenero7="Mitología" data-infogenero="Narracion breve, oral o escrita, historias de ficcion" data-infogenero2="Grabacion de los contenidos de un libro" data-infogenero3="Narracion en prosa, extensa, historias de ficción" data-infogenero4="Cuento o narración corta, relatando un acontecimiento" data-infogenero5="Ofrece breves y sencillas historias de eventos reales" data-infogenero6="Es una narrativa sobre la curiosidad humana" data-infogenero7="Conjunto de mitos de una cultura o pueblo" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Generos Literarios">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Géneros Literarios</p>
                         </div>
                     </div>
                     <div class="timeline-step mb-0">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
+                        <div class="timeline-content" onclick="mostrarInformacion('profesoras', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Nuestro Equipo">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Profesoras</p>
                         </div>

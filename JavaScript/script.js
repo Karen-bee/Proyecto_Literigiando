@@ -44,13 +44,21 @@ function mostrarInformacion(seleccion, elemento) {
   const titlegeneros2 = elemento.getAttribute('data-titlegenero2');
   const titlegeneros3 = elemento.getAttribute('data-titlegenero3');
   const titlegeneros4 = elemento.getAttribute('data-titlegenero4');
-
+  const titlegeneros5 = elemento.getAttribute('data-titlegenero5');
+  const titlegeneros6 = elemento.getAttribute('data-titlegenero6');
+  const titlegeneros7 = elemento.getAttribute('data-titlegenero7');
 
 
   const infogeneros = elemento.getAttribute('data-infogenero');
   const infogeneros2 = elemento.getAttribute('data-infogenero2');
   const infogeneros3 = elemento.getAttribute('data-infogenero3');
   const infogeneros4 = elemento.getAttribute('data-infogenero4');
+  const infogeneros5 = elemento.getAttribute('data-infogenero5');
+  const infogeneros6 = elemento.getAttribute('data-infogenero6');
+  const infogeneros7 = elemento.getAttribute('data-infogenero7');
+
+
+
 
 
 
@@ -166,16 +174,31 @@ function mostrarInformacion(seleccion, elemento) {
   <div class="straight-cuadrado4"></div>
   <div class="infogenero4">${infogeneros4}</div>
 
+  <div class="cuadradogen5"></div>
+  <h4 class="titlegenero5">${titlegeneros5}</h4>
+  <div class="straight-cuadrado5"></div>
+  <div class="infogenero5">${infogeneros5}</div>
 
 
+  <div class="cuadradogen6"></div>
+  <h4 class="titlegenero6">${titlegeneros6}</h4>
+  <div class="straight-cuadrado6"></div>
+  <div class="infogenero6">${infogeneros6}</div>
+
+  <div class="cuadradogen7"></div>
+  <h4 class="titlegenero7">${titlegeneros7}</h4>
+  <div class="straight-cuadrado7"></div>
+  <div class="infogenero7">${infogeneros7}</div>
 
 
-
-
-  
     `;
-  }
+  } else if (seleccion === 'profesoras') {
+    objetivosInfo.innerHTML = `
+    <h4 class='titleProfe'>${title}</h4>
 
+    `;
+
+  }
 }
 
 

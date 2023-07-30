@@ -1491,6 +1491,33 @@ body {
     margin-left: 1004px;
 }
 
+.cuadradogen5 {
+    width: 233px;
+    height: 184px;
+    background-color: rgba(228, 196, 142, 0.67);
+    position: relative;
+    top: -1658px;
+    margin-left: 230px;
+}
+
+.cuadradogen6 {
+    width: 233px;
+    height: 184px;
+    background-color: rgba(228, 196, 142, 0.67);
+    position: relative;
+    top: -2147px;
+    margin-left: 545px;
+}
+
+.cuadradogen7 {
+    width: 233px;
+    height: 184px;
+    background-color: rgba(228, 196, 142, 0.67);
+    position: relative;
+    top: -2637px;
+    margin-left: 860px;
+}
+
 /*LETRA CUADRADO*/
 
 .titlegenero {
@@ -1525,6 +1552,33 @@ body {
     position: relative;
     margin-left: 1078px;
     top: -1600px;
+
+}
+
+.titlegenero5 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 27px !important;
+    position: relative;
+    margin-left: 286px;
+    top: -1849px;
+
+}
+
+.titlegenero6 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 27px !important;
+    position: relative;
+    margin-left: 605px;
+    top: -2338px;
+
+}
+
+.titlegenero7 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 27px !important;
+    position: relative;
+    margin-left: 918px;
+    top: -2828px;
 
 }
 
@@ -1585,6 +1639,49 @@ body {
 }
 
 
+.infogenero5 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 15px !important;
+    position: relative;
+    margin-left: 289px;
+    top: -1868px;
+    width: px;
+    height: 198px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+.infogenero6 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 15px !important;
+    position: relative;
+    margin-left: 628px;
+    top: -2359px;
+    width: px;
+    height: 198px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+.infogenero7 {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 15px !important;
+    position: relative;
+    margin-left: 943px;
+    top: -2848px;
+    width: px;
+    height: 198px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+
 /*LINEA CUADRADO */
 
 .straight-cuadrado {
@@ -1623,4 +1720,48 @@ body {
     top: -1631px;
     position: relative;
 
+}
+
+.straight-cuadrado5 {
+    width: 9%;
+    height: 2px;
+    background-color: #7E55F3;
+    margin-left: 286px;
+    top: -1883px;
+    position: relative;
+
+}
+
+.straight-cuadrado6 {
+    width: 9%;
+    height: 2px;
+    background-color: #7E55F3;
+    margin-left: 605px;
+    top: -2373px;
+    position: relative;
+
+}
+
+.straight-cuadrado7 {
+    width: 9%;
+    height: 2px;
+    background-color: #7E55F3;
+    margin-left: 918px;
+    top: -2862px;
+    position: relative;
+
+}
+
+/*PROFESORAS*/
+
+.titleProfe {
+    font-family: 'Source Serif Pro' !important;
+    font-size: 32px !important;
+    width: px;
+    height: 198px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+    margin-left: 245px;
 }
