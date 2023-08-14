@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="timeline-step mb-0">
-                        <div class="timeline-content" onclick="mostrarInformacion('profesoras', this)" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Nuestro Equipo">
+                        <div class="timeline-content" onclick="mostrarInformacion('profesoras', this)" data-img="<img  src='../Imagenes/circulo-blanco.png' alt='Niños' width='300px' height='300px'>" data-img-prof="<img  src='../Imagenes/alberto.jpg' alt='Niños' width='300px' height='300px'>"  data-img-prof3="<img  src='../Imagenes/gomez.jpg' alt='Niños' width='300px' height='300px'>" data-img-prof2="<img  src='../Imagenes/Acosta.jpg' alt='Niños' width='300px' height='300px'>"  data-facul="Facultad de Humanidades y Ciencias de la Educación" data-titleName="Profesora" data-name="Diana Carolina Alberto Chapelles" data-name2="Diana Jennifer Acosta Pineda" data-name3="Pilar Tatiana Gomez Bohorquez" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Nuestro Equipo">
                             <div class="inner-circle"></div>
                             <p class="parrafo">Profesoras</p>
                         </div>

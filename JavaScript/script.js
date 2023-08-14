@@ -59,6 +59,25 @@ function mostrarInformacion(seleccion, elemento) {
 
 
 
+  // INFO PROFESORAS
+
+  const CIRCLEPRO = elemento.getAttribute('data-img');
+
+  const imgpro = elemento.getAttribute('data-img-prof');
+  const imgpro2 = elemento.getAttribute('data-img-prof2');
+  const imgpro3 = elemento.getAttribute('data-img-prof3');
+
+
+  const NombrePro = elemento.getAttribute('data-name');
+  const NombrePro2 = elemento.getAttribute('data-name2');
+  const NombrePro3 = elemento.getAttribute('data-name3');
+
+
+  const TItleNombrePro = elemento.getAttribute('data-titleName');
+  const Facul = elemento.getAttribute('data-facul');
+
+
+
 
 
 
@@ -194,7 +213,32 @@ function mostrarInformacion(seleccion, elemento) {
     `;
   } else if (seleccion === 'profesoras') {
     objetivosInfo.innerHTML = `
+    <div class="cuadradoProfe"></div>
     <h4 class='titleProfe'>${title}</h4>
+    <div class="cuadradoImg"></div>
+
+    <div class="circlepro">${CIRCLEPRO}</div>
+    <div class="imagen-circular">${imgpro}</div>
+    <div class="figura-ovalada"></div>
+    <div class="NombrePro">${NombrePro}</div>
+    <div class="TItleNombrePro">${TItleNombrePro}</div>
+    <div class="Facul">${Facul}</div>
+
+
+    <div class="circlepro2">${CIRCLEPRO}</div>
+    <div class="imagen-circular2">${imgpro2}</div>
+    <div class="figura-ovalada2"></div>
+    <div class="NombrePro2">${NombrePro2}</div>
+    <div class="TItleNombrePro2">${TItleNombrePro}</div>
+    <div class="Facul2">${Facul}</div>
+
+    <div class="circlepro3">${CIRCLEPRO}</div>
+    <div class="imagen-circular3">${imgpro3}</div>
+    <div class="figura-ovalada3"></div>
+    <div class="NombrePro3">${NombrePro3}</div>
+    <div class="TItleNombrePro3">${TItleNombrePro}</div>
+    <div class="Facul3">${Facul}</div>
+
 
     `;
 
