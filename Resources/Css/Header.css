@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #EB8600;
+  position: fixed;
+  width: 100%;
+  top: 68px;
+  z-index: 1000;
+}
+
+.imagenes_header {
+  background: #FFFFFF;
+  /* Agrega aquí tus estilos para las imágenes o contenido */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  top: -2px;
+}
+
+.letra {
+  font-family: 'Source Serif Pro', cursive !important;
+  color: #47525E !important;
+  font-size: 15px !important;
+}
+
+.ulIzqu {
+  position: relative;
+  top: 6px;
+}
+
+.Iconhome {
+  position: relative;
+  top: 0px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    margin-top: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav li {
+    margin: 5px 0;
+  }
+}

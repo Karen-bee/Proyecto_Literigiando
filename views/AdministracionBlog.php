@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../Estilos/style.css">
+    <link rel="stylesheet" href="../Resources/Css/style.css">
 
     <!-- BOOSTRAP -->
     <!-- JavaScript Bundle with Popper -->
@@ -27,129 +27,130 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    });
 
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
-
-        // TIEMPO 
-        const myTimeout = setTimeout(myGreeting, 5000);
-        const myTimeout1 = setTimeout(myGreeting1, 5000);
-        const myTimeout2 = setTimeout(myGreeting2, 5000);
-        const myTimeout3 = setTimeout(myGreeting3, 5000);
+    // TIEMPO 
+    const myTimeout = setTimeout(myGreeting, 5000);
+    const myTimeout1 = setTimeout(myGreeting1, 5000);
+    const myTimeout2 = setTimeout(myGreeting2, 5000);
+    const myTimeout3 = setTimeout(myGreeting3, 5000);
 
 
-        //FUNCIONES 
+    //FUNCIONES 
 
-        // Buscar
-        function myGreeting() {
-            if (document.getElementById("example_filter") != null) {
-                var strMessage1 = document.getElementById("example_filter");
-                strMessage1.innerHTML = strMessage1.innerHTML
-                    .replace('Search:', 'Buscar:');
+    // Buscar
+    function myGreeting() {
+        if (document.getElementById("example_filter") != null) {
+            var strMessage1 = document.getElementById("example_filter");
+            strMessage1.innerHTML = strMessage1.innerHTML
+                .replace('Search:', 'Buscar:');
 
-            }
         }
+    }
 
-        // Buscar
-        function myGreeting1() {
-            if (document.getElementById("example_info") != null) {
-                var strMessage1 = document.getElementById("example_info");
-                strMessage1.innerHTML = strMessage1.innerHTML
-                    .replace('Showing 1 to 1 of 1 entries', 'Mostrando 1 a 1 de 1 entradas');
+    // Buscar
+    function myGreeting1() {
+        if (document.getElementById("example_info") != null) {
+            var strMessage1 = document.getElementById("example_info");
+            strMessage1.innerHTML = strMessage1.innerHTML
+                .replace('Showing 1 to 1 of 1 entries', 'Mostrando 1 a 1 de 1 entradas');
 
-            }
         }
+    }
 
-        // PREVIOUS
+    // PREVIOUS
 
-        function myGreeting2() {
-            if (document.getElementById("example_previous") != null) {
-                var strMessage1 = document.getElementById("example_previous");
-                strMessage1.innerHTML = strMessage1.innerHTML
-                    .replace('Previous', 'Previo');
+    function myGreeting2() {
+        if (document.getElementById("example_previous") != null) {
+            var strMessage1 = document.getElementById("example_previous");
+            strMessage1.innerHTML = strMessage1.innerHTML
+                .replace('Previous', 'Previo');
 
-            }
         }
+    }
 
-        // SIGUIENTE 
-        function myGreeting3() {
-            if (document.getElementById("example_next") != null) {
-                var strMessage1 = document.getElementById("example_next");
-                strMessage1.innerHTML = strMessage1.innerHTML
-                    .replace('Next', 'Siguiente');
+    // SIGUIENTE 
+    function myGreeting3() {
+        if (document.getElementById("example_next") != null) {
+            var strMessage1 = document.getElementById("example_next");
+            strMessage1.innerHTML = strMessage1.innerHTML
+                .replace('Next', 'Siguiente');
 
-            }
         }
+    }
 
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 
-        // Pop up 
-        $('#myModal').on('shown.bs.modal', function() {
-            $('#myInput').trigger('focus')
-        })
-    </script>
+    // Pop up 
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
+</script>
 
 
-    <title>Literagiando</title>
+<title>Literagiando</title>
 </head>
 
 <body>
-    <div class="card">
-        <div class="selectortwo ">
-            <div class="lineaIzquierda">
-                <div class="horizontal-line"></div>
-                <div class="horizontal-linetwo"></div>
-            </div>
-            <h1 class="custom-heading">Administrar Blog</h1>
-            <div class="lineaderecha">
-                <div class="horizontal-derecha"></div>
-                <div class="horizontal-derechatwo"></div>
-            </div>
-            <div class="table-responsive media2" >
-                <div style="overflow-x:auto;">
-                    <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
-                        <thead>
-                            <tr>
-                                <th scope="col-sm-2" class="table-Gray">Código</th>
-                                <th scope="col-sm-2" class="table-Gray">Titulo</th>
-                                <th scope="col-sm-2" class="table-Gray">Autor</th>
-                                <th scope="col-sm-2" class="table-Gray">Fecha</th>
-                                <th scope="col-sm-2" class="table-Gray">Descripcion</th>
-                                <th scope="col-sm-2" class="table-Gray">Imagen</th>
-                                <th scope="col-sm-2" class="table-Gray">Estado</th>
-                                <th scope="col-sm-2" class="table-Gray">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-sm-2 table-orange">02457</td>
-                                <td class="col-sm-2 table-orange">Teorias Pedagogicas</td>
-                                <td class="col-sm-2 table-orange">Regina de Miguel</td>
-                                <td class="col-sm-2 table-orange">30/04/2023</td>
-                                <td class="col-sm-2 table-orange">Tecnicas inclusivas para la pedagogia actualmente...</td>
-                                <td class="col-sm-2 table-orange"><img src="../Imagenes/pedagogica.png" alt="MDN" width="50px" height="50px"></td>
-                                <td class="col-sm-2 justificarIcon table-orange">Activo</td>
-                                <td class="col-sm-2 justificarIcon table-orange">
-                                    <button class="form-control" data-toggle="tooltip" title="Editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="form-control" data-toggle="tooltip" title="Desactivar"><i class="bi bi-x-circle-fill"></i></button>
-
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-                    </table>
+    <div class="pr">
+        <div class="card">
+            <div class="selectortwo ">
+                <div class="lineaIzquierda">
+                    <div class="horizontal-line"></div>
+                    <div class="horizontal-linetwo"></div>
                 </div>
-                <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
-            </div>
+                <h1 class="custom-heading">Administrar Blog</h1>
+                <div class="lineaderecha">
+                    <div class="horizontal-derecha"></div>
+                    <div class="horizontal-derechatwo"></div>
+                </div>
+                <div class="table-responsive media2">
+                    <div style="overflow-x:auto;">
+                        <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col-sm-2" class="table-Gray">Código</th>
+                                    <th scope="col-sm-2" class="table-Gray">Titulo</th>
+                                    <th scope="col-sm-2" class="table-Gray">Autor</th>
+                                    <th scope="col-sm-2" class="table-Gray">Fecha</th>
+                                    <th scope="col-sm-2" class="table-Gray">Descripcion</th>
+                                    <th scope="col-sm-2" class="table-Gray">Imagen</th>
+                                    <th scope="col-sm-2" class="table-Gray">Estado</th>
+                                    <th scope="col-sm-2" class="table-Gray">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-2 table-orange">02457</td>
+                                    <td class="col-sm-2 table-orange">Teorias Pedagogicas</td>
+                                    <td class="col-sm-2 table-orange">Regina de Miguel</td>
+                                    <td class="col-sm-2 table-orange">30/04/2023</td>
+                                    <td class="col-sm-2 table-orange">Tecnicas inclusivas para la pedagogia actualmente...</td>
+                                    <td class="col-sm-2 table-orange"><img src="../Storage/Imagenes/pedagogica.png" alt="MDN" width="50px" height="50px"></td>
+                                    <td class="col-sm-2 justificarIcon table-orange">Activo</td>
+                                    <td class="col-sm-2 justificarIcon table-orange">
+                                        <button class="form-control" data-toggle="tooltip" title="Editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+                                        <button class="form-control" data-toggle="tooltip" title="Desactivar"><i class="bi bi-x-circle-fill"></i></button>
 
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
+                </div>
+
+            </div>
         </div>
     </div>
-
     <!-- POP UP EDITAR -->
 
     <div class="modal fade pop" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

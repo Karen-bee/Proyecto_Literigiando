@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../Estilos/style.css">
+    <link rel="stylesheet" href="../Resources/Css/style.css">
 
     <!-- BOOSTRAP -->
     <!-- JavaScript Bundle with Popper -->
@@ -98,59 +98,64 @@
     <title>Literagiando</title>
 </head>
 
+<?php
+include("../Views/Header.php")
+?>
+
 <body>
-    <div class="card">
-        <div class="selectortwo ">
-            <div class="lineaIzquierda">
-                <div class="horizontal-line"></div>
-                <div class="horizontal-linetwo"></div>
-            </div>
-            <h1 class="custom-headingUsu">Administrador de Usuarios</h1>
-            <div class="lineaderecha">
-                <div class="horizontal-derecha2"></div>
-                <div class="horizontal-derechatwo2"></div>
-            </div>
-            <div class="table-responsive media2">
-                <div style="overflow-x:auto;">
-                    <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
-                        <thead>
-                            <tr>
-                                <th scope="col-sm-2" class="table-Gray">Código</th>
-                                <th scope="col-sm-2" class="table-Gray">Nombre</th>
-                                <th scope="col-sm-2" class="table-Gray">Apellido</th>
-                                <th scope="col-sm-2" class="table-Gray">Dirección</th>
-                                <th scope="col-sm-2" class="table-Gray">Teléfono</th>
-                                <th scope="col-sm-2" class="table-Gray">Nombre de Usuario</th>
-                                <th scope="col-sm-2" class="table-Gray">Email</th>
-                                <th scope="col-sm-2" class="table-Gray">Rol</th>
-                                <th scope="col-sm-2" class="table-Gray">Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-sm-2 table-orange">01875</td>
-                                <td class="col-sm-2 table-orange">Ana Maria</td>
-                                <td class="col-sm-2 table-orange">Cortez Carreño</td>
-                                <td class="col-sm-2 table-orange">Cra 105c # 25f-75</td>
-                                <td class="col-sm-2 table-orange">7690190</td>
-                                <td class="col-sm-2 table-orange">AnaM78</td>
-                                <td class="col-sm-2 table-orange">AnaM85Cortez@gmail.com </td>
-                                <td class="col-sm-2 table-orange">Usuario</td>
-                                <td class="col-sm-2 justificarIcon table-orange"><i class="bi bi-circle-fill"></i></td>
-
-                            </tr>
-
-                        </tbody>
-                    </table>
+    <div class="contendorCard">
+        <div class="card">
+            <div class="selectortwo ">
+                <div class="lineaIzquierda">
+                    <div class="horizontal-line"></div>
+                    <div class="horizontal-linetwo"></div>
                 </div>
-                <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
-                <button class="button tooltiptext" data-toggle="tooltip" title="Actualizar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Actualizar</button>
+                <h1 class="custom-headingUsu">Administrador de Usuarios</h1>
+                <div class="lineaderecha">
+                    <div class="horizontal-derecha2"></div>
+                    <div class="horizontal-derechatwo2"></div>
+                </div>
+                <div class="table-responsive media2">
+                    <div style="overflow-x:auto;">
+                        <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col-sm-2" class="table-Gray">Código</th>
+                                    <th scope="col-sm-2" class="table-Gray">Nombre</th>
+                                    <th scope="col-sm-2" class="table-Gray">Apellido</th>
+                                    <th scope="col-sm-2" class="table-Gray">Dirección</th>
+                                    <th scope="col-sm-2" class="table-Gray">Teléfono</th>
+                                    <th scope="col-sm-2" class="table-Gray">Nombre de Usuario</th>
+                                    <th scope="col-sm-2" class="table-Gray">Email</th>
+                                    <th scope="col-sm-2" class="table-Gray">Rol</th>
+                                    <th scope="col-sm-2" class="table-Gray">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-2 table-orange">01875</td>
+                                    <td class="col-sm-2 table-orange">Ana Maria</td>
+                                    <td class="col-sm-2 table-orange">Cortez Carreño</td>
+                                    <td class="col-sm-2 table-orange">Cra 105c # 25f-75</td>
+                                    <td class="col-sm-2 table-orange">7690190</td>
+                                    <td class="col-sm-2 table-orange">AnaM78</td>
+                                    <td class="col-sm-2 table-orange">AnaM85Cortez@gmail.com </td>
+                                    <td class="col-sm-2 table-orange">Usuario</td>
+                                    <td class="col-sm-2 justificarIcon table-orange"><i class="bi bi-circle-fill"></i></td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
+                    <button class="button tooltiptext" data-toggle="tooltip" title="Actualizar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Actualizar</button>
+
+                </div>
 
             </div>
-
         </div>
     </div>
-
     <!-- POP UP EDITAR -->
 
     <div class="modal fade pop" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -220,7 +225,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
                 </div>
                 <div class="modal-body">
-                <form>
+                    <form>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -229,29 +234,29 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_autor" class="letraform">Apellido</label>
-                                    <input type="text" class="form-control" id="txt_apellido" >
+                                    <input type="text" class="form-control" id="txt_apellido">
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Telefono</label>
-                                    <input type="text" class="form-control" id="txt_telefono" >
+                                    <input type="text" class="form-control" id="txt_telefono">
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Email</label>
-                                    <input type="email" class="form-control" id="txt_email" >
+                                    <input type="email" class="form-control" id="txt_email">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="txt_titulo" class="letraform">Nombre</label>
-                                    <input type="text" class="form-control" id="txt_nombre" >
+                                    <input type="text" class="form-control" id="txt_nombre">
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_fecha" class="letraform">Dirección</label>
-                                    <input type="text" class="form-control" id="txt_direccion" >
+                                    <input type="text" class="form-control" id="txt_direccion">
                                 </div>
                                 <div class="form-group">
                                     <label for="file_imagen" class="letraform">Nombre de Usuario</label>
-                                    <input type="text" class="form-control" id="txt_usuario" >
+                                    <input type="text" class="form-control" id="txt_usuario">
                                 </div>
                                 <div class="form-group">
                                     <label for="file_imagen" class="letraform">Rol</label>
@@ -269,6 +274,11 @@
             </div>
         </div>
     </div>
+
+    <?php
+    include("../Views/Footer.php")
+    ?>
 </body>
+
 
 </html>
