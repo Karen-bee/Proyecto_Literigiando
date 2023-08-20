@@ -4,9 +4,9 @@
 
 <!-- Header -->
 
-<?php 
-//include("../Views/Header.php")
-?> 
+<?php
+include("../Views/Header.php")
+?>
 
 <head>
     <!-- Required meta tags -->

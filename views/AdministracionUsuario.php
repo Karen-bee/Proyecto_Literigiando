@@ -275,10 +275,11 @@ include("../Views/Header.php")
         </div>
     </div>
 
-    <?php
-    include("../Views/Footer.php")
-    ?>
+
 </body>
 
+<?php
+include("../Views/Footer.php")
+?>
 
 </html>

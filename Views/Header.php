@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../Resources/Css/Header.css">
 
+    <!-- Icons -->
+
+    <link rel="shortcut icon" href="../Storage/Imagenes/Logo_Literagiando.png">
+
+
+    <!-- footer css -->
+
+    <link rel="stylesheet" href="../Resources/Css/Footer.css">
+
+
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +30,7 @@
 <body>
     <div class="imagenes_header">
         <img class="m-3" src="../Storage/Imagenes/Logo_Lite.png" alt="" width="150" height="50">
-        <img class="m-3 " src="../Storage/Imagenes/Logo_Uni.png" alt="" width="150" height="50">
+        <img class="m-3 " src="../Storage/Imagenes/Logo-Uni.jpeg" alt="" width="150" height="50">
     </div>
 
     <nav class="navbar fixed-top">
