@@ -7,7 +7,7 @@
 
     <title>Header/Footer/General literagiando</title>
     <!--Enlazae para obtener estilos-->
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilo.css">
      <!--Iconos-->
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
