@@ -1,19 +1,21 @@
 <footer>
     <div class="contenedor">
-
+        <!--Logos del Footer-->
         <img class="logo1" src="../Storage/Imagenes/Logo_Universidad.png" alt="">
         <img class="logo2" src="../Storage/Imagenes/Logo_Literagiando.png" alt="">
     </div>
+    <!--Iconos del Footer-->
     <div class="social-media">
-        <a href="https://www.facebook.com/Literagiando" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-whatsapp"></a>
         <a href="#" class="fa fa-google"></a>
-        <a href="https://www.youtube.com/@lilianachaparro9233" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-youtube"></a>
     </div>
-    <div class="column-container ">
+    <!--Columna 1 del Footer-->
+    <div class="column-container">
         <div class="column1">
-            <h1 class="letraFooter">Contactanos</h1>
-            <ul class="letraFooter2 ">
+            <h1>Contactanos</h1>
+            <ul>
                 <li><label href="#">Universidad de San Buenaventura, Sede Bogotá<label></li>
                 <li>
                     <h4 href="#">Dirección:</h4>
@@ -29,22 +31,26 @@
                 <li><a href="#"> bibliotecainfantilliteragiando@gmail.com</a></li>
             </ul>
         </div>
+        <!--Linea vertical del Footer-->
         <div class="vertical-line"></div>
+        <!--Columna 2 del Footer-->
         <div class="column2">
-            <h1 class="letraFooter">Literagiando</h1>
-            <ul class="letraFooter2">
+            <h1>Literagiando</h1>
+            <ul>
                 <li><label href="#">Biblioteca Literagiando,</label></li>
                 <li><label href="#">literagiando nuestros cuentos</label></li>
                 <li><label href="#">vamos contando.</label></li>
             </ul>
         </div><br>
     </div>
+    <!--Linea horizontal del Footer-->
     <div class="line"></div>
-
-    <div class="text2 letraFooter2">
+    <!--Texto final del Footer-->
+    <div class="text2">
         <small>&copy; 2023 <b>Literagiando</b> | Desarrollado por Semillero TecnoSoft.</small>
     </div>
     </div>
 </footer>
 
-<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+<!--Enlazace para obtener los java script-->
+<script src="../Resources/JavaScript/scriptHome.js"></script>
