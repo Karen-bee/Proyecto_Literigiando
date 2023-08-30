@@ -1,14 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-size: 20px;
-    width: 100%;
-    font-family: 'Source Serif Pro', cursive;
-}
-
 h1 {
     font-family: 'Source Serif Pro', cursive;
     color: #47525E;
@@ -72,7 +61,7 @@ hr {
 
 .seccion2{
     width: 80%;
-    background: url(../Imagenes/login_literagiando.jpeg);
+    background: url(../Storage/Imagenes/login_literagiando.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -126,19 +115,26 @@ p{
     font-family: 'Source Serif Pro', cursive;
 }
 
-.bloque{
-    display: flex;
+.line{
+    width: 100;
+    background-color: #F59A35;
+    border: 1px solid #F59A35;
+}
+
+.container_line{
+    display: inline-block;
+    align-items: center;
     width: 100%;
 }
+
 .elemento{
     padding: 3px;
     border: 1px solid black;
     width: 100%;
 }
 
-.titulo_grande{
-    text-align: center;
-    margin-top: 5px;
+.contenido{
+    padding-top: 40px;
 }
 
 /* responsive */
@@ -152,7 +148,7 @@ p{
 @media(max-width: 1194px){
     .seccion2{
         width: 50%;
-        background: url(../Imagenes/login_literagiando2.jpeg);
+        background: url(../Storage/Imagenes/login_literagiando2.jpeg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
