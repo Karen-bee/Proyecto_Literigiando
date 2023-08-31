@@ -597,97 +597,191 @@ table {
 /* CSS Login*/
 
 @media (min-width: 768px){
+  .content-section {
+    display: block;
+    justify-content: center;
+    justify-items: center;
+  }
 
-  .content-section-log {
+  .title-welcome {
     display: flex;
     justify-content: center;
     justify-items: center;
   }
 
-  .login-container {
-    display: block;
-    position: relative;
-    background-color: #fff;
-    border: 1px solid;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 380px;
-    width: 50%;
-    height: 100%;
+  .container-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-img img {
+    width: 68%;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .container-user {
+    width: 31%;
+    bottom: -12%;
+    position: absolute;
+    right: 22%;
+    max-width: 680px;
+    transition: none;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 35px;
+    border: 1px solid rgb(230, 226, 221);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .line-left-log {
+    width: 98%;
+    margin-left: -15px;
+    background-color: rgb(255, 187, 0);
+    border-color: rgb(255, 187, 0);
+    color: rgb(255, 187, 0);
+    border: 2px solid rgb(255, 187, 0);
+    justify-content: left;
+    justify-items: left;
+  }
+
+  .line-right-log {
+    width: 98%;
+    margin-left: 15px;
+    background-color: rgb(255, 187, 0);
+    border-color: rgb(255, 187, 0);
+    color: rgb(255, 187, 0);
+    border: 2px solid rgb(255, 187, 0);
+    justify-content: left;
+    justify-items: left;
+  }
+
+  .content-details h2, i {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .content-details i {
+    font-size: 50px;
+  }
+
+  .content-details {
+    margin-top: 15px;
+  }
+  .content-details h2 {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+
+  .content-details .bi-person-circle {
+    margin-top: -10px;
+    color: orange;
+  }
+
+  .content-details h2 {
+    color: orange;
+  }
+
+  .content-details .btn-outlook {
+    margin-top: 25px;
+    padding: 8px 10px;
+    text-align: center;
+    border: 2px solid rgb(146, 143, 143);
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+  }
+
+  .container-user .btn-outlook img {
+    width: 10%;
+  }
+  .content-separator {
+    display: flex;
     margin-top: 15px;
     justify-content: center;
-    justify-items: center
-  }
-
-  .title-details {
-    display: flex;
-  }
-
-  .title-details hr {
-    width: 50%;
-    background-color: #f7b80a;
-    border-color: #f7b80a;
-    color: #f7b80a;
-    border: 2px solid #f7b80a;
-
-  }
-
-  .title-details i {
-    justify-content: center;
     justify-items: center;
   }
 
-  .title-details .bi-person-circle {
-    font-size: 55px;
-  }
-
-  .content-login {
-    display: block;
-  }
-
-  .button-sesion a {
+  .content-separator h3 {
     display: flex;
     width: 100%;
-    margin-top: 15px;
-    border: 2px solid #797777;
-    border-radius: 10px;
-    padding: 8px;
-    color: black;
-    text-decoration: none;
+    font-size: 25px;
     text-align: center;
     justify-content: center;
     justify-items: center;
   }
 
-  .btn-iniciar a {
-    display: flex;
-    width: 70%;
-    background-color: #f7b80a;
-    border-radius: 10px;
-    padding: 8px;
-    margin-top: 15px;
-    color: black;
-    text-decoration: none;
-    justify-content: center;
-    justify-items: center;
-
+  .content-separator hr {
+    width: 100%;
+    border: 1px solid;
   }
 
-  .input-group label, input {
+  .input-group-log {
+    margin-top: 15px;
+  }
+  
+
+  .input-group-log input {
+    padding: 7px;
+    border-radius: 6px;
+  }
+
+  .input-group-log label, input {
     width: 100%;
     margin-top: 5px;
-    
   }
-  .input-group input {
-    padding: 8px;
+
+  .content-pass {
+    display: flex;
+    margin-top: 10px;
   }
+  .content-pass h1, a {
+    font-size: 15px;
+    color: orange;
+  }
+
+  .content-details .log-btn {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .content-details .btn-iniciar {
+    width: 50%;
+    font-size: 19px;
+    padding: 9px;
+    margin-top: 15px;
+    border-radius: 12px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+
+
 }
 
 @media (max-width: 767px) {
-  
+  .content-section {
+    display: block;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .container-section h1 {
+    font-size: 25px;
+  }
+
+
+  .container-img img {
+    width: 100%;
+  }
 
 }
+
+
 
 
 
