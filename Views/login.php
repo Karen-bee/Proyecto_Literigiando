@@ -7,7 +7,7 @@
 <section class="content-section">
     <h1 class="title-welcome">¡Bienvenido a Litegareando!</h1>
 <div class="container-img">
-    <img src="\App\Storage\login.jfif" alt="">
+    <img src="../Storage/login.jfif" alt="">
 
     <div class="container-user">
         <div class="content-details">
@@ -26,7 +26,7 @@
             </div>
             </div>
 
-            <a class="btn-outlook" type="submit"><img src="\App\Storage\Outlook-Logo.png" alt=""> Iniciar sesión con Outlook</a>
+            <a class="btn-outlook" type="submit"><img src="../Storage/Outlook-Logo.png" alt=""> Iniciar sesión con Outlook</a>
 
             <div class="content-separator">
                 <div class="col-4">
