@@ -1,0 +1,116 @@
+/*ESTILOS REGISTROS*/
+.contenedorR {
+    position: relative;
+    max-width: 100%;
+    padding-top: 10%;
+    padding-bottom: 2%;
+}
+
+/* imagen fondo*/
+.seccion {
+    background: url(../../Storage/Imagenes/registro.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10%;
+    left: 50%;
+}
+
+/*Texto*/
+.texto-superpuesto {
+    font-family: 'Source Serif Pro' !important;
+    color: #F59A35 !important;
+    font-size: 39px !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    position: relative;
+    top: 5px;
+}
+
+/*Liena Recta*/
+
+.linea-recta {
+    width: 63%;
+    height: 2px;
+    background-color: #F9A826;
+    position: relative;
+    top: 9px;
+    left: 19%;
+}
+
+/*Icon*/
+
+.icon {
+    position: relative;
+    top: -91px;
+    left: 33%;
+    z-index: 800
+}
+
+/*Descripcion*/
+
+.des {
+    font-family: 'Source Serif Pro' !important;
+    position: relative;
+    color: #000000 !important;
+    font-size: 17px !important;
+    top: -56px;
+    left: 20%;
+}
+
+/*Liena Recta Descripcion*/
+
+.linea-Desc {
+    width: 70%;
+    height: 2px;
+    background-color: #969FAA;
+    position: relative;
+    top: -73px;
+    left: 16%;
+}
+
+/* Estilos Form */
+
+.formStyle {
+    font-family: 'Source Serif Pro' !important;
+    color: #000000 !important;
+    font-size: 17px !important;
+    position: relative;
+    top: -15px;
+    left: 31%;
+
+}
+
+/*Iconos pequeños */
+
+.iconpequeno {
+    position: relative;
+    top: 0px;
+    left: 0%;
+}
+
+/*Boton Registro*/
+
+.btnRegistro {
+    font-family: 'Source Serif Pro' !important;
+    color: white !important;
+    font-size: 27px !important;
+    background: #EB8600;
+    border-color: #EB8600;
+    border-radius: 52px;
+    position: relative;
+    top: 20px;
+    left: 11%;
+    width: 180px;
+    height: 48px;
+    justify-content: center;
+    display: inline-flex;
+}
+
+/*Enlace*/
+
+.enlace {
+    position: relative;
+    top: 134px;
+    left: 7%;
+}

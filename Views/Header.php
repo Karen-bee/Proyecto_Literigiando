@@ -13,6 +13,10 @@
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 
 
+    <!-- Boostrap karen -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 </head>
 
 
@@ -40,8 +44,8 @@
 <body>
     <!--Header con dos logos de encabezado-->
     <div class="rectangulo">
-        <img class="m-3" src="../Storage/Imagenes/Logo_Lite.png" alt="" width="150" height="50" class="logolite">
-        <img class="m-3 " src="../Storage/Imagenes/Logo-Uni.jpeg" alt="" width="150" height="50" class="logouni">
+        <img  src="../Storage/Imagenes/Logo_Lite.png" alt="" width="150" height="50" class="logolite">
+        <img src="../Storage/Imagenes/Logo-Uni.png" alt="" width="150" height="50" class="logouni">
     </div>
 </body>
 
