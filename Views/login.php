@@ -42,10 +42,10 @@
 
             <div class="input-group-log">
                 <label for="" class="bi bi-person"><b>Usuario:</b></label>
-                <input type="text" name="" id="" placeholder="Ingresa Usuario o Email">
+                <input type="text" name="usuario" id="" placeholder="Ingresa Usuario o Email">
 
                 <label for="" class="bi bi-key-fill"><b>Contraseña</b></label>
-                <input type="password" name="" id="" placeholder="Ingresar Contraseña">
+                <input type="password" name="pass" id="" placeholder="Ingresar Contraseña">
             </div>
 
             <div class="content-pass">
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="log-btn">
-                <a class="btn-iniciar" href="#">Iniciar sesión</a>
+                <a class="btn-iniciar" href="../Models/InicioSession.php">Iniciar sesión</a>
             </div>
         </div>
         
