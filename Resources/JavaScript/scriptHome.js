@@ -101,3 +101,5 @@ $(".step03").click(function () {
     $("#line-progress").css("width", "100%");
     $(".creative").addClass("active").siblings().removeClass("active");
 });
+
+

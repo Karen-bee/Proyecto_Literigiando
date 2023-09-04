@@ -5,6 +5,11 @@
 include("../Views/Header.php")
 ?>
 
+<?php
+include("../Views/submit.php")
+?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +35,7 @@ include("../Views/Header.php")
             <div class="linea-Desc"> </div>
             <!-- Formulario -->
 
-            <form class="formStyle">
+            <form class="formStyle" id="contactform" method="post" action="">
                 <!-- Tipo de Identificacion -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/identificacion.png" class="iconpequeno" alt="Identificacion">
@@ -45,7 +50,7 @@ include("../Views/Header.php")
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/numero_documento.png" class="iconpequeno" alt="Numero de Identificacion">
                     <label for="lb_numeroDocuemnto"><strong>Número de Documento</strong></label>
-                    <input type="text" id="txt_numeroDocumento" class="form-control" placeholder="Ingrese su Número de Documento">
+                    <input type="text" id="txt_numeroDocumento" class="form-control" maxlength="10" placeholder="Ingrese su Número de Documento">
                 </div>
 
                 <!-- Nombre Completo -->
@@ -66,7 +71,7 @@ include("../Views/Header.php")
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/telefono.png" class="iconpequeno" alt="Telefono">
                     <label for="lb_nombreCompleto"><strong>Telefono</strong></label>
-                    <input type="text" id="txt_telefono" class="form-control" placeholder=" Ingrese su Telefono">
+                    <input type="text" id="txt_telefono" class="form-control" maxlength="10" placeholder=" Ingrese su Telefono">
                 </div>
 
                 <!-- Nombre Usuario -->
@@ -88,7 +93,15 @@ include("../Views/Header.php")
                     <img src="../Storage/Icon/clave.png" class="iconpequeno" alt="Contraseña">
                     <label for="lb_pass"><strong>Contraseña</strong></label>
                     <input type="password" id="txt_pass" class="form-control" placeholder="Ingrese su contraseña">
+                    <div id="message"></div>
                 </div>
+
+                <!-- input -->
+                <input type="hidden" name="submit_fm" value="1">
+                
+                <!-- RECAPCHA -->
+
+                <button class="g-recaptcha" data-sitekey="6Lc5svknAAAAAC6M5T23-LYvTqHhNg-R2n31Ifsa" data-callback="onsubmit" data-action='submit'></button>
 
                 <!-- Boton Registro -->
                 <button type="submit" class="btnRegistro">Registrate</button>
@@ -100,9 +113,6 @@ include("../Views/Header.php")
         </div>
     </div>
     </div>
-
-
-
 
 </body>
 

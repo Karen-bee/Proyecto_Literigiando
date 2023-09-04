@@ -105,6 +105,7 @@
     height: 48px;
     justify-content: center;
     display: inline-flex;
+    border: solid 4px #EB8600;
 }
 
 /*Enlace*/
