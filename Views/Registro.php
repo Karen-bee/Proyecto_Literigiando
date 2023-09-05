@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <?php
-include("../Views/Header.php")
+include("../Views/submit.php")
 ?>
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Literagiando</title>
     <link rel="stylesheet" href="../Resources/Css/styleRegistro.css">
+
+    <!-- Boostrap karen -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 
 </head>
 
@@ -30,7 +37,7 @@ include("../Views/Header.php")
             <div class="linea-Desc"> </div>
             <!-- Formulario -->
 
-            <form class="formStyle">
+            <form class="formStyle" id="contactform" method="post" action="">
                 <!-- Tipo de Identificacion -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/identificacion.png" class="iconpequeno" alt="Identificacion">
@@ -45,7 +52,7 @@ include("../Views/Header.php")
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/numero_documento.png" class="iconpequeno" alt="Numero de Identificacion">
                     <label for="lb_numeroDocuemnto"><strong>Número de Documento</strong></label>
-                    <input type="text" id="txt_numeroDocumento" class="form-control" placeholder="Ingrese su Número de Documento">
+                    <input type="text" id="txt_numeroDocumento" class="form-control" maxlength="10" placeholder="Ingrese su Número de Documento">
                 </div>
 
                 <!-- Nombre Completo -->
@@ -66,7 +73,7 @@ include("../Views/Header.php")
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/telefono.png" class="iconpequeno" alt="Telefono">
                     <label for="lb_nombreCompleto"><strong>Telefono</strong></label>
-                    <input type="text" id="txt_telefono" class="form-control" placeholder=" Ingrese su Telefono">
+                    <input type="text" id="txt_telefono" class="form-control" maxlength="10" placeholder=" Ingrese su Telefono">
                 </div>
 
                 <!-- Nombre Usuario -->
@@ -88,6 +95,14 @@ include("../Views/Header.php")
                     <img src="../Storage/Icon/clave.png" class="iconpequeno" alt="Contraseña">
                     <label for="lb_pass"><strong>Contraseña</strong></label>
                     <input type="password" id="txt_pass" class="form-control" placeholder="Ingrese su contraseña">
+                    <div id="message"></div>
+                </div>
+
+                <!-- RECAPCHA -->
+
+                <div class="form-group col-md-5">
+                    <div class="g-recaptcha" data-sitekey="6LcXNP0nAAAAAP0UrrYUU1ep2flKR8EZbPIWccLj"></div>
+
                 </div>
 
                 <!-- Boton Registro -->
@@ -101,13 +116,8 @@ include("../Views/Header.php")
     </div>
     </div>
 
-
-
-
 </body>
 
-<?php
-include("../Views/Footer.php")
-?>
+
 
 </html>

@@ -1,4 +1,4 @@
-<?php include('Header.php') ?>
+
 
 <!--Estilo-->
 <link rel="stylesheet" href="../Resources/Css/stylesE.css">
@@ -69,4 +69,3 @@
 </div>    
   
 </section>
-<?php include('Footer.php') ?>
