@@ -2,7 +2,7 @@
 .contenedorR {
     position: relative;
     max-width: 100%;
-    padding-top: 10%;
+    padding-top: 3%;
     padding-bottom: 2%;
 }
 
@@ -12,7 +12,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 10%;
+    padding: 3%;
     left: 50%;
 }
 
@@ -24,27 +24,28 @@
     text-align: center !important;
     font-weight: 700 !important;
     position: relative;
-    top: 5px;
+    top: 92px;
+
 }
 
 /*Liena Recta*/
 
 .linea-recta {
-    width: 63%;
+    width: 54%;
     height: 2px;
     background-color: #F9A826;
     position: relative;
-    top: 9px;
-    left: 19%;
+    top: 90px;
+    left: 23%;
 }
 
 /*Icon*/
 
 .icon {
     position: relative;
-    top: -91px;
-    left: 33%;
-    z-index: 800
+    top: -11px;
+    left: 35%;
+    z-index: 800;
 }
 
 /*Descripcion*/
@@ -54,19 +55,19 @@
     position: relative;
     color: #000000 !important;
     font-size: 17px !important;
-    top: -56px;
-    left: 20%;
+    top: 1px;
+    left: 23%;
 }
 
 /*Liena Recta Descripcion*/
 
 .linea-Desc {
-    width: 70%;
+    width: 59%;
     height: 2px;
     background-color: #969FAA;
     position: relative;
-    top: -73px;
-    left: 16%;
+    top: -8px;
+    left: 21%;
 }
 
 /* Estilos Form */
@@ -76,8 +77,8 @@
     color: #000000 !important;
     font-size: 17px !important;
     position: relative;
-    top: -15px;
-    left: 31%;
+    top: 11px;
+    left: 28%;
 
 }
 
@@ -99,18 +100,20 @@
     border-color: #EB8600;
     border-radius: 52px;
     position: relative;
-    top: 20px;
-    left: 11%;
+    top: -8px;
+    left: 14%;
     width: 180px;
     height: 48px;
     justify-content: center;
     display: inline-flex;
+    border: solid 4px #EB8600;
 }
 
 /*Enlace*/
 
 .enlace {
     position: relative;
-    top: 134px;
-    left: 7%;
+    top: 24px;
+    left: 10%;
+
 }
