@@ -334,6 +334,3 @@ $(document).ready(function () {
 
 // REPCAPHA 
 
-function onsubmit(toke){
-  document.getElementById ("contactform").submit();
-}
