@@ -279,3 +279,58 @@ $(function () {
     $(this).prev().find(".fa").eq(1).removeClass("fa-angle-down").addClass("fa-angle-right");
   });
 })
+
+
+// NO PERMITIR CARACTERES ESPECIALES INPUT TEXT
+
+$(document).ready(function () {
+  // Seleccionamos el campo de entrada por su ID
+  var inputField = $("#txt_telefono");
+  var inputField2 = $("#txt_numeroDocumento");
+
+  // Usamos el evento "input" para detectar cambios en el campo
+  inputField.on("input", function () {
+    // Obtenemos el valor actual del campo
+    var inputValue = inputField.val();
+
+    // Reemplazamos cualquier caracter no numérico con una cadena vacía
+    var cleanedValue = inputValue.replace(/[^0-9]/g, "");
+
+    // Actualizamos el valor del campo con la versión limpia
+    inputField.val(cleanedValue);
+  });
+
+
+  // Segunda opcion 
+
+  // Usamos el evento "input" para detectar cambios en el campo
+  inputField2.on("input", function () {
+    // Obtenemos el valor actual del campo
+    var inputValue2 = inputField2.val();
+
+    // Reemplazamos cualquier caracter no numérico con una cadena vacía
+    var cleanedValue2 = inputValue2.replace(/[^0-9]/g, "");
+
+    // Actualizamos el valor del campo con la versión limpia
+    inputField2.val(cleanedValue2);
+  });
+});
+
+
+// CLAVE VERIFICACION 
+
+$(document).ready(function () {
+  $('#txt_pass').on('input', function () {
+    var password = $(this).val();
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/;
+
+    if (regex.test(password)) {
+      $('#message').text('Contraseña válida').css('color', 'green');
+    } else {
+      $('#message').text('la contraseña deberá tener una longitud minima de 8 caracteres, entre ellos mayusculas, minúsculas, números y carateres especioales (@$#?¿%_)').css('color', 'red');
+    }
+  });
+});
+
+// REPCAPHA 
+

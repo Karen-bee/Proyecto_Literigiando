@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="../Resources/Css/style_registroExitoso.css">
 </head>
 
 
@@ -45,7 +47,7 @@
 <body>
     <!--Header con dos logos de encabezado-->
     <div class="rectangulo">
-        <img  src="../Storage/Imagenes/Logo_Lite.png" alt="" width="150" height="50" class="logolite">
+        <img src="../Storage/Imagenes/Logo_Lite.png" alt="" width="150" height="50" class="logolite">
         <img src="../Storage/Imagenes/Logo-Uni.png" alt="" width="150" height="50" class="logouni">
     </div>
 </body>

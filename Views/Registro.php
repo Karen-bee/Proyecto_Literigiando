@@ -2,9 +2,6 @@
 <html lang="en">
 
 
-<?php
-include("../Views/submit.php")
-?>
 
 
 <head>
@@ -37,14 +34,15 @@ include("../Views/submit.php")
             <div class="linea-Desc"> </div>
             <!-- Formulario -->
 
-            <form class="formStyle" id="contactform" method="post" action="">
+            <form class="formStyle" id="contactform" method="post" action="../Models/InsertRegistro.php">
                 <!-- Tipo de Identificacion -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/identificacion.png" class="iconpequeno" alt="Identificacion">
                     <label for="lb_tipoDocumentos"><strong>Tipo Documento</strong></label>
-                    <select id="select_tipodocumento" class="form-control">
-                        <option selected>Elige tu documento</option>
-                        <option>Cedula Ciudadania</option>
+                    <select id="select_tipodocumento" class="form-control" name="select_Documentos">
+                        <option value="0">Elige tu documento</option>
+                        <?php include '../Models/CargarSelect_Documentos.php'; ?>
+
                     </select>
                 </div>
 
@@ -52,49 +50,49 @@ include("../Views/submit.php")
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/numero_documento.png" class="iconpequeno" alt="Numero de Identificacion">
                     <label for="lb_numeroDocuemnto"><strong>Número de Documento</strong></label>
-                    <input type="text" id="txt_numeroDocumento" class="form-control" maxlength="10" placeholder="Ingrese su Número de Documento">
+                    <input type="text" id="txt_numeroDocumento" name="numeroDocumento" class="form-control" maxlength="10" placeholder="Ingrese su Número de Documento">
                 </div>
 
                 <!-- Nombre Completo -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/usuario.png" class="iconpequeno" alt="Nombre completo">
                     <label for="lb_nombreCompleto"><strong>Nombre Completo</strong></label>
-                    <input type="text" id="txt_nombreCompleto" class="form-control" placeholder="Ingrese su Nombre Completo">
+                    <input type="text" id="txt_nombreCompleto" class="form-control" name="nombreCompleto" placeholder="Ingrese su Nombre Completo">
                 </div>
 
                 <!-- Direccion -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/ubicacion.png" class="iconpequeno" alt="Direccion">
                     <label for="lb_nombreCompleto"><strong>Dirección</strong></label>
-                    <input type="text" id="txt_direccion" class="form-control" placeholder=" Ingrese su Dirección">
+                    <input type="text" id="txt_direccion" class="form-control" name="direccion" placeholder=" Ingrese su Dirección">
                 </div>
 
                 <!-- Telefono -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/telefono.png" class="iconpequeno" alt="Telefono">
                     <label for="lb_nombreCompleto"><strong>Telefono</strong></label>
-                    <input type="text" id="txt_telefono" class="form-control" maxlength="10" placeholder=" Ingrese su Telefono">
+                    <input type="text" id="txt_telefono" class="form-control" name="telefono" maxlength="10" placeholder=" Ingrese su Telefono">
                 </div>
 
                 <!-- Nombre Usuario -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/usuario.png" class="iconpequeno" alt="Usuario">
                     <label for="lb_username"><strong>Nombre de usuario</strong></label>
-                    <input type="text" id="txt_username" class="form-control" placeholder=" Ingrese su Nombre de usuario">
+                    <input type="text" id="txt_username" class="form-control" name="username" placeholder=" Ingrese su Nombre de usuario">
                 </div>
 
                 <!-- Email -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/email.png" class="iconpequeno" alt="Email">
                     <label for="lb_email"><strong>E-mail</strong></label>
-                    <input type="email" id="txt_email" class="form-control" placeholder="Ingrese su correo electronico">
+                    <input type="email" id="txt_email" class="form-control" name="email" placeholder="Ingrese su correo electronico">
                 </div>
 
                 <!-- Password -->
                 <div class="form-group col-md-5">
                     <img src="../Storage/Icon/clave.png" class="iconpequeno" alt="Contraseña">
                     <label for="lb_pass"><strong>Contraseña</strong></label>
-                    <input type="password" id="txt_pass" class="form-control" placeholder="Ingrese su contraseña">
+                    <input type="password" id="txt_pass" class="form-control" name="pass" placeholder="Ingrese su contraseña">
                     <div id="message"></div>
                 </div>
 
@@ -106,7 +104,7 @@ include("../Views/submit.php")
                 </div>
 
                 <!-- Boton Registro -->
-                <button type="submit" class="btnRegistro">Registrate</button>
+                <button type="submit" class="btnRegistro" name="registrar">Registrate</button>
 
                 <p class="enlace"><strong>¿Ya tienes una cuenta?</strong><a href="../Views/login.php" class="text-white"> Iniciar Sesión</a>
                 </p>
@@ -117,6 +115,8 @@ include("../Views/submit.php")
     </div>
 
 </body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="../Resources/JavaScript/script.js" async defer></script>
 
 
 
