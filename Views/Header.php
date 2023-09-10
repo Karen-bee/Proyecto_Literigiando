@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 
     <link rel="stylesheet" href="../Resources/Css/style_registroExitoso.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../Storage/Imagenes/Logo_Literagiando.png">
+
 </head>
 
 
@@ -37,7 +40,7 @@
             <li><a href="#">Sobre nosotros</a></li>
             <li><a href="#">Noticias</a></li>
             <li><a href="#">Eventos</a></li>
-            <li><a href="prueba.php">Blog</a></li>
+            <li><a href="#">Blog</a></li>
             <li><a href="../Views/login.php"><label for="#">Inicio Sesion</label></a></li>
             <label for="check" class="esconder-menu">&#215</label>
         </ul>
