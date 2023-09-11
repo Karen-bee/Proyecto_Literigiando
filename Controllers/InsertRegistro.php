@@ -3,16 +3,6 @@
 //1. Invocar conexión
 include '../Models/conexion.php';
 
-// Variables de error 
-$error_documento = false;
-$error_username = false;
-$error_correo = false;
-$error_telefono = false;
-
-
-// Variable de comprobacion 
-$error = false;
-
 // Correo
 // Libreria
 
@@ -79,45 +69,36 @@ if (isset($_POST["registrar"])) {
     $cant_duplicidad_telefono = mysqli_num_rows($result_telefono);
 
 
-
+    // Variables de error 
 
     if (isset($_POST["registrar"])) {
         if ($cant_duplicidad_documnt === 0) {
-            // $error_documento = true;
             header("location:../Views/Registro.php?Repeated");
-        } else if ($cant_duplicidad_user === 0) {
-            //$error_username = true;
-            header("location:../Views/Registro.php?Repeated1");
-        } else if ($cant_duplicidad_correo === 0) {
-            echo $cant_duplicidad_correo;
-            //$error_correo = true;
-            header("location:../Views/Registro.php?Repeated2");
-        } else if ($cant_duplicidad_telefono === 0) {
-            //$error_telefono = true;
-            header("location:../Views/Registro.php?Repeated3");
-        } else {
+        }
+    }
 
-            // 5. INSERT SQL 
-            $idDocumento = $_POST["select_Documentos"];
 
-            $inserta = "INSERT INTO usuario (documento_usuario, 
+    // 5. INSERT SQL 
+    $idDocumento = $_POST["select_Documentos"];
+
+    $inserta = "INSERT INTO usuario (documento_usuario, 
     idusuario, nombrecompleto_usuario, direccion_usuario, telefono_usuario, username, 
-    correo_usuario, password, estado, foto_usuario,Fecha_registro,idtipodedocumento, idrolusuario)
+    correo_usuario, password, estado, foto_usuario,idtipodedocumento, idrolusuario)
     VALUES('$documento_usuario ', 
     '$nuevoID', '$nombre_usuario', '$direccion','$telefono ', ' $username', '$email', '$sha256_hash'  , 
-    '$estado', '$foto_perfil',NOW(),
+    '$estado', '$foto_perfil',
     '$idDocumento', '$idrolusuario') ";
 
-            $resultado = mysqli_query($conexion, $inserta);
+    $resultado = mysqli_query($conexion, $inserta);
 
 
 
-            if ($resultado === TRUE) {
-                session_start(); // Inicia la sesión para almacenar datos del usuario
-                $_SESSION['username'] = $username; // Almacena el nombre de usuario en la sesión
+    if ($resultado === TRUE) {
+        session_start(); // Inicia la sesión para almacenar datos del usuario
+        $_SESSION['username'] = $username; // Almacena el nombre de usuario en la sesión
 
 
-                $miDisenoHTML = '<!DOCTYPE html>
+        $miDisenoHTML = '<!DOCTYPE html>
         <html lang="en">
         
         <head>
@@ -193,29 +174,27 @@ if (isset($_POST["registrar"])) {
         </html>
         ';
 
-                // Correo
-                $to =  $email;
-                $subject = "Literagiando - Registro Exitoso";
-                $headers = "MIME-Version: 1.0" . "\r\n";
-                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                $message = $miDisenoHTML;
+        // Correo
+        $to =  $email;
+        $subject = "Literagiando - Registro Exitoso";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $message = $miDisenoHTML;
 
 
 
 
-                if (mail($to, $subject, $message, $headers)) {
-                    echo "Correo enviado con éxito";
-                } else {
-                    echo "Error al enviar el correo";
-                }
-
-                header("Location: ../Views/registro_exitoso.php"); // Redirecciona al usuario a la página de confirmación
-                exit; // Termina el script
-
-            }
-
-            // Cierra la conexión
-            $conexion->close();
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Correo enviado con éxito";
+        } else {
+            echo "Error al enviar el correo";
         }
+
+        header("Location: ../Views/registro_exitoso.php"); // Redirecciona al usuario a la página de confirmación
+        exit; // Termina el script
+
     }
+
+    // Cierra la conexión
+    $conexion->close();
 }
