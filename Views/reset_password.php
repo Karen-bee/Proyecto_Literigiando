@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-include("../Views/Header.php")
-?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +8,9 @@ include("../Views/Header.php")
 
     <!-- CSS -->
     <link rel="stylesheet" href="../Resources/Css/style_cambiocontra.css">
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
@@ -58,9 +57,5 @@ include("../Views/Header.php")
     </div>
 
 </body>
-
-<?php
-include("../Views/Footer.php")
-?>
 
 </html>
