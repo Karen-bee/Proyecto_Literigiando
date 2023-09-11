@@ -3,13 +3,6 @@
 //1. Invocar conexión
 include '../Models/conexion.php';
 
-//2. Crear conexión a la Base de Datos
-$conexion = new mysqli($server, $userRoot, $password, $db);
-
-if ($conexion->connect_error) {
-    die("Connection failed: " . $conexion->connect_error);
-}
-
 
 //3.  LLenar Select Documentos 
 
