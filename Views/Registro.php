@@ -1,5 +1,9 @@
+<?php
+include '../Controllers/InsertRegistro.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -50,7 +54,9 @@
                     <input type="text" id="txt_numeroDocumento" name="numeroDocumento" class="form-control" maxlength="10" placeholder="Ingrese su Número de Documento" required>
                     <?php
                     $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                   
                     if (false !== strpos($fullUrl, 'Repeated')) {
+                      
                     ?>
                         </br>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -84,8 +90,8 @@
                     <label for="lb_nombreCompleto"><strong>Telefono</strong></label>
                     <input type="text" id="txt_telefono" class="form-control" name="telefono" maxlength="10" placeholder=" Ingrese su Telefono" required>
                     <?php
-                    $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    if (false !== strpos($fullUrl, 'Repeated')) {
+                    $fullUrl2 = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if (false !== strpos($fullUrl2, 'Repeated1')) {
                     ?>
                         </br>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -105,8 +111,8 @@
                     <label for="lb_username"><strong>Nombre de usuario</strong></label>
                     <input type="text" id="txt_username" class="form-control" name="username" placeholder=" Ingrese su Nombre de usuario" required>
                     <?php
-                    $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    if (false !== strpos($fullUrl, 'Repeated')) {
+                    $fullUrl3 = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if (false !== strpos($fullUrl3, 'Repeated2')) {
                     ?>
                         </br>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -125,9 +131,9 @@
                     <img src="../Storage/Icon/email.png" class="iconpequeno" alt="Email">
                     <label for="lb_email"><strong>E-mail</strong></label>
                     <input type="email" id="txt_email" class="form-control" name="email" placeholder="Ingrese su correo electronico" required>
-                    <?php
-                    $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    if (false !== strpos($fullUrl, 'Repeated')) {
+                     <?php
+                    $fullUrl4 = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if (false !== strpos($fullUrl4, 'Repeated3')) {
                     ?>
                         </br>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
