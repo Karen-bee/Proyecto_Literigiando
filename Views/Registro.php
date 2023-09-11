@@ -40,7 +40,6 @@
                     <select id="select_tipodocumento" class="form-control" name="select_Documentos" required>
                         <option value="0">Elige tu documento</option>
                         <?php include '../Controllers/CargarSelect_Documentos.php'; ?>
-
                     </select>
                 </div>
 

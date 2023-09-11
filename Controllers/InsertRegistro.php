@@ -3,6 +3,9 @@
 //1. Invocar conexión
 include '../Models/conexion.php';
 
+// Correo
+// Libreria
+
 
 session_start();
 
@@ -61,22 +64,18 @@ if (isset($_POST["registrar"])) {
 
     $validar_telefono = "SELECT * FROM usuario WHERE telefono_usuario = '$telefono'";
     $result_telefono = mysqli_query($conexion, $validar_telefono);
-    $cant_duplicidad_correo = mysqli_num_rows($result_telefono);
+    $cant_duplicidad_telefono = mysqli_num_rows($result_telefono);
 
 
     // Variables de error 
 
-    if (isset($_POST["registrar"])) {
-        if (
-            $cant_duplicidad == 0 ||  $cant_duplicidad_user == 0 ||  $cant_duplicidad_correo == 0
-            ||  $cant_duplicidad_correo == 0
-        ) {
-            header("location:../Views/Registro.php?Repeated");
-        } else {
-            // 5. INSERT SQL 
-            $idDocumento = $_POST["select_Documentos"];
 
-            $inserta = "INSERT INTO usuario (documento_usuario, 
+
+
+    // 5. INSERT SQL 
+    $idDocumento = $_POST["select_Documentos"];
+
+    $inserta = "INSERT INTO usuario (documento_usuario, 
     idusuario, nombrecompleto_usuario, direccion_usuario, telefono_usuario, username, 
     correo_usuario, password, estado, foto_usuario,idtipodedocumento, idrolusuario)
     VALUES('$documento_usuario ', 
@@ -84,17 +83,112 @@ if (isset($_POST["registrar"])) {
     '$estado', '$foto_perfil',
     '$idDocumento', '$idrolusuario') ";
 
-            $resultado = mysqli_query($conexion, $inserta);
+    $resultado = mysqli_query($conexion, $inserta);
 
-            if ($resultado === TRUE) {
-                session_start(); // Inicia la sesión para almacenar datos del usuario
-                $_SESSION['username'] = $username; // Almacena el nombre de usuario en la sesión
-                header("Location: ../Views/registro_exitoso.php"); // Redirecciona al usuario a la página de confirmación
-                exit; // Termina el script
-            }
 
-            // Cierra la conexión
-            $conexion->close();
+
+    if ($resultado === TRUE) {
+        session_start(); // Inicia la sesión para almacenar datos del usuario
+        $_SESSION['username'] = $username; // Almacena el nombre de usuario en la sesión
+
+
+        $miDisenoHTML ='<!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Gracias por Registrarte</title>
+            <style>
+                body {
+                    font-family: Source Serif Pro, sans-serif;
+                    background-color: #f2f2f2;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                .container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+        
+                .header {
+                    background-color: #EB8600;
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px;
+                }
+        
+                .content {
+                    padding: 20px;
+                }
+        
+                .button {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #EB8600;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+        
+                .button:hover {
+                    background-color: #0056b3;
+                }
+        
+                .footer {
+                    text-align: center;
+                    padding-top: 20px;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>Gracias por Registrarte</h1>
+                </div>
+                <div class="content">
+                    <p>Estimado/a Usuario,</p>
+                    <p>Gracias por registrarte en nuestro sitio web. Estamos encantados de tenerte como parte de nuestra comunidad.</p>
+                    <p>No olvides visitar nuestro sitio web y comenzar a explorar.</p>
+                    <p>¡Esperamos verte pronto!</p>
+                    <a href="http://localhost/Literagiando/Views/" class="button">Ir al Sitio Web</a>
+                </div>
+                <div class="footer">
+                    <p>Gracias de nuevo por unirte a nosotros.</p>
+                </div>
+            </div>
+        </body>
+        
+        </html>
+        ';
+
+        // Correo
+        $to =  $email;
+        $subject = "Literagiando - Registro Exitoso";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $message = $miDisenoHTML;
+
+
+
+    
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Correo enviado con éxito";
+        } else {
+            echo "Error al enviar el correo";
         }
+
+        header("Location: ../Views/registro_exitoso.php"); // Redirecciona al usuario a la página de confirmación
+        exit; // Termina el script
+
     }
+
+    // Cierra la conexión
+    $conexion->close();
 }
