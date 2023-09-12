@@ -3,17 +3,19 @@
 //1. Invocar conexión
 include '../Models/conexion.php';
 
-session_start();
+
 
 // -- Tomar los datos provenientes de los campos del Formulario
 
 if (isset($_POST["Enviar_correo"])) {
+
     $email_consulta = $_POST['email'];
-
-
     $consultaEmail = "SELECT * FROM usuario WHERE correo_usuario LIKE '%$email_consulta%'";
     $resultado_email = mysqli_query($conexion, $consultaEmail);
     $row = mysqli_num_rows($resultado_email);
+
+    session_start(); // Inicia la sesión para almacenar datos del usuario
+    $_SESSION['email'] = $email_consulta; // Almacena el nombre de usuario en la sesión
 
     if ($row !== 0) {
         $miDisenoHTML1 = '<!DOCTYPE html>
@@ -81,7 +83,7 @@ if (isset($_POST["Enviar_correo"])) {
                     <p>Recibes este correo porque solicitaste recuperar tu cuenta en Literagiando</p>
                     <p>Estamos aquí para ayudarte a restablecer tu acceso. A continuación, encontrarás un enlace seguro para cambiar tu contraseña:
                     </p>
-                    <a href="http://localhost/Literagiando/Views/reset_password.php" class="button">Recuperar Cuenta</a>
+                    <a href="http://localhost/pruebita/Views/reset_password.php?dato&&email_consulta='.$email_consulta.'" class="button">Recuperar Cuenta</a>
                     <p>Por favor, haz clic en el enlace anterior y sigue las instrucciones para crear una nueva contraseña. Asegúrate de utilizar una contraseña segura que contenga al menos 8 caracteres, incluyendo letras mayúsculas, letras minúsculas, números y símbolos.</p>
                     <p>Si no solicitaste esta recuperación de cuenta o no reconoces esta solicitud, te recomendamos que ignores este correo electrónico y tomes medidas adicionales para proteger tu cuenta. </p>
                     </div>
@@ -105,14 +107,16 @@ if (isset($_POST["Enviar_correo"])) {
 
 
         if (mail($to1, $subject1, $message1, $headers1)) {
-            echo "Correo enviado con éxito";
+            echo '<script>$("#correoEnviadoModal").modal("show");</script>';
+            //echo "Correo enviado con éxito";
         } else {
-            echo "Error al enviar el correo";
+            echo '<script>$("#NOcorreoEnviadoModal").modal("show");</script>';
         }
-
-        header("Location: ../Views/login.php"); // Redirecciona al usuario a la página de confirmación
+        //header("Location: ../Views/login.php"); // Redirecciona al usuario a la página de confirmación
         exit; // Termina el script
 
+    } else {
+        echo '<script>$("#NOcorreoEnviadoModal").modal("show");</script>';
     }
     // Cierra la conexión
     $conexion->close();

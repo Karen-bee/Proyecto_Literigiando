@@ -82,7 +82,7 @@ if (isset($_POST["registrar"])) {
 
 
     if (isset($_POST["registrar"])) {
-        if ($cant_duplicidad_documnt === 0) {
+        /* if ($cant_duplicidad_documnt === 0) {
             // $error_documento = true;
             header("location:../Views/Registro.php?Repeated");
         } else if ($cant_duplicidad_user === 0) {
@@ -95,12 +95,12 @@ if (isset($_POST["registrar"])) {
         } else if ($cant_duplicidad_telefono === 0) {
             //$error_telefono = true;
             header("location:../Views/Registro.php?Repeated3");
-        } else {
+        } */
 
-            // 5. INSERT SQL 
-            $idDocumento = $_POST["select_Documentos"];
+        // 5. INSERT SQL 
+        $idDocumento = $_POST["select_Documentos"];
 
-            $inserta = "INSERT INTO usuario (documento_usuario, 
+        $inserta = "INSERT INTO usuario (documento_usuario, 
     idusuario, nombrecompleto_usuario, direccion_usuario, telefono_usuario, username, 
     correo_usuario, password, estado, foto_usuario,Fecha_registro,idtipodedocumento, idrolusuario)
     VALUES('$documento_usuario ', 
@@ -108,16 +108,16 @@ if (isset($_POST["registrar"])) {
     '$estado', '$foto_perfil',NOW(),
     '$idDocumento', '$idrolusuario') ";
 
-            $resultado = mysqli_query($conexion, $inserta);
+        $resultado = mysqli_query($conexion, $inserta);
 
 
 
-            if ($resultado === TRUE) {
-                session_start(); // Inicia la sesión para almacenar datos del usuario
-                $_SESSION['username'] = $username; // Almacena el nombre de usuario en la sesión
+        if ($resultado === TRUE) {
+            session_start(); // Inicia la sesión para almacenar datos del usuario
+            $_SESSION['username'] = $username; // Almacena el nombre de usuario en la sesión
 
 
-                $miDisenoHTML = '<!DOCTYPE html>
+            $miDisenoHTML = '<!DOCTYPE html>
         <html lang="en">
         
         <head>
@@ -193,29 +193,28 @@ if (isset($_POST["registrar"])) {
         </html>
         ';
 
-                // Correo
-                $to =  $email;
-                $subject = "Literagiando - Registro Exitoso";
-                $headers = "MIME-Version: 1.0" . "\r\n";
-                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                $message = $miDisenoHTML;
+            // Correo
+            $to =  $email;
+            $subject = "Literagiando - Registro Exitoso";
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $message = $miDisenoHTML;
 
 
 
 
-                if (mail($to, $subject, $message, $headers)) {
-                    echo "Correo enviado con éxito";
-                } else {
-                    echo "Error al enviar el correo";
-                }
-
-                header("Location: ../Views/registro_exitoso.php"); // Redirecciona al usuario a la página de confirmación
-                exit; // Termina el script
-
+            if (mail($to, $subject, $message, $headers)) {
+                echo "Correo enviado con éxito";
+            } else {
+                echo "Error al enviar el correo";
             }
 
-            // Cierra la conexión
-            $conexion->close();
+            header("Location: ../Views/registro_exitoso.php"); // Redirecciona al usuario a la página de confirmación
+            exit; // Termina el script
+
         }
+
+        // Cierra la conexión
+        $conexion->close();
     }
 }

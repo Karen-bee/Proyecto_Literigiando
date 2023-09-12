@@ -2,13 +2,13 @@
 
 
 include("../Models/Conexion.php");
+include '../Views/login.php';
 
 
 if(!empty($_POST["btnSubmit"])) {
     if(empty($_POST["correo_usuario"]) and empty($_POST["password"])) {
-        echo '<script>
-            alert("COMPO E-MAIL O CONTRASEÑA VACIO");
-            window.location= "../Views/login.php"</script>';
+        echo '<script>$("#errorCampos").modal("show");</script>';
+
 
     } else {
         $correo_usuario=$_POST["correo_usuario"];
@@ -22,15 +22,8 @@ if(!empty($_POST["btnSubmit"])) {
             $_SESSION['correo'] = $correo_usuario;
             header("location:../Views/Dasboard.php");
         }else {
-            echo '<script>
-            alert("CONTRASEÑA INCORRECTA");
-            window.location= "../Views/login.php"</script>';
+            echo '<script>$("#errorlogin").modal("show");</script>';
         }
      
     }
 }
-
-
-
-
-?>
