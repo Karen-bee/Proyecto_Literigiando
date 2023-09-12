@@ -593,194 +593,237 @@ table {
 }
 
 
+/*CSS Login*/
 
-/* CSS Login*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.title-login {
+  position: absolute;
+  top: 6%;
+  left: 11%;
+  transform: translate(-0%, -50%);
+  padding: 30px 10px;
+}
+
+#img-login {
+  position: absolute;
+  min-width: 473px;
+  height: 84vh;
+  top: 15%;
+  left: 4%;
+  background-position: center center;
+  
+}
+
+.link-register {
+  position: absolute;
+  top: 91%;
+  left: 20%;
+}
+
+.link-register a {
+  color: white;
+}
+
+.section {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+.form-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 395px;
+  height: 70vh;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 60px;
+  background-color: white;
+  z-index: 1;
+  
+}
+
+.group-log input, label {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  outline: none;
+}
+
+.group-log input {
+  background-color: #d1cece;
+}
+
+.btn-login input[type="submit"]{
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 9px;
+  background-color: orange;
+  border: 0;
+  color: white;
+  padding: 8px;
+
+}
+
+.btn-login {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  justify-items: center;
+}
+
+.btn-outlook {
+  width: 100%;
+  text-align: center;
+  border-radius: 9px;
+  padding: 8px;
+  text-decoration: none;
+  border: 2px solid rgb(221, 220, 220);
+}
+
+.group-pw {
+  width: 100%;
+  display: inline-flex;
+  margin: 10px;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.group-pw label, a, input[type="checkbox"] {
+  display: inline;
+  color: orange;
+}
+
+.logo-login hr {
+  width: 100%;
+  border: 0px;
+  border: 2px solid orange;
+  color: orange;
+  background-color: orange;
+}
+
+.logo-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border: 0;
+  margin: 0;
+}
+
+
+.logo-login h2 {
+  display: flex;
+  color: orange;
+  justify-content: center;
+  justify-items: center;
+  margin: 0;
+}
+
+.logo-login .bi-person-circle {
+  display: flex;
+  font-size: 50px;
+  color: orange;
+  margin-top: -5px;
+  padding-left: 15px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.btn-outlook {
+  margin-top: 5%;
+}
+
+.btn-outlook a {
+  color: black;
+  font-size: medium;
+  text-decoration: none;
+}
+
+.separator {
+  width: 95%;
+  display: inline-flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.section h5{
+  margin-top: 5px;
+}
+
+
+
 
 @media (min-width: 768px){
-  .content-section {
-    display: block;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .title-welcome {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .container-img {
-    display: flex;
-    justify-content: center;
-  }
-
-  .container-img img {
-    width: 68%;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .container-user {
-    width: 31%;
-    bottom: -12%;
+  
+  #img-login {
     position: absolute;
-    right: 22%;
-    max-width: 680px;
-    transition: none;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: white;
-    border-radius: 35px;
-    border: 1px solid rgb(230, 226, 221);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    height: 92vh;
+    top: 8%;
+    background-size: cover;
+    background-position: center center;
+    
   }
 
-  .line-left-log {
-    width: 98%;
-    margin-left: -15px;
-    background-color: rgb(255, 187, 0);
-    border-color: rgb(255, 187, 0);
-    color: rgb(255, 187, 0);
-    border: 2px solid rgb(255, 187, 0);
-    justify-content: left;
-    justify-items: left;
-  }
-
-  .line-right-log {
-    width: 98%;
-    margin-left: 15px;
-    background-color: rgb(255, 187, 0);
-    border-color: rgb(255, 187, 0);
-    color: rgb(255, 187, 0);
-    border: 2px solid rgb(255, 187, 0);
-    justify-content: left;
-    justify-items: left;
-  }
-
-  .content-details h2, i {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-  }
+  .title-login {
+    position: absolute;
+    left: 50%;
+    margin: 0;
+    border: 0;
+    font-size: xx-large;
+    margin-top: -20px;
+    transform: translate(-50%, -50%);
+    padding: 30px 10px;
+  }  
   
-  .content-details i {
-    font-size: 50px;
+  .form-container {
+    position: absolute;
+    top: 50%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    height: 72vh;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 60px;
   }
 
-  .content-details {
-    margin-top: 15px;
-  }
-  .content-details h2 {
-    font-size: 28px;
-    margin-top: 10px;
-  }
-
-  .content-details .bi-person-circle {
-    margin-top: -10px;
-    color: orange;
-  }
-
-  .content-details h2 {
-    color: orange;
-  }
-
-  .content-details .btn-outlook {
-    margin-top: 25px;
-    padding: 8px 10px;
-    text-align: center;
-    border: 2px solid rgb(146, 143, 143);
-    text-decoration: none;
-    color: black;
-    border-radius: 8px;
-  }
-
-  .container-user .btn-outlook img {
-    width: 10%;
-  }
-  .content-separator {
+  .btn-login {
     display: flex;
-    margin-top: 15px;
+    margin-top: 7%;
     justify-content: center;
     justify-items: center;
   }
 
-  .content-separator h3 {
-    display: flex;
-    width: 100%;
-    font-size: 25px;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
+  .link-register {
+    position: absolute;
+    top: 91%;
+    left: 64%;
   }
-
-  .content-separator hr {
-    width: 100%;
-    border: 1px solid;
-  }
-
-  .input-group-log {
-    margin-top: 15px;
-  }
-  
-
-  .input-group-log input {
-    padding: 7px;
-    border-radius: 6px;
-  }
-
-  .input-group-log label, input {
-    width: 100%;
-    margin-top: 5px;
-  }
-
-  .content-pass {
-    display: flex;
-    margin-top: 10px;
-  }
-  .content-pass h1, a {
-    font-size: 15px;
-    color: orange;
-  }
-
-  .content-details .log-btn {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-  }
-  .content-details .btn-iniciar {
-    width: 50%;
-    font-size: 19px;
-    padding: 9px;
-    margin-top: 15px;
-    border-radius: 12px;
-    background-color: orange;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-  }
-
-
-
 }
 
+/*
 @media (max-width: 767px) {
-  .content-section {
-    display: block;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .container-section h1 {
-    font-size: 25px;
-  }
-
-
-  .container-img img {
-    width: 100%;
-  }
+  
 
 }
 
+*/
 
 
 
