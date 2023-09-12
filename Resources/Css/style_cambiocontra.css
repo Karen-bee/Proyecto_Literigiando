@@ -72,7 +72,7 @@ hr {
 
 .seccion2{
     width: 80%;
-    background: url('~/Storage/Imagenes/login_literagiando.jpeg');
+    background: url(imagenes/login_literagiando.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -152,7 +152,7 @@ p{
 @media(max-width: 1194px){
     .seccion2{
         width: 50%;
-        background: url('.../Storage/Imagenes/login_literagiando2.jpeg');
+        background: url(imagenes/login_literagiando2.jpeg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
