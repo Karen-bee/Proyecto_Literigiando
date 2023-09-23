@@ -108,7 +108,7 @@ if ( isset( $_SESSION['correo'] ) ) {
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="../Storage/Imagenes/alberto.jpg " width="50" height="50" class="img-fluid rounded-circle avatar mr-2 " alt="" />
-                                    Diana Alberto
+                                    <?php echo session_name()?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-black " href="#"><i class="icon ion-md-person lead mr-2"></i>Mi perfil</a>

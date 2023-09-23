@@ -2,6 +2,7 @@
 
 //1. Invocar conexión
 include '../Models/conexion.php';
+include '../Views/envio_correo.php';
 
 
 
@@ -83,7 +84,7 @@ if (isset($_POST["Enviar_correo"])) {
                     <p>Recibes este correo porque solicitaste recuperar tu cuenta en Literagiando</p>
                     <p>Estamos aquí para ayudarte a restablecer tu acceso. A continuación, encontrarás un enlace seguro para cambiar tu contraseña:
                     </p>
-                    <a href="http://localhost/pruebita/Views/reset_password.php?dato&&email_consulta='.$email_consulta.'" class="button">Recuperar Cuenta</a>
+                    <a href="http://localhost/Literagiando/Views/reset_password.php?email_consulta='. $email_consulta .'" class="button">Recuperar Cuenta</a>
                     <p>Por favor, haz clic en el enlace anterior y sigue las instrucciones para crear una nueva contraseña. Asegúrate de utilizar una contraseña segura que contenga al menos 8 caracteres, incluyendo letras mayúsculas, letras minúsculas, números y símbolos.</p>
                     <p>Si no solicitaste esta recuperación de cuenta o no reconoces esta solicitud, te recomendamos que ignores este correo electrónico y tomes medidas adicionales para proteger tu cuenta. </p>
                     </div>
