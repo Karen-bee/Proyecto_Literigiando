@@ -4,10 +4,16 @@
                         INNER JOIN rol_usuario AS R ON AP.idrolusuario = R.idrolusuario WHERE R.idrolusuario = $rol");
                         while($resultado5 = $sql_opciones -> fetch_assoc()){
                         ?>
-                        <a href="../Views/<?php echo $resultado5["url_pagina"]?>" target = "miIframe" class="btn btn-toggle align-items-center rounded collapsed text-white">
-                            <i class="bi bi-house-door-fill"></i> <?php echo $resultado5["nombre_pagina"] ?>
-                        </a>
-                    </li>
+                        <li>
+                            <a href="../Views/<?php echo $resultado5["url_pagina"]?>">
+                                <i class='bx bx-grid-alt'></i>
+                                <span class="links_name"><?php echo $resultado5["nombre_pagina"] ?></span>
+                            </a>
+                                <span class="tooltip"><?php echo $resultado5["nombre_pagina"] ?></span>
+                        </li>
                     <?php 
                         }
                     ?>
+
+                    
+

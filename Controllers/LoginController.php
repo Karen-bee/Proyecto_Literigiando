@@ -20,12 +20,17 @@ if(!empty($_POST["btnSubmit"])) {
         if ($datos=$sql->fetch_object()) {
             session_start();
             $_SESSION['correo'] = $correo_usuario;
-            header("location:../Views/Dasboard.php");
+            header("location:..//Views/Dashboard.php");
         }else {
             echo '<script>
             alert("CONTRASEÑA INCORRECTA");
             window.location= "../Views/login.php"</script>';
         }
-
+     
     }
 }
+
+
+
+
+?>

@@ -147,39 +147,32 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="../Controllers/UpdateTareas.php" method="POST">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Número Actividad</label>
-                                    <input type="number" class="form-control" id="txt_codigo" readonly>
+                                    <input type="number" class="form-control" id="txt_codigo" name="id_actualizar" readonly>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Actividad</label>
-                                    <input type="text" class="form-control" id="txt_Actividad">
-                                </div>
-                                <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Email</label>
-                                    <input type="email" class="form-control" id="txt_email" placeholder="AnaM85Cortez@gmail.com	">
+                                    <textarea class="form-control col-md-12" id="txt_Actividad"></textarea>
+                                    <select id="txt_Actividad " class="form-control" name="txt_Actividad" >
+                                        <option value="0">Elige una actividad</option>
+                                        <?php include '../Controllers/dropdown_rol.php';
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="txt_rol" class="letraform">Rol</label>
-                                    <input type="text" class="form-control" id="txt_rol">
-                                </div>
-                                <div class="form-group">
-                                    <label for="txt_fecha" class="letraform">Dirección</label>
-                                    <input type="text" class="form-control" id="txt_direccion" placeholder="Cra 105c # 25f-75">
-                                </div>
-                                <div class="form-group">
-                                    <label for="file_imagen" class="letraform">Nombre de Usuario</label>
-                                    <input type="text" class="form-control" id="txt_usuario" placeholder="AnaM78">
-                                </div>
-                                <div class="form-group">
-                                    <label for="file_imagen" class="letraform">Rol</label>
-                                    <input type="text" class="form-control" id="txt_rol" placeholder="Usuario">
+                                    <select id="select_rol " class="form-control" name="select_rol" >
+                                        <option value="0">Elige tu documento</option>
+                                        <?php include '../Controllers/dropdown_rol.php';
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>

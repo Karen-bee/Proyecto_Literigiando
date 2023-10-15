@@ -1,0 +1,332 @@
+/* ======= Card Perfil =======*/
+.container-card {
+    position: absolute;
+    margin-top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home-section .card{
+    width: 850px;
+    border-radius: 15px;
+    justify-content: center;
+    justify-items: center;
+    border: 7px solid #98A3AD;
+    
+   
+}
+.card .title-perfil{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.container-1 .col-4 .bx-user, .bxs-file {
+    font-size: 45px;
+    margin-top: -10px;
+    color: orange;
+}
+
+.name {
+    font-size: 32px;
+}
+.rol-name {
+    font-size: 25px;
+    color: #484646;
+}
+
+.line-left,
+.line-right{
+    border: 2px solid orange;
+    background: orange;
+    color: orange;
+}
+
+.container-2 .col-7 {
+    margin: -38px;
+}
+
+.container-1, .container-3 {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    justify-items: center;
+    
+}
+
+.container-4 {
+    display: block;
+    margin-top: 12px;
+    columns: 2;
+}
+
+.container-2 {
+    display: flex;
+    margin-top: 15px;
+}
+
+.container-2 img {
+    width: 170px;
+    height: 160px;
+    border-radius: 10px;
+}
+
+.container-2 .col-5 {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container-2 .col-7 {
+    left: 15px;
+    margin-top: 20px;
+}
+
+.btn-foto,
+.btn-eliminar {
+    text-decoration: none;
+    border-radius: 10px;
+    width: 18%;
+    margin: 5px;
+    padding: 8px 18px;
+    text-align: center;
+}
+.btn_cargar_foto{
+    background:orange ;
+    border: none;
+    border-radius: 10px;
+    width: 22%;
+    height: 30px;
+    color: white;
+}
+
+.btn-foto {
+    background: orange;
+    margin: -28px 0;
+    border: 1px solid orange;
+    color: white;
+    border: 1px solid orange;
+}
+
+.btn-eliminar {
+    
+    padding: 8px 52px;
+    border: 1px solid black;
+    color: black;
+}
+
+.group-btn {
+    display: flex;
+    margin-top: 18px;
+    justify-content: center;
+    justify-items: center;
+}
+
+ .btn-edit,
+ .btn-volver {
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 2px 16px;
+    width: 12%;
+    margin: 8px;
+    text-align: center;
+    
+}
+
+.btn-edit {
+    background: orange;
+    color: white;
+    border: 1px solid orange;
+}
+
+.btn-volver {
+    border: 1px solid black;
+    color: black;
+}
+
+/*=======Admin Noticias =======*/
+
+.home-section .container-noticias {
+    width: 98%;
+    border-radius: 10px;
+    border: 12px solid #98A3AD;
+    position: absolute;
+    margin-top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-noticias .table {
+    width: 92%;
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-noticias .container-1 h1 {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 25px;
+}
+
+.container-noticias .container-1 .line-left {
+    margin: -8px 0;
+    margin-top: 10px;
+    margin-right: -35px;
+}
+.container-noticias .container-1 .line-right {
+    margin: -8px 0;
+    margin-top: 10px;
+    margin-left: -35px;
+}
+
+.container-noticias .table th{
+    background: #C2BFBF;
+}
+.container-noticias .table tr td img {
+    width: 80px;
+    height: 70px;
+}
+
+.table #btn-delete {
+    font-size: 25px;
+    color: black;
+}
+
+.table #btn-edit {
+  
+    border-radius: 50%;
+    border: 1px solid black;
+    color: black;
+    box-sizing: border-box;
+}
+
+.container-noticias .btn-peg-button-arrow {
+    display: block;
+    width: 92%;
+    columns: 3;
+    position: relative;
+    left: 50%;
+    margin: 25px;
+    transform: translateX(-50%);
+}
+
+.container-noticias .btn-peg-button-arrow .btn-agregar a{
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: white;
+    background: orange;
+    border: 1px solid orange;
+    text-decoration: none;
+}
+
+.container-noticias .btn-peg-button-arrow .page {
+    margin-right: 35px;
+}
+
+@media only screen and (max-width:768px) {
+
+    /*========Card Mobil ========*/
+    .home-section .card {
+        display: block;
+        width: 470px;
+        border-radius: 15px;
+        justify-content: center;
+        justify-items: center;
+        border: 7px solid #98A3AD;
+    }
+
+    .btn-foto {
+        display: inline;
+        margin: -28px 0;
+        padding: 5px 2px;
+        font-size: 14px;
+        background: orange;
+        color: white;
+        border: 1px solid orange;
+    }
+
+    .container-2 .col-7 {
+        margin: -28px 0;
+        margin-top: 20px;
+    }
+    
+    .btn-eliminar {
+        display: inline;
+        margin: -28px 0;
+        padding: 5px 29px;
+        font-size: 14px;
+        border: 1px solid black;
+        color: black;
+    }
+    
+    .container-2 img {
+        width: 140px;
+        height: 140px;
+        border-radius: 10px;
+    }
+
+    .card .title-perfil{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .container-4 {
+        display: block;
+        display: block;
+        margin-top: 12px;
+        columns: 1;
+    }
+
+    .container-1 .col-4 .bx-user, .bxs-file {
+        font-size: 32px;
+        margin-top: -5px;
+        color: orange;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+    .rol-name {
+        font-size: 15px;
+        color: #484646;
+    }
+
+    .group-btn {
+        display: flex;
+        margin-top: 18px;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+     .btn-edit,
+     .btn-volver {
+        display: flex;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 2px 18px;
+        width: 18%;
+        margin: 8px;
+        text-align: center;
+        
+    }
+    
+    .btn-edit {
+        background: orange;
+        color: white;
+        border: 1px solid orange;
+    }
+    
+    .btn-volver {
+        border: 1px solid black;
+        color: black;
+    }
+
+}

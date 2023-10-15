@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<?php include './layouts/header.php'; ?>
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -23,6 +25,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
     <!-- Icons -->
@@ -98,64 +103,56 @@
     <title>Literagiando</title>
 </head>
 
-<?php
-include("../Views/Header.php")
-?>
-
 <body>
-    <div class="contendorCard">
-        <div class="card">
-            <div class="selectortwo ">
-                <div class="lineaIzquierda">
-                    <div class="horizontal-line"></div>
-                    <div class="horizontal-linetwo"></div>
-                </div>
-                <h1 class="custom-headingUsu">Administrador de Usuarios</h1>
-                <div class="lineaderecha">
-                    <div class="horizontal-derecha2"></div>
-                    <div class="horizontal-derechatwo2"></div>
-                </div>
-                <div class="table-responsive media2">
-                    <div style="overflow-x:auto;">
-                        <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
-                            <thead>
-                                <tr>
-                                    <th scope="col-sm-2" class="table-Gray">Código</th>
-                                    <th scope="col-sm-2" class="table-Gray">Nombre</th>
-                                    <th scope="col-sm-2" class="table-Gray">Apellido</th>
-                                    <th scope="col-sm-2" class="table-Gray">Dirección</th>
-                                    <th scope="col-sm-2" class="table-Gray">Teléfono</th>
-                                    <th scope="col-sm-2" class="table-Gray">Nombre de Usuario</th>
-                                    <th scope="col-sm-2" class="table-Gray">Email</th>
-                                    <th scope="col-sm-2" class="table-Gray">Rol</th>
-                                    <th scope="col-sm-2" class="table-Gray">Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-sm-2 table-orange">01875</td>
-                                    <td class="col-sm-2 table-orange">Ana Maria</td>
-                                    <td class="col-sm-2 table-orange">Cortez Carreño</td>
-                                    <td class="col-sm-2 table-orange">Cra 105c # 25f-75</td>
-                                    <td class="col-sm-2 table-orange">7690190</td>
-                                    <td class="col-sm-2 table-orange">AnaM78</td>
-                                    <td class="col-sm-2 table-orange">AnaM85Cortez@gmail.com </td>
-                                    <td class="col-sm-2 table-orange">Usuario</td>
-                                    <td class="col-sm-2 justificarIcon table-orange"><i class="bi bi-circle-fill"></i></td>
 
-                                </tr>
+    <div class="card">
+        <div class="selectortwo ">
+            <div class="lineaIzquierda">
+                <div class="horizontal-line"></div>
+                <div class="horizontal-linetwo"></div>
+            </div>
+            <h1 class="custom-headingUsu">Administrador de Usuarios</h1>
+            <div class="lineaderecha">
+                <div class="horizontal-derecha2"></div>
+                <div class="horizontal-derechatwo2"></div>
+            </div>
+            <button class='tooltiptext form-control-ms buttonAgregar' data-toggle='tooltip' title='Agregar' data-bs-toggle='modal' data-bs-target='#pop_agregar'>
 
-                            </tbody>
-                        </table>
-                    </div>
-                    <button class="button tooltiptext" data-toggle="tooltip" title="Agregar" data-bs-toggle="modal" data-bs-target="#pop_agregar">Agregar</button>
-                    <button class="button tooltiptext" data-toggle="tooltip" title="Actualizar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Actualizar</button>
+                Agregar <i class='bi bi-plus-square-fill'></i>
+            </button>
 
+            <div class="table-responsive media2">
+                <div style="overflow-x:auto;">
+                    <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th scope="col-sm-2" class="table-Gray">#</th>
+                                <th scope="col-sm-2" class="table-Gray">Tipo de Documento</th>
+                                <th scope="col-sm-2" class="table-Gray">Documento</th>
+                                <th scope="col-sm-2" class="table-Gray">Tipo de Usuario</th>
+                                <th scope="col-sm-2" class="table-Gray">Nombre Completo</th>
+                                <th scope="col-sm-2" class="table-Gray">Dirección</th>
+                                <th scope="col-sm-2" class="table-Gray">Teléfono</th>
+                                <th scope="col-sm-2" class="table-Gray">Nombre de Usuario</th>
+                                <th scope="col-sm-2" class="table-Gray">Email</th>
+                                <th scope="col-sm-2" class="table-Gray">Estado</th>
+                                <th scope="col-sm-2" class="table-Gray">Foto Usuario</th>
+                                <th scope="col-sm-2" class="table-Gray">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php include '../Controllers/Listar_Usuarios.php'; ?>
+
+                        </tbody>
+                    </table>
                 </div>
+
 
             </div>
+
         </div>
     </div>
+
     <!-- POP UP EDITAR -->
 
     <div class="modal fade pop" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -165,53 +162,67 @@ include("../Views/Header.php")
                     <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Editar Usuarios</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form action="../Controllers/UpdateUsuarios.php" method="post" enctype="multipart/form-data">
+
+                    <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Código</label>
-                                    <input type="number" class="form-control" id="txt_codigo" placeholder="01875" readonly>
+                                    <input type="hidden" id="idUsuario" name="idUsuario" value="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt_autor" class="letraform">Apellido</label>
-                                    <input type="text" class="form-control" id="txt_apellido" placeholder="Cortez Carreño">
+                                    <label for="txt_autor" class="letraform">Tipo de Documento</label>
+                                    <select id="select_tipodocumento" class="form-control" name="select_Documentos" disabled>
+                                        <option value="0">Elige tu documento</option>
+                                        <?php include '../Controllers/CargarSelect_Documentos.php'; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_autor" class="letraform">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="txt_nombre_completo" name="nombreCompleto">
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Telefono</label>
-                                    <input type="text" class="form-control" id="txt_telefono" placeholder="7690190">
+                                    <input type="text" class="form-control" id="txt_telefono" name="telefono">
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Email</label>
-                                    <input type="email" class="form-control" id="txt_email" placeholder="AnaM85Cortez@gmail.com	">
+                                    <input type="email" class="form-control" id="txt_email" name="email">
                                 </div>
+                                <div class="form-group">
+                                    <label for="txt_codigo" class="letraform">Cambiar Foto Perfil</label>
+                                    <input type="file" name="imagen" class="form-control" id="txt_file" accept="image/*">
+                                </div>
+
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_titulo" class="letraform">Nombre</label>
-                                    <input type="text" class="form-control" id="txt_nombre" placeholder="Ana Maria">
+                                    <label for="txt_autor" class="letraform">Numero Documento</label>
+                                    <input type="text" class="form-control" id="txt_numero_documento" name="numero_documento" disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_fecha" class="letraform">Dirección</label>
-                                    <input type="text" class="form-control" id="txt_direccion" placeholder="Cra 105c # 25f-75">
+                                    <input type="text" class="form-control" id="txt_direccion" name="direccion">
                                 </div>
                                 <div class="form-group">
                                     <label for="file_imagen" class="letraform">Nombre de Usuario</label>
-                                    <input type="text" class="form-control" id="txt_usuario" placeholder="AnaM78">
+                                    <input type="text" class="form-control" id="txt_usuario" name="username">
                                 </div>
                                 <div class="form-group">
-                                    <label for="file_imagen" class="letraform">Rol</label>
-                                    <input type="text" class="form-control" id="txt_rol" placeholder="Usuario">
+                                    <label for="txt_documento" class="letraform">Foto Perfil</label>
+                                    <img id="modalImage" class="img-fluid rounded" alt="Image" name="imagen" width="100px" height="100px">
                                 </div>
+
                             </div>
                         </div>
-                    </form>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
-                    <button type="button" class="botenesPopup">Guardar</button>
-                </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                        <button type="submit" class="botenesPopup" name="guardarUsuario">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -221,65 +232,63 @@ include("../Views/Header.php")
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Agregar Usuarios</h5>
+                    <h5 class="custom-heading" id="pop_agregarLabel" style="margin-top:-16px;">Agregar Usuarios</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form action="../Controllers/Insert_Usuario.php" method="post">
+
+                    <div class="modal-body">
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Código</label>
-                                    <input type="number" class="form-control" id="txt_codigo">
-                                </div>
-                                <div class="form-group">
-                                    <label for="txt_autor" class="letraform">Apellido</label>
-                                    <input type="text" class="form-control" id="txt_apellido">
+                                    <label for="txt_autor" class="letraform">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="txt_nombre_completo" name="nombreCompleto" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Telefono</label>
-                                    <input type="text" class="form-control" id="txt_telefono">
+                                    <input type="text" class="form-control" id="txt_telefono" name="telefono" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_codigo" class="letraform">Email</label>
-                                    <input type="email" class="form-control" id="txt_email">
+                                    <input type="email" class="form-control" id="txt_email" name="email" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_titulo" class="letraform">Nombre</label>
-                                    <input type="text" class="form-control" id="txt_nombre">
-                                </div>
-                                <div class="form-group">
                                     <label for="txt_fecha" class="letraform">Dirección</label>
-                                    <input type="text" class="form-control" id="txt_direccion">
+                                    <input type="text" class="form-control" id="txt_direccion" name="direccion" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="file_imagen" class="letraform">Nombre de Usuario</label>
-                                    <input type="text" class="form-control" id="txt_usuario">
+                                    <input type="text" class="form-control" id="txt_usuario" name="username" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="file_imagen" class="letraform">Rol</label>
-                                    <input type="text" class="form-control" id="txt_rol">
+                                    <label for="txt_documento" class="letraform">Tipo de Usuario</label>
+                                    <select id="txt_tipoUsuario" class="form-control" name="txt_tipoUsuario" required>
+                                        <option value="0">Elige una tipo de Usuario</option>
+                                        <?php include '../Controllers/dropdown_rol.php';
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </form>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
-                    <button type="button" class="botenesPopup">Guardar</button>
-                </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                        <button type="submit" class="botenesPopup" name="guardarUsuario">Guardar</button>
+                    </div>
+                </form>
             </div>
+            </form>
         </div>
     </div>
 
 
-</body>
 
-<?php
-include("../Views/Footer.php")
-?>
+</body>
+<?php include './layouts/footer.php'; ?>
 
 </html>

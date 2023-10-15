@@ -21,7 +21,6 @@ include("../Views/Header.php")
 
                     <h1 class="title">Registro Exitoso</h1>
                     <p class="letra">Gracias por registrarte en nuestro sitio web. Tu cuenta ha sido creada con éxito.</p>
-                    <p class="letra">Tu nombre de usuario es: <?php echo $_SESSION['username']; ?></p>
                     <div class="link">
                         <p class="letra"><a href="../Views/login.php" style="color:#EB8600">Iniciar sesión</a></p>
                     </div>

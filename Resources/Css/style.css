@@ -15,6 +15,16 @@
     padding-bottom: 150px;
 }
 
+.buttonAgregar {
+    margin-left: 86%;
+    background-color: #EB8600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /*PRUEBA ADMIN USUARIO*/
 
 .custom-headingUsu {
@@ -85,6 +95,7 @@
     position: relative !important;
     left: 184px !important;
 }
+
 /*ICON /*
 
 /*PRUEBA*/
@@ -1995,5 +2006,3 @@ body {
     /*max-width: 100%;
     margin: 0;*/
 }
-
-
