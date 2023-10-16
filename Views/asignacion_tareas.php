@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<?php include './layouts/header.php'; ?>
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -115,6 +117,10 @@
                 <div class="horizontal-derecha2"></div>
                 <div class="horizontal-derechatwo2"></div>
             </div>
+            <button class='tooltiptext form-control-ms buttonAgregar' data-toggle='tooltip' title='Agregar' data-bs-toggle='modal' data-bs-target='#pop_agregar'>
+
+                Agregar <i class='bi bi-plus-square-fill'></i>
+            </button>
             <div class="table-responsive media2">
                 <div style="overflow-x:auto;">
                     <table id="example" class="table table-hover table-striped table-bordered position table" style="width: 100%">
@@ -143,46 +149,48 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Editar Usuarios</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Editar Actividades</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form action="../Controllers/UpdateTareas.php" method="POST">
+                <form action="../Controllers/UpdateTareas.php" method="post">
+                    <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Número Actividad</label>
-                                    <input type="number" class="form-control" id="txt_codigo" name="id_actualizar" readonly>
+                                    <input type="hidden" id="actividades" name="actividades" value="">
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Actividad</label>
-                                    <textarea class="form-control col-md-12" id="txt_Actividad"></textarea>
-                                    <select id="txt_Actividad " class="form-control" name="txt_Actividad" >
-                                        <option value="0">Elige una actividad</option>
-                                        <?php include '../Controllers/dropdown_rol.php';
-                                        ?>
+                                    <label for="txt_autor" class="letraform">Tipo de Rol</label>
+                                    <select id="select_rol" class="form-control" name="select_rol" require>
+                                        <option value="0">Elige un tipo de rol</option>
+                                        <?php include '../Controllers/dropdown_rol.php'; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt_estado" class="letraform">Estado</label>
+                                    <select name="select_estado" id="select_estado" class="form-control" require>
+                                        <option value="" selected>Selecciona un estado</option>
+                                        <option value="0" selected>Desactivar</option>
+                                        <option value="1" selected>Activar</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_rol" class="letraform">Rol</label>
-                                    <select id="select_rol " class="form-control" name="select_rol" >
-                                        <option value="0">Elige tu documento</option>
-                                        <?php include '../Controllers/dropdown_rol.php';
-                                        ?>
+                                    <label for="txt_autor" class="letraform">Actividades</label>
+                                    <select id="select_actividades" class="form-control" name="select_actividades" require>
+                                        <option value="0">Elige un tipo de rol</option>
+                                        <?php include '../Controllers/dropdown_actividad.php'; ?>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                    </form>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
-                    <button type="button" class="botenesPopup">Guardar</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                        <button type="submit" class="botenesPopup" name="guardarActividad">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -192,61 +200,55 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Agregar Usuarios</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                    <h5 class="custom-heading" id="pop_agregarLabel" style="margin-top:-16px;">Agregar Actividades</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form action="../Controllers/Insert_actividad.php" method="post">
+                    <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Código</label>
-                                    <input type="number" class="form-control" id="txt_codigo">
+                                    <label for="txt_autor" class="letraform">Tipo de Rol</label>
+                                    <select id="select_rol" class="form-control" name="select_rol" require>
+                                        <option value="0">Elige un tipo de rol</option>
+                                        <?php include '../Controllers/dropdown_rol.php'; ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt_autor" class="letraform">Apellido</label>
-                                    <input type="text" class="form-control" id="txt_apellido">
-                                </div>
-                                <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Telefono</label>
-                                    <input type="text" class="form-control" id="txt_telefono">
-                                </div>
-                                <div class="form-group">
-                                    <label for="txt_codigo" class="letraform">Email</label>
-                                    <input type="email" class="form-control" id="txt_email">
+                                    <label for="txt_estado" class="letraform">Estado</label>
+                                    <select name="select_estado" class="form-control" require>
+                                        <option value="0" disabled>Selecciona un estado</option>
+                                        <option value="1" selected>Activar</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_titulo" class="letraform">Nombre</label>
-                                    <input type="text" class="form-control" id="txt_nombre">
-                                </div>
-                                <div class="form-group">
-                                    <label for="txt_fecha" class="letraform">Dirección</label>
-                                    <input type="text" class="form-control" id="txt_direccion">
-                                </div>
-                                <div class="form-group">
-                                    <label for="file_imagen" class="letraform">Nombre de Usuario</label>
-                                    <input type="text" class="form-control" id="txt_usuario">
-                                </div>
-                                <div class="form-group">
-                                    <label for="file_imagen" class="letraform">Rol</label>
-                                    <input type="text" class="form-control" id="txt_rol">
+                                    <label for="txt_autor" class="letraform">Actividades</label>
+                                    <select id="select_actividades" class="form-control" name="select_actividades" require>
+                                        <option value="0">Elige una Actividad</option>
+                                        <?php include '../Controllers/dropdown_actividad.php'; ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </form>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
-                    <button type="button" class="botenesPopup">Guardar</button>
-                </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius:9px; height: 37px;">Cerrar</button>
+                        <button type="submit" class="botenesPopup" name="guardarActividad">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
 
+
+
 </body>
+<?php include './layouts/footer.php'; ?>
 
 </html>

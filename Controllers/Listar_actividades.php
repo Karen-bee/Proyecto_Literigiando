@@ -19,10 +19,19 @@ if ($result->num_rows > 0) {
         echo "<td class='table-orange'>" . $row["nombrepagina"] . "</td>";
         echo "<td class='table-orange'>" .  $estado . "</td>";
         echo "<td class='col-sm-1 justificarIcon table-orange'>";
-        echo "<button class='tooltiptext form-control ' data-toggle='tooltip' title='Estados' data-estado='".  $row["idusuario"] ."'><i class='bi bi-x-circle-fill'></i></button>";
-        echo "<button class='tooltiptext form-control ' data-toggle='tooltip' title='Agregar' data-bs-toggle='modal' data-bs-target='#pop_agregar'><i class='bi bi-plus-square-fill'></i></button>";
-        // Aquí agregamos el atributo data-id con el valor del ID de la fila
-        echo "<button class='tooltiptext form-control editar-button' data-id='" . $row["idpagina"] . "' data-rol='" . $row["nombrerol"] . "' data-toggle='tooltip' title='Actualizar' data-bs-toggle='modal' data-bs-target='#staticBackdrop'><i class='bi bi-pencil-square'></i></button>";
+
+        // Botón para cambiar el estado
+        echo "<button class='tooltiptext form-control cambiar-estado' title='Estados' data-id_asignacion=\"" . $row['idpagina'] . "\" data-estado=\"" . $row['estado'] . "\">
+        <i class='bi " . ($row['estado'] == 1 ? 'bi-check-circle-fill' : 'bi-x-circle-fill') . "'></i>
+        </button>";
+
+        // Botón para editar
+        echo "<button class='tooltiptext form-control editar-button' data-toggle='tooltip' title='Actualizar' data-bs-toggle='modal' data-bs-target='#staticBackdrop' 
+           data-idpagina='" . $row['idpagina'] . "' 
+           data-nombrerol='" . $row['nombrerol'] . "' 
+           data-nombrepagina='" . $row['nombrepagina'] . "' >
+           <i class='bi bi-pencil-square'></i>
+           </button>";
         echo "</td>";
         echo "</tr>";
     }
@@ -34,38 +43,97 @@ if ($result->num_rows > 0) {
 ?>
 
 <script>
+    function cambiarEstado(id_asignacion, estadoActual) {
+        // Envía una solicitud POST al servidor
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "../Controllers/desactivar_actividad.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // Muestra la respuesta del servidor
+                    alert(xhr.responseText);
+                    // Recarga la página después de mostrar la alerta
+                    location.reload();
+                    // Puedes realizar otras acciones después de cambiar el estado
+                } else {
+                    // Manejar errores si es necesario
+                }
+            }
+        };
+
+        // Envía los datos al servidor
+        xhr.send("id_asignacion=" + id_asignacion + "&estado=" + estadoActual);
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
-        // Selecciona todos los botones de edición
-        var editButtons = document.querySelectorAll(".editar-button");
+        // Agrega un event listener al documento para manejar clics en cualquier parte del documento
+        document.addEventListener('click', function(event) {
+            // Verifica si el clic proviene de un botón con la clase 'cambiar-estado'
+            if (event.target.classList.contains('cambiar-estado')) {
+                // Obtiene el ID de usuario y el estado actual desde los atributos de datos
+                var id_asignacion = event.target.getAttribute('data-id_asignacion');
+                var estadoActual = event.target.getAttribute('data-estado');
 
-        // Agrega un evento click a cada botón de edición
-        editButtons.forEach(function(button) {
-            button.addEventListener("click", function() {
-                // Captura el valor del atributo data-id
-                var id = button.getAttribute("data-id");
-                var rol = button.getAttribute("data-rol"); // Obtén el valor de data-rol
-
-                //document.write(rol);
-
-                // Obtén los valores de la fila correspondiente
-                var actividad = button.parentElement.parentElement.querySelector(".table-orange:nth-child(3)").textContent;
-                //var rol = button.parentElement.parentElement.querySelector(".table-orange:nth-child(2)").textContent;
-
-                // Rellena los campos del formulario en el popup con la información correspondiente
-                var txtCodigo = document.getElementById("txt_codigo");
-                var txtActividad = document.getElementById("txt_Actividad");
-                var txtRol = document.getElementsByName("select_rol");
-                var txtEstado = document.getElementById("txt_estado");
-
-                // Asigna los valores a los campos del formulario
-                txtCodigo.value = id;
-                txtActividad.value = actividad;
-                txtRol.value = rol.toString;
-            });
+                // Llama a la función cambiarEstado
+                cambiarEstado(id_asignacion, estadoActual);
+            }
         });
 
-
+        // ...
     });
 
-    
+    // MODAL EDITAR 
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener('click', function(event) {
+            // Verifica si el clic proviene de un botón con la clase 'editar-button'
+            if (event.target.classList.contains('editar-button')) {
+                // Obtiene el ID de usuario desde el atributo data
+                var id_asignacion = event.target.getAttribute('data-idpagina');
+
+                // Realiza una solicitud AJAX para obtener detalles del usuario
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "../Controllers/ObtenerDetalle_Actividad.php?id_asignacion=" + id_asignacion, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Parsea la respuesta JSON
+                        var userDetails = JSON.parse(xhr.responseText);
+                        console.log(userDetails);
+
+                        // Llena los campos del modal con los detalles del usuario
+                        document.getElementById('select_rol').value = userDetails.idrolusuario;
+                        document.getElementById('select_estado').value = userDetails.estado;
+                        document.getElementById('select_actividades').value = userDetails.id_asignacion;
+                    
+
+
+                        // Configura el campo oculto de ID de usuario en el formulario
+                        document.getElementById('actividades').value = userDetails.id_asignacion;
+                    }
+                };
+                xhr.send();
+            }
+        });
+    });
+
+    // Tomar rol 
+
+    function obtenerNombreRol(idrolusuario) {
+        // Implementa lógica para obtener el nombre asociado al idrolusuario
+        // Esto podría incluir otra solicitud AJAX o usar datos que ya tengas cargados en la página
+        // Por ahora, asumamos que tienes un array de roles en tu página
+        var roles = [
+            { id: 1, nombre: 'Administrador' },
+            { id: 2, nombre: 'Estudiante' },
+            // ... más roles ...
+        ];
+
+        // Encuentra el rol con el id correspondiente
+        var rolEncontrado = roles.find(function (rol) {
+            return rol.id === idrolusuario;
+        });
+
+        // Si se encuentra el rol, devuelve su nombre; de lo contrario, devuelve un mensaje predeterminado
+        return rolEncontrado ? rolEncontrado.nombre : 'Rol Desconocido';
+    };
 </script>
