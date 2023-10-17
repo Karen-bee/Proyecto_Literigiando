@@ -6,7 +6,7 @@
                         ?>
                         <li>
                             <a href="../Views/<?php echo $resultado5["url_pagina"]?>">
-                                <i class='bx bx-grid-alt'></i>
+                                <i class="<?php echo $resultado5["icono"] ?>"></i>
                                 <span class="links_name"><?php echo $resultado5["nombre_pagina"] ?></span>
                             </a>
                                 <span class="tooltip"><?php echo $resultado5["nombre_pagina"] ?></span>

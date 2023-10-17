@@ -224,8 +224,8 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
-  min-height: 100vh;
+  /*background-color: #E4E9F7;*/
+  min-height: 715px;
   top: 0;
   left: 78px;
   width: calc(100% - 78px);

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
 
     // Ruta donde se guardará la imagen (ajusta según tu estructura de carpetas)
-    $carpetaDestino = '../Storage/Imagenes/Foto_perfil_usuario';
+    $carpetaDestino = '../Storage/img_user/';
 
     // Verifica si se ha cargado un nuevo archivo
     if (!empty($_FILES['imagen']['name'])) {

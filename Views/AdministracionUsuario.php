@@ -17,7 +17,6 @@
 
     <!-- BOOSTRAP -->
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
@@ -160,7 +159,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="custom-heading" id="staticBackdropLabel" style="margin-top:-16px;">Editar Usuarios</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="../Controllers/UpdateUsuarios.php" method="post" enctype="multipart/form-data">
 
@@ -233,7 +232,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="custom-heading" id="pop_agregarLabel" style="margin-top:-16px;">Agregar Usuarios</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-circle-fill"></i></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="../Controllers/Insert_Usuario.php" method="post">
 

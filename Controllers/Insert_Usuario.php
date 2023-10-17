@@ -13,7 +13,7 @@ if (isset($_POST["guardarUsuario"])) {
     $username = $_POST['username'];
     $tipoUsuario = $_POST['txt_tipoUsuario'];
     $pass = 123;
-    $foto_perfil = '../Storage/Imagenes/Foto_perfil_usuario/Acosta.jpg';
+    $foto_perfil = '../Storage/Imagenes/Acosta.jpg';
     $idDocumento = 1;
     $idrolusuario = 2;
     $estado = 1; // Reemplazar 'SomeValue' con el valor apropiado

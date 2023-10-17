@@ -20,9 +20,6 @@
                 <hr>
             </div>
         </div>
-        <div class="btn-outlook">
-            <a href="#">Iniciar sesión con Outlook</a>
-        </div>
         <div class="separator">
             <div class="col-6">
                 <hr>

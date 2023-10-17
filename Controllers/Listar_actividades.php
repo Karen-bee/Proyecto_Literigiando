@@ -27,11 +27,13 @@ if ($result->num_rows > 0) {
 
         // Botón para editar
         echo "<button class='tooltiptext form-control editar-button' data-toggle='tooltip' title='Actualizar' data-bs-toggle='modal' data-bs-target='#staticBackdrop' 
-           data-idpagina='" . $row['idpagina'] . "' 
-           data-nombrerol='" . $row['nombrerol'] . "' 
-           data-nombrepagina='" . $row['nombrepagina'] . "' >
-           <i class='bi bi-pencil-square'></i>
-           </button>";
+        data-idpagina='" . $row['idpagina'] . "' 
+        data-nombrerol='" . $row['nombrerol'] . "' 
+        data-nombrepagina='" . $row['nombrepagina'] . "' 
+        data-estado='" . $row['estado'] . "'>
+        <i class='bi bi-pencil-square'></i>
+        </button>";
+
         echo "</td>";
         echo "</tr>";
     }
@@ -90,50 +92,36 @@ if ($result->num_rows > 0) {
             if (event.target.classList.contains('editar-button')) {
                 // Obtiene el ID de usuario desde el atributo data
                 var id_asignacion = event.target.getAttribute('data-idpagina');
+                var estado = event.target.getAttribute('data-estado');
 
-                // Realiza una solicitud AJAX para obtener detalles del usuario
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "../Controllers/ObtenerDetalle_Actividad.php?id_asignacion=" + id_asignacion, true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        // Parsea la respuesta JSON
-                        var userDetails = JSON.parse(xhr.responseText);
-                        console.log(userDetails);
+                // Verifica si el estado es 0 (desactivado)
+                if (estado == 0) {
+                    // Muestra un mensaje de alerta
+                    alert("No puedes editar un elemento desactivado.");
+                    // Recarga la página después de mostrar la alerta
+                    window.location.reload();
+                } else {
+                    // Realiza una solicitud AJAX para obtener detalles del usuario
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "../Controllers/ObtenerDetalle_Actividad.php?id_asignacion=" + id_asignacion, true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            // Parsea la respuesta JSON
+                            var userDetails = JSON.parse(xhr.responseText);
+                            console.log(userDetails);
 
-                        // Llena los campos del modal con los detalles del usuario
-                        document.getElementById('select_rol').value = userDetails.idrolusuario;
-                        document.getElementById('select_estado').value = userDetails.estado;
-                        document.getElementById('select_actividades').value = userDetails.id_asignacion;
-                    
+                            // Llena los campos del modal con los detalles del usuario
+                            document.getElementById('select_rol').value = userDetails.idrolusuario;
+                            document.getElementById('select_estado').value = userDetails.estado;
+                            document.getElementById('select_actividades').value = userDetails.id_asignacion;
 
-
-                        // Configura el campo oculto de ID de usuario en el formulario
-                        document.getElementById('actividades').value = userDetails.id_asignacion;
-                    }
-                };
-                xhr.send();
+                            // Configura el campo oculto de ID de usuario en el formulario
+                            document.getElementById('actividades').value = userDetails.id_asignacion;
+                        }
+                    };
+                    xhr.send();
+                }
             }
         });
     });
-
-    // Tomar rol 
-
-    function obtenerNombreRol(idrolusuario) {
-        // Implementa lógica para obtener el nombre asociado al idrolusuario
-        // Esto podría incluir otra solicitud AJAX o usar datos que ya tengas cargados en la página
-        // Por ahora, asumamos que tienes un array de roles en tu página
-        var roles = [
-            { id: 1, nombre: 'Administrador' },
-            { id: 2, nombre: 'Estudiante' },
-            // ... más roles ...
-        ];
-
-        // Encuentra el rol con el id correspondiente
-        var rolEncontrado = roles.find(function (rol) {
-            return rol.id === idrolusuario;
-        });
-
-        // Si se encuentra el rol, devuelve su nombre; de lo contrario, devuelve un mensaje predeterminado
-        return rolEncontrado ? rolEncontrado.nombre : 'Rol Desconocido';
-    };
 </script>

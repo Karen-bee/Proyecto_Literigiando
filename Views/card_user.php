@@ -24,7 +24,7 @@
                 <div class="col-10">
                   <form class="form-inline d-flex align-items-center" action="../Controllers/controller_actualizacionP.php" method="post" enctype="multipart/form-data" >
                     <input class="form-control form-control-sm mr-2 input-file" id="formFileSm" type="file" name = "foto">
-                    <button type="submit" class="btn_cargar_foto m-2">Enviar</button>
+                    <button type="submit" class="btn_cargar_foto m-2">Actualizar</button>
                   </form>
 
                   <?php

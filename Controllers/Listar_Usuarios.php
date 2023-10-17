@@ -53,7 +53,6 @@ if ($result->num_rows > 0) {
         data-idrolusuario='" . $row['idrolusuario'] . "'>
         <i class='bi bi-pencil-square'></i>
         </button>";
-
         echo "</td>";
         echo "</tr>";
     }
@@ -109,35 +108,44 @@ if ($result->num_rows > 0) {
             if (event.target.classList.contains('editar-button')) {
                 // Obtiene el ID de usuario desde el atributo data
                 var idUsuario = event.target.getAttribute('data-idusuario');
+                var estado = event.target.getAttribute('data-estado');
+                // Verifica si el estado es 0 (desactivado)
+                if (estado == 0) {
+                    // Muestra un mensaje de alerta
+                    alert("No puedes editar un elemento desactivado.");
+                    // Recarga la página después de mostrar la alerta
+                    window.location.reload();
+                } else {
 
-                // Realiza una solicitud AJAX para obtener detalles del usuario
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "../Controllers/Obtener_Detalle_Usuario.php?idusuario=" + idUsuario, true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        // Parsea la respuesta JSON
-                        var userDetails = JSON.parse(xhr.responseText);
+                    // Realiza una solicitud AJAX para obtener detalles del usuario
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "../Controllers/Obtener_Detalle_Usuario.php?idusuario=" + idUsuario, true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            // Parsea la respuesta JSON
+                            var userDetails = JSON.parse(xhr.responseText);
 
-                        // Llena los campos del modal con los detalles del usuario
-                        document.getElementById('select_tipodocumento').value = userDetails.idtipodedocumento;
-                        document.getElementById('txt_numero_documento').value = userDetails.documento_usuario;
-                        document.getElementById('txt_nombre_completo').value = userDetails.nombrecompleto_usuario;
-                        document.getElementById('txt_telefono').value = userDetails.telefono_usuario;
-                        document.getElementById('txt_email').value = userDetails.correo_usuario;
-                        document.getElementById('txt_direccion').value = userDetails.direccion_usuario;
-                        document.getElementById('txt_usuario').value = userDetails.username;
-                        document.getElementById('txt_tipoUsuario').value = userDetails.idrolusuario;
+                            // Llena los campos del modal con los detalles del usuario
+                            document.getElementById('select_tipodocumento').value = userDetails.idtipodedocumento;
+                            document.getElementById('txt_numero_documento').value = userDetails.documento_usuario;
+                            document.getElementById('txt_nombre_completo').value = userDetails.nombrecompleto_usuario;
+                            document.getElementById('txt_telefono').value = userDetails.telefono_usuario;
+                            document.getElementById('txt_email').value = userDetails.correo_usuario;
+                            document.getElementById('txt_direccion').value = userDetails.direccion_usuario;
+                            document.getElementById('txt_usuario').value = userDetails.username;
+                            document.getElementById('txt_tipoUsuario').value = userDetails.idrolusuario;
 
-                        // Configura la URL de la imagen
-                        var modalImage = document.getElementById('modalImage');
-                        modalImage.src = userDetails.foto_usuario;
-                        modalImage.alt = "Foto de usuario";
+                            // Configura la URL de la imagen
+                            var modalImage = document.getElementById('modalImage');
+                            modalImage.src = userDetails.foto_usuario;
+                            modalImage.alt = "Foto de usuario";
 
-                        // Configura el campo oculto de ID de usuario en el formulario
-                        document.getElementById('idUsuario').value = userDetails.idusuario;
-                    }
-                };
-                xhr.send();
+                            // Configura el campo oculto de ID de usuario en el formulario
+                            document.getElementById('idUsuario').value = userDetails.idusuario;
+                        }
+                    };
+                    xhr.send();
+                }
             }
         });
     });
