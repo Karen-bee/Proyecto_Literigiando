@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap);
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Serif Pro' !important;
+}
+html{
+    height: 100%;
+}
+body{
+    font-size: 20px;
+    font-family: 'Source Serif Pro' !important;
+    min-height: 100%;
+}
+
+.grid-container > *{
+    border-radius: 4px;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-image: url("imagenes/spiner_eventos.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    opacity: 0.5;
+    
+}
+.item1{
+    font-family: 'Source Serif Pro', cursive;
+}
+
+.cuadrado{
+    background-color: #EB8600;
+    color: aliceblue;
+    text-align: center;
+
+}
+
+.titulo-slider{
+    color: black;
+    font-weight: bolder;
+    font-size: 70px;
+    font-family: 'Source Serif Pro' !important;
+    z-index: 1;
+}
+.titulo-card{
+    text-decoration: underline;
+    text-decoration-color: #EB8600;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    border-right: 1px solid;
+    border-color: black;
+}
+
+.container-side{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.main{
+    grid-area: main;
+}
+
+.grid-container{
+    display: grid;
+    grid-template: 
+    "navbar navbar" 300px
+    "sidebar main" auto /
+    300px     auto;
+}
+
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+@media(max-width: 796px){
+    .grid-container{
+        display: grid;
+        grid-template: 
+        "navbar navbar" 300px
+        "sidebar sidebar" auto
+        "main main" auto /
+        300px     auto;
+    }
+    .sidebar{
+        grid-area: sidebar;
+        border-right: 1px solid;
+        border-color: black;
+        padding: 10px;
+    }
+
+
+}
