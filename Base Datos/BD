@@ -1,0 +1,388 @@
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `dioses`
+--
+
+CREATE TABLE `dioses` (
+  `id_dios` bigint NOT NULL AUTO_INCREMENT,
+  `id_usuario` bigint NOT NULL,
+  `nivel` varchar(4) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_dios)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `dioses`
+--
+
+INSERT INTO `dioses` (`id_dios`, `id_usuario`, `nivel`) VALUES
+(1, '1', 'Dios');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `objetivos`
+--
+
+CREATE TABLE `objetivos` (
+  `id_objetivo` bigint NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `descripcion` varchar(500) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_objetivo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `objetivos`
+--
+
+INSERT INTO `objetivos` (`id_objetivo`, `titulo`, `foto`, `descripcion`) VALUES
+(1, 'Un Mundo de Imaginación', 'banner4.png', 'Las habilidades comunicativas se puede decir que son los niveles de competencias y destrezas que adquieren los individuos por la sistematización de determinadas acciones a través de las experiencias y la educación que obtienen en el transcurso de sus vidas que les permiten el desempeño y la regulación de la actividad comunicativa.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `marcos`
+--
+
+CREATE TABLE `marcos` (
+  `id_marco` bigint NOT NULL AUTO_INCREMENT,
+  `foto_1` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `titulo_1` varchar(60) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto_2` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `titulo_2` varchar(115) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_marco)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `marcos`
+--
+
+INSERT INTO `marcos` (`id_marco`, `foto_1`, `titulo_1`, `foto_2`, `titulo_2`) VALUES
+(1, 'bg1-1-min.jpg', '', 'bg1-2-min.jpg', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `accesos`
+--
+
+CREATE TABLE `accesos` (
+  `id_acceso` bigint NOT NULL AUTO_INCREMENT,
+  `acceso` varchar(8) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_acceso)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `accesos`
+--
+
+INSERT INTO `accesos` (`id_acceso`, `acceso`) VALUES
+(1, 'Activo'),
+(2, 'Inactivo');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE `roles` (
+  `id_rol` bigint NOT NULL AUTO_INCREMENT,
+  `rol` varchar(7) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_rol)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id_rol`, `rol`) VALUES
+(1, 'Staff'),
+(2, 'Usuario');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id_usuario` bigint NOT NULL AUTO_INCREMENT,
+  `rol` bigint NOT NULL,
+  `identificacion` bigint NOT NULL,
+  `nombre_completo` varchar(50) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `sexo` varchar(10) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `telefono` bigint NOT NULL,
+  `correo` varchar(65) COLLATE utf8mb4_swedish_ci DEFAULT NULL,
+  `usuario` varchar(50) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto_perfil` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `fecha_creacion` date NOT NULL,
+  `acceso` bigint NOT NULL,
+  PRIMARY KEY (id_usuario)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `rol`, `identificacion`, `nombre_completo`, `sexo`, `telefono`, `correo`, `usuario`, `password`, `foto_perfil`, `fecha_creacion`, `acceso`) VALUES
+(1, '1', '1143970702', 'Laura Dayana Triana Perez', 'Femenino', '3176432002', 'latibeiffetou-2435@gmail.com', 'laura', '$2y$10$7o732JswEZI.YjsQ5GoFUe24F6H0/xtLLAElFMgxpXns4UAaI7tvq', '0234567890.png', '2023-11-01', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id_blog` bigint NOT NULL AUTO_INCREMENT,
+  `foto_1` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `titulo` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `autor` varchar(51) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `fecha_publicacion` date NOT NULL,
+  `sub_titulo_1` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `descripcion` varchar(1600) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto_2` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `sub_titulo_2` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_1` varchar(900) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_2` varchar(900) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_3` varchar(900) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_4` varchar(900) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `acceso` bigint NOT NULL,
+  PRIMARY KEY (id_blog)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `id_evento` bigint NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `fecha_publicacion` datetime NOT NULL,
+  `descripcion` varchar(250) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `ubicacion` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `tipo_evento` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `tipo_acceso` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `acceso` bigint NOT NULL,
+  PRIMARY KEY (id_evento)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `eventos`
+--
+
+INSERT INTO `eventos` (`id_evento`, `titulo`, `foto`, `fecha_publicacion`, `descripcion`, `ubicacion`, `tipo_evento`, `tipo_acceso`, `acceso`) VALUES
+(1, 'Taller de dibujo y pintura', 'product-slider1.jpg', '2023-11-09 00:00:00', 'uhaybfyua byusf yusyu fysudb fyubasdyufbyuasf yuvysubyubsyu basyub fyubfyu as yubfsbyfubsdyufbyuasb dfuyyudabfyu sbayu bvfyuabvsdyufy sdyu yudsyufvbsyuvb fydyus yusbvfyu d yu svb yuf', 'ubicacion', 'tipo_evento', 'tipo_acceso', '1'),
+(2, 'Taller de lenguaje de señas', 'product-slider2.jpg', '2023-11-08 00:00:00', 'uhaybfyua byusf yusyu fysudb fyubasdyufbyuasf yuvysubyubsyu basyub fyubfyu as yubfsbyfubsdyufbyuasb dfuyyudabfyu sbayu bvfyuabvsdyufy sdyu yudsyufvbsyuvb fydyus yusbvfyu d yu svb yuf', 'ubicacion', 'tipo_evento', 'tipo_acceso', '1'),
+(3, 'XIV Feria del libro 2022', 'product-slider3.jpg', '2023-11-07 00:00:00', 'uhaybfyua byusf yusyu fysudb fyubasdyufbyuasf yuvysubyubsyu basyub fyubfyu as yubfsbyfubsdyufbyuasb dfuyyudabfyu sbayu bvfyuabvsdyufy sdyu yudsyufvbsyuvb fydyus yusbvfyu d yu svb yuf', 'ubicacion', 'tipo_evento', 'tipo_acceso', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `noticias`
+--
+
+CREATE TABLE `noticias` (
+  `id_noticia` bigint NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto_1` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `foto_2` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `fecha_publicacion` date NOT NULL,
+  `sub_titulo_1` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `descripcion` varchar(500) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `descripcion_2` varchar(500) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `sub_titulo_2` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_1` varchar(300) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_2` varchar(300) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_3` varchar(300) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `parrafo_4` varchar(300) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `acceso` bigint NOT NULL,
+  PRIMARY KEY (id_noticia)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `noticias`
+--
+
+INSERT INTO `noticias` (`id_noticia`, `titulo`, `foto_1`, `foto_2`, `fecha_publicacion`, `sub_titulo_1`, `descripcion`, `descripcion_2`, `sub_titulo_2`, `parrafo_1`, `parrafo_2`, `parrafo_3`, `parrafo_4`, `acceso`) VALUES
+(1, 'XIV Feria del libro 2022', 'banner1.png', '0234567890.png', '2023-11-06', 'De vuelta a la Arena1', 'descripcion descripcion', 'descripcion descripcion', 'De vuelta a la Arena1', 'descripcion descripcion', 'descripcion descripcion', 'descripcion descripcion', 'descripcion descripcion', '1'),
+(2, 'XIV Feria del libro 2022', 'banner2.png', '0234567891.png', '2023-11-06', 'De vuelta a la Arena1', 'descripcion descripcion', 'descripcion descripcion', 'De vuelta a la Arena1', 'descripcion descripcion', 'descripcion descripcion', 'descripcion descripcion', 'descripcion descripcion', '1'),
+(3, 'XIV Feria del libro 2022', 'banner3.png', '0234567892.png', '2023-11-06', 'De vuelta a la Arena1', 'descripcion descripcion', 'descripcion descripcion', 'De vuelta a la Arena1', 'descripcion descripcion', 'descripcion descripcion', 'descripcion descripcion', 'descripcion descripcion', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `disponibles`
+--
+
+CREATE TABLE `disponibles` (
+  `id_disponible` bigint NOT NULL AUTO_INCREMENT,
+  `disponible` varchar(10) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_disponible)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `disponibles`
+--
+
+INSERT INTO `disponibles` (`id_disponible`, `disponible`) VALUES
+(1, 'Disponible'),
+(2, 'Agotado');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `libros`
+--
+
+CREATE TABLE `libros` (
+  `id_libro` bigint NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(101) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `autor` varchar(51) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `tema` varchar(51) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `descripcion`  varchar(501) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `condicion_libro` varchar(51) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `edades` varchar(18) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `color` varchar(9) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `formato` varchar(8) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `link` varchar(1000) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `portada` varchar(76) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `disponible` bigint NOT NULL,
+  PRIMARY KEY (id_libro)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estados`
+--
+
+CREATE TABLE `estados` (
+  `id_estado` bigint NOT NULL AUTO_INCREMENT,
+  `estado` varchar(8) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_estado)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `estados`
+--
+
+INSERT INTO `estados` (`id_estado`, `estado`) VALUES
+(1, 'Devuelto'),
+(2, 'Prestado');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `permisos`
+--
+
+CREATE TABLE `permisos` (
+  `id_permiso` bigint NOT NULL AUTO_INCREMENT,
+  `permiso` varchar(11) COLLATE utf8mb4_swedish_ci NOT NULL,
+  PRIMARY KEY (id_permiso)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `permisos`
+--
+
+INSERT INTO `permisos` (`id_permiso`, `permiso`) VALUES
+(1, 'Aprobado'),
+(2, 'Desaprobado');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `prestamos`
+--
+
+CREATE TABLE `prestamos` (
+  `id_prestamo` bigint NOT NULL AUTO_INCREMENT,
+  `id_usuario` bigint NOT NULL,
+  `id_libro_1` bigint NULL,
+  `id_libro_2` bigint NULL,
+  `id_libro_3` bigint NULL,
+  `fecha_prestamo` date NOT NULL,
+  `fecha_devolucion` date NOT NULL,
+  `estado` bigint NOT NULL,
+  `permiso` bigint NOT NULL,
+  PRIMARY KEY (id_prestamo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `blogs`
+--
+
+ALTER TABLE blogs
+ADD FOREIGN KEY (acceso) REFERENCES accesos(id_acceso);
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `eventos`
+--
+
+ALTER TABLE eventos
+ADD FOREIGN KEY (acceso) REFERENCES accesos(id_acceso);
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `noticias`
+--
+
+ALTER TABLE noticias
+ADD FOREIGN KEY (acceso) REFERENCES accesos(id_acceso);
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `dioses`
+--
+
+ALTER TABLE dioses
+ADD FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario);
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `usuarios`
+--
+
+ALTER TABLE usuarios
+ADD FOREIGN KEY (rol) REFERENCES roles(id_rol),
+ADD FOREIGN KEY (acceso) REFERENCES accesos(id_acceso);
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `libros`
+--
+
+ALTER TABLE libros
+ADD FOREIGN KEY (disponible) REFERENCES disponibles(id_disponible);
+
+-- --------------------------------------------------------
+
+--
+-- Filtros para la tabla `prestamos`
+--
+
+ALTER TABLE prestamos
+ADD FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+ADD FOREIGN KEY (id_libro_1) REFERENCES libros(id_libro),
+ADD FOREIGN KEY (id_libro_2) REFERENCES libros(id_libro),
+ADD FOREIGN KEY (id_libro_3) REFERENCES libros(id_libro),
+ADD FOREIGN KEY (permiso) REFERENCES permisos(id_permiso),
+ADD FOREIGN KEY (estado) REFERENCES estados(id_estado);
+
+-- --------------------------------------------------------
